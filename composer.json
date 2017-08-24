@@ -1,0 +1,30 @@
+{
+  "name": "wild-and-without/blog",
+  "description": "Wild and Without Blog",
+  "type": "project",
+  "license": "proprietary",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "johnpbloch/wordpress": "^4.8",
+    "wpackagist-plugin/wp-super-cache": "^1.5",
+    "wpackagist-plugin/akismet": "^3.1",
+    "wpackagist-theme/twentyseventeen": "*",
+    "wpackagist-plugin/w3-total-cache": "^0.9.5",
+    "wpackagist-plugin/better-wp-security": "^6.5",
+    "roots/wp-password-bcrypt": "^1.0",
+    "vlucas/phpdotenv": "^2.4"
+  },
+  "extra" : {
+    "wordpress-install-dir": "public/wp",
+    "installer-paths": {
+      "public/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  }
+}
