@@ -19,6 +19,9 @@ require_once( __DIR__ . '/../vendor/autoload.php' );
 
 (new \Dotenv\Dotenv(__DIR__.'/../'))->load();
 
+// ** Cache Settings ** //
+define('WP_CACHE', true);
+
 // ** MySQL settings - You can get this info from your web host ** //
 define('DB_NAME', getenv('MYSQL_DATABASE'));
 define('DB_USER', getenv('MYSQL_USER'));
