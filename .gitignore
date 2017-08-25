@@ -16,3 +16,4 @@ public/wp-content/themes/*
 !public/wp-content/themes/wild-and-without/
 /.env
 /.docker/mysql
+/log
