@@ -17,6 +17,7 @@
     "wpackagist-plugin/better-wp-security": "^6.5",
     "wpackagist-plugin/google-analytics-for-wordpress": "^6.2",
     "wpackagist-plugin/wordpress-seo": "^5.3",
+    "wpackagist-plugin/instagram-feed": "^1.4",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^2.4"
   },
