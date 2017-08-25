@@ -20,5 +20,7 @@ public/wp-content/themes/*
 
 #cache
 !public/wp-content/advanced-cache.php
+!public/wp-content/db.php
+!public/wp-content/object-cache.php
 !public/wp-content/w3tc-config
 !public/wp-content/cache
