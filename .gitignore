@@ -17,3 +17,8 @@ public/wp-content/themes/*
 /.env
 /.docker/mysql
 /log
+
+#cache
+!public/wp-content/advanced-cache.php
+!public/wp-content/w3tc-config
+!public/wp-content/cache
