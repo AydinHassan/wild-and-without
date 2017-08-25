@@ -8,7 +8,7 @@ set :pty, true
 set :log_level, :debug
 set :keep_releases, 3
 set :linked_files, %w{.env robots.txt}
-set :linked_dirs, %w(public/wp-content/uploads public/wp-content/w3tc-config)
+set :linked_dirs, %w(public/wp-content/uploads public/wp-content/w3tc-config public/wp-content/cache)
 
 namespace :deploy do
 
