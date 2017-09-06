@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7206bf191cf92b055963bc81198207c3",
+    "content-hash": "c756a062c8c9fb57bc73e93e2a6512e5",
     "packages": [
         {
             "name": "composer/installers",
@@ -377,15 +377,15 @@
         },
         {
             "name": "wpackagist-plugin/better-wp-security",
-            "version": "6.5.1",
+            "version": "6.6.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/better-wp-security/",
-                "reference": "tags/6.5.1"
+                "reference": "tags/6.6.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/better-wp-security.6.5.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/better-wp-security.6.6.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -456,6 +456,26 @@
             "homepage": "https://wordpress.org/plugins/instagram-feed/"
         },
         {
+            "name": "wpackagist-plugin/kraken-image-optimizer",
+            "version": "2.6.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/kraken-image-optimizer/",
+                "reference": "tags/2.6.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/kraken-image-optimizer.2.6.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/kraken-image-optimizer/"
+        },
+        {
             "name": "wpackagist-plugin/w3-total-cache",
             "version": "0.9.5.4",
             "source": {
@@ -477,15 +497,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "5.3.2",
+            "version": "5.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/5.3.2"
+                "reference": "tags/5.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.5.3.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.5.4.zip",
                 "reference": null,
                 "shasum": null
             },

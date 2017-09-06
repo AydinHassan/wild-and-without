@@ -19,6 +19,7 @@
     "wpackagist-plugin/wordpress-seo": "^5.3",
     "wpackagist-plugin/instagram-feed": "^1.4",
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "^5.1",
+    "wpackagist-plugin/kraken-image-optimizer": "^2.6",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^2.4"
   },
