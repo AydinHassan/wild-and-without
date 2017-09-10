@@ -1,8 +1,8 @@
 FROM php:7.1-fpm
 
-RUN apt-get -qq update && apt-get install -qqy git zlib1g-dev \
+RUN apt-get -qq update && apt-get install -qqy git zlib1g-dev libpng-dev \
 	&& rm -rf /var/lib/apt/lists/* \
-	&& docker-php-ext-install pdo pdo_mysql mysqli zip
+	&& docker-php-ext-install pdo pdo_mysql mysqli zip gd
 
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
