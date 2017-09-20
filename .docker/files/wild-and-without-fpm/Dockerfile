@@ -1,8 +1,10 @@
 FROM php:7.1-fpm
 
-RUN apt-get -qq update && apt-get install -qqy git zlib1g-dev libpng-dev \
+RUN apt-get -qq update && apt-get install -qqy git zlib1g-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev \
 	&& rm -rf /var/lib/apt/lists/* \
-	&& docker-php-ext-install pdo pdo_mysql mysqli zip gd
+	&& docker-php-ext-install pdo pdo_mysql mysqli zip \
+	&& docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+	&& docker-php-ext-install gd
 
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
