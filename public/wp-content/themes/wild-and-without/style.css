@@ -3,8 +3,149 @@
  Description:  Wild and Without Theme
  Author:       Aydin Hassan
  Author URI:   https://github.com/AydinHassan
- Template:     twentyseventeen
+ Template:     voyager
  Version:      1.0.0
- Text Domain:  wild-and-without
 */
 
+/*!*a:hover, a:focus {*!*/
+    /*!*color: #04AF8D;*!*/
+    /*!*text-decoration: none;*!*/
+/*!*}*!*/
+
+/*!*.navbar-default .navbar-nav> li> a {*!*/
+    /*!*padding-top: 35px;*!*/
+    /*!*padding-bottom: 25px;*!*/
+    /*!*font-size: 30px;*!*/
+    /*!*font-weight: normal;*!*/
+/*!*}*!*/
+
+/*!*.navbar-default .navbar-nav> .active> a, .navbar-default .navbar-nav> .active> a:hover, .navbar-default .navbar-nav> .active> a:focus, .navbar-default .navbar-nav> li> a:hover, .navbar-default .navbar-nav> li> a:focus, .navbar-default .navbar-nav> .open> a, .navbar-default .navbar-nav> .open> a:hover, .navbar-default .navbar-nav> .open> a:focus {*!*/
+    /*!*color: #04AF8D;*!*/
+    /*!*background-color: transparent;*!*/
+/*!*}*!*/
+
+/*!*.nav-search input::-webkit-input-placeholder { !* WebKit, Blink, Edge *!*!*/
+    /*!*color: #eee;*!*/
+/*!*}*!*/
+/*!*.nav-search input:-moz-placeholder { !* Mozilla Firefox 4 to 18 *!*!*/
+    /*!*color: #eee;*!*/
+    /*!*opacity: 1;*!*/
+/*!*}*!*/
+/*!*.nav-search input::-moz-placeholder { !* Mozilla Firefox 19+ *!*!*/
+    /*!*color: #eee;*!*/
+    /*!*opacity: 1;*!*/
+/*!*}*!*/
+/*!*.nav-search input:-ms-input-placeholder { !* Internet Explorer 10-11 *!*!*/
+    /*!*color: #eee;*!*/
+/*!*}*!*/
+
+/*!*.nav-search input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {*!*/
+    /*!*color: #666;*!*/
+/*!*}*!*/
+
+/*!*.site-navigation-inner .nav-search input {*!*/
+    /*!*border-radius: 0px;*!*/
+    /*!*border-bottom: 1px solid #eee;*!*/
+/*!*}*!*/
+
+/*!*.site-navigation-inner .nav-search input:focus {*!*/
+    /*!*border-radius: 0px;*!*/
+    /*!*border-bottom: 1px solid #04AF8D;*!*/
+    /*!*-webkit-transition: 1s all ease;*!*/
+    /*!*transition: 1s ease-in-out;*!*/
+/*!*}*!*/
+
+/*!*.header-search-icon {*!*/
+    /*!*color: #04AF8D;*!*/
+/*!*}*!*/
+
+/*!*.header-search-icon:hover {*!*/
+    /*!*color: #51FBDA;*!*/
+/*!*}*!*/
+
+/*!*#secondary .widget-title:after {*!*/
+    /*!*background: #04AF8D;*!*/
+/*!*}*!*/
+
+/*!*article.post .post-categories:after, .post-inner-content .cat-item:after {*!*/
+    /*!*background: #04AF8D;*!*/
+/*!*}*!*/
+
+/*!*#sbi_images {*!*/
+    /*!*padding: 0px !important;*!*/
+/*!*}*!*/
+
+/*!*.sticky-sidebar-social #social li, .sticky-sidebar-social #social ul {*!*/
+    /*!*text-align: left !important;*!*/
+/*!*}*!*/
+
+/*!*#social a:hover {*!*/
+    /*!*color: #04AF8D;*!*/
+/*!*}*!*/
+
+
+/*!*.more-tag {*!*/
+    /*!*text-align: center;*!*/
+    /*!*padding: 20px 0px 10px;*!*/
+/*!*}*!*/
+
+/*!*.more-tag span {*!*/
+    /*!*border: 1px solid #e4e4e4;*!*/
+    /*!*background-color: #ffffff;*!*/
+    /*!*display: inline-block;*!*/
+    /*!*padding: 8px 15px;*!*/
+    /*!*border: 1px solid #e4e4e4;*!*/
+    /*!*!*font-family: 'Montserrat',sans-serif;*!*!*/
+    /*!*font-size: 10px;*!*/
+    /*!*text-transform: uppercase;*!*/
+    /*!*letter-spacing: 3px;*!*/
+/*!*}*!*/
+
+/*!*.logo {*!*/
+    /*!*width: 150px;*!*/
+    /*!*margin: 15px;*!*/
+/*!*}*!*/
+
+/*!*.navbar-default .navbar-nav a{*!*/
+
+/*}*/
+
+/* Disable likes */
+.single_post_meta > span.post_meta_views, .post_format_content > span.post-meta-likes {
+    display:none;
+}
+
+#instafeed a {
+    background-color: #fff !important;
+}
+
+#instafeed a img {
+    display: block;
+    margin-bottom: -30px;
+    width: calc(100% + 30px);
+    max-width: none;
+    height: 100%;
+    opacity: 1 !important;
+}
+
+#instafeed a:before, #instafeed a:after {
+    content: none !important;
+}
+
+.cstheme_widget_instagram a:before, .cstheme_widget_instagram a:after {
+    content: none !important;
+}
+
+.cstheme_widget_instagram a:hover img {
+    opacity: 1 !important;
+    -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out !important;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out !important;
+}
+
+.cstheme-logo {
+    max-height: 300px !important;
+}
+
+.cstheme-logo a img {
+    max-height: 300px !important;
+}
