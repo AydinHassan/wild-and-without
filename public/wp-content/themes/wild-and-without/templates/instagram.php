@@ -24,7 +24,7 @@ if ( is_home() || is_category() || is_tag() || is_search() || is_day() || is_mon
 		<div class="instagram_wrap <?php echo $instagram_type ?> <?php echo $type3_class ?>">
 			<?php if ( $instagram_type == 'type2' ) { ?>
 				<div class="container text-center">
-					<a class="custom_inst_link heading_font" href="<?php echo esc_url( $instagram_link ) ?>" target="_blank"><i class="fa fa-instagram"></i><?php echo esc_attr__('Join to Instagram','voyager') ?></a>
+					<a class="custom_inst_link heading_font" href="<?php echo esc_url( $instagram_link ) ?>" target="_blank"><i class="fa fa-instagram"></i><?php echo esc_attr__('Follow us on instagram!','voyager') ?></a>
 					<h2><?php echo esc_attr( $instagram_title ) ?></h2>
 					<div class="instafeed_wrap">
 						<div class="instagram_preloader">
@@ -34,7 +34,7 @@ if ( is_home() || is_category() || is_tag() || is_search() || is_day() || is_mon
 					</div>
 				</div>
 			<?php } else if ( $instagram_type == 'type3' || is_404() || ( cstheme_woo_enabled() && ( is_shop() || is_product() || is_product_category() || is_product_tag() ) ) ) { ?>
-				<a class="custom_inst_link heading_font" href="<?php echo esc_url( $instagram_link ) ?>" target="_blank"><i class="fa fa-instagram"></i><?php echo esc_attr__('Join to Instagram','voyager') ?></a>
+				<a class="custom_inst_link heading_font" href="<?php echo esc_url( $instagram_link ) ?>" target="_blank"><i class="fa fa-instagram"></i><?php echo esc_attr__('Follow us on instagram!','voyager') ?></a>
 				<div class="instafeed_wrap">
 					<div class="instagram_preloader">
 						<div class="instagram_preloader_in"></div>
@@ -47,7 +47,7 @@ if ( is_home() || is_category() || is_tag() || is_search() || is_day() || is_mon
 						<div class="col-md-6 mb30">
 							<h2><?php echo esc_attr( $instagram_title ) ?></h2>
 							<p><?php echo esc_attr( $instagram_descr ) ?></p>
-							<a class="custom_inst_link heading_font" href="<?php echo esc_url( $instagram_link ) ?>" target="_blank"><i class="fa fa-instagram"></i><?php echo esc_attr__('Join to Instagram','voyager') ?></a>
+							<a class="custom_inst_link heading_font" href="<?php echo esc_url( $instagram_link ) ?>" target="_blank"><i class="fa fa-instagram"></i><?php echo esc_attr__('Follow us on instagram!','voyager') ?></a>
 						</div>
 						<div class="col-md-6 mb30">
 							<div class="instafeed_wrap">
