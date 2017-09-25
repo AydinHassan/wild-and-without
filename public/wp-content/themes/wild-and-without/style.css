@@ -149,3 +149,24 @@
 .cstheme-logo a img {
     max-height: 300px !important;
 }
+
+.mc4wp-response {
+    padding: 80px;
+}
+
+.subscribe-error {
+    width: 100% !important;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+.subscribe-success {
+    width: 100% !important;
+    font-weight: bold;
+    color: #04af8d;
+}
+
+.no-spam {
+    font-size: 80%;
+    font-weight: bold;
+}

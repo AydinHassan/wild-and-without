@@ -38,3 +38,28 @@ add_action('wp_head', function () {
         <meta name="theme-color" content="#ffffff">
     <?php
 });
+
+$forms = mc4wp('forms');
+
+remove_action('init', [$forms, 'initialize']);
+
+$subscribe = function () {
+    $listener = new MC4WP_Form_Listener();
+    $listener->listen($request = mc4wp('request'));
+
+    $formId = $request->post->get( '_mc4wp_form_id' );
+    $form = mc4wp_get_form($formId);
+
+    if (!$form->has_errors()) {
+        wp_send_json_success(['message' => $form->messages]);
+    }
+
+    $errors = array_map(function (string $errorCode) use ($form) {
+        return $form->get_message($errorCode);
+    }, $form->messages);
+
+    wp_send_json_error(['errors' => $errors]);
+};
+
+add_action('wp_ajax_nopriv_wild_without_subscribe', $subscribe);
+add_action('wp_ajax_wild_without_subscribe', $subscribe);
