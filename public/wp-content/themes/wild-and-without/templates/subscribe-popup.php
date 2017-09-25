@@ -30,21 +30,21 @@ $subscribe_popup_mailChimpid = cstheme_option( 'subscribe_popup_mailChimpid' );
 						e.preventDefault();
 						$(".mc4wp-response").remove();
 
-						const formData = new FormData(e.target);
+						//const formData = new FormData(e.target);
 						const form = $(e.target);
+						const formData = form.serializeArray();
+						const data = {};
+
+						$(formData).each(function(index, obj){
+							data[obj.name] = obj.value;
+						});
+
+						data['action'] = 'wild_without_subscribe';
+
 						const submitButton = form.find('input[type=submit]').first();
 
 						submitButton.val('Submitting...');
 						submitButton.prop('disabled', true);
-
-						const data = {
-							'action': 'wild_without_subscribe',
-							'EMAIL': formData.get('EMAIL'),
-							'_mc4wp_timestamp': formData.get('_mc4wp_timestamp'),
-							'_mc4wp_form_id': formData.get('_mc4wp_form_id'),
-							'_mc4wp_form_element_id': formData.get('_mc4wp_form_element_id'),
-							'_mc4wp_honeypot': formData.get('_mc4wp_honeypot'),
-						}
 
 						$.ajax({
 							url: '<?= admin_url('admin-ajax.php') ?>',
