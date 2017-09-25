@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a81174c66163ad9d323bdf71d2fb0ead",
+    "content-hash": "d94f5e75fcb04afc0ab1c6ec852ce302",
     "packages": [
         {
             "name": "composer/installers",
@@ -477,6 +477,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/kraken-image-optimizer/"
+        },
+        {
+            "name": "wpackagist-plugin/updraftplus",
+            "version": "1.13.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/updraftplus/",
+                "reference": "tags/1.13.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.13.9.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/updraftplus/"
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
