@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d94f5e75fcb04afc0ab1c6ec852ce302",
+    "content-hash": "fddfcb7ac8c0ba71ce2f358f080ee46b",
     "packages": [
         {
             "name": "composer/installers",
@@ -417,6 +417,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/contact-form-7/"
+        },
+        {
+            "name": "wpackagist-plugin/featured-images-for-rss-feeds",
+            "version": "1.4.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/featured-images-for-rss-feeds/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1494551012",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/featured-images-for-rss-feeds/"
         },
         {
             "name": "wpackagist-plugin/google-analytics-dashboard-for-wp",

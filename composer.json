@@ -20,6 +20,7 @@
     "wpackagist-plugin/kraken-image-optimizer": "^2.6",
     "wpackagist-plugin/contact-form-7": "^4.9",
     "wpackagist-plugin/updraftplus": "^1.13",
+    "wpackagist-plugin/featured-images-for-rss-feeds": "^1.4",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^2.4"
   },
