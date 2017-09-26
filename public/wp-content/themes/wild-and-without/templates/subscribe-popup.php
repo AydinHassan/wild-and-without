@@ -70,7 +70,7 @@ $subscribe_popup_mailChimpid = cstheme_option( 'subscribe_popup_mailChimpid' );
 								}
 
 								var responseHtml = '<div class="mc4wp-response"><p class="subscribe-success">Thank you for subscribing. We have sent you a confirmation email.</p></div>';
-								form.append(responseHtml);
+								form.replaceWith(responseHtml);
 
 								form.removeClass('mc4wp-form-success').addClass('mc4wp-form-error');
 								submitButton.val('Sign up');
