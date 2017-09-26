@@ -26,7 +26,7 @@ $subscribe_popup_mailChimpid = cstheme_option( 'subscribe_popup_mailChimpid' );
 
 				(function($) {
 
-					document.querySelector('#mc4wp-form-1').addEventListener('submit', (e) => {
+					document.querySelector('#mc4wp-form-1').addEventListener('submit', function (e) {
 						e.preventDefault();
 						$(".mc4wp-response").remove();
 
