@@ -43,6 +43,11 @@ $forms = mc4wp('forms');
 
 remove_action('init', [$forms, 'initialize']);
 
+$rc = new ReflectionClass(MC4WP_Form_Manager::class);
+$rp = $rc->getProperty('listener');
+$rp->setAccessible(true);
+$rp->setValue($forms, new MC4WP_Form_Listener);
+
 $subscribe = function () {
     $listener = new MC4WP_Form_Listener();
     $listener->listen($request = mc4wp('request'));
