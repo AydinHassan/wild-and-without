@@ -24,6 +24,7 @@
     "wpackagist-plugin/mailchimp-for-wp": "^4.1",
     "wpackagist-plugin/instagram-feed": "^1.10",
     "wpackagist-plugin/media-file-renamer": "^4.4",
+    "wpackagist-plugin/envira-gallery-lite": "^1.6",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^2.4"
   },
