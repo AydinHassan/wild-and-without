@@ -105,6 +105,7 @@ class cstheme_widget_sociallinks extends WP_Widget {
         }
     }
 }
-
-add_action('widgets_init', create_function('', 'return register_widget("cstheme_widget_sociallinks");'));
+add_action('widgets_init', function () {
+    return register_widget("cstheme_widget_sociallinks");
+});
 ?>
