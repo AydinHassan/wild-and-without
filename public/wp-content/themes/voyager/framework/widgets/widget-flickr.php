@@ -6,7 +6,7 @@
 
 class cstheme_widget_flickr extends WP_Widget {
 
-	function cstheme_widget_flickr() {
+	function __construct() {
 		parent::__construct( false, 'Evatheme Flickr' );
 	}
 

@@ -58,7 +58,7 @@ $cs_widget_social_links = array(
 
 class cstheme_widget_sociallinks extends WP_Widget {
 
-    function cstheme_widget_sociallinks() {
+    function __construct() {
         $widget_ops = array(
 			'classname' 	=> 'cstheme_widget_sociallinks',
 			'description' 	=> 'Displays your social profile.'
@@ -105,6 +105,7 @@ class cstheme_widget_sociallinks extends WP_Widget {
         }
     }
 }
-
-add_action('widgets_init', create_function('', 'return register_widget("cstheme_widget_sociallinks");'));
+add_action('widgets_init', function () {
+    return register_widget("cstheme_widget_sociallinks");
+});
 ?>

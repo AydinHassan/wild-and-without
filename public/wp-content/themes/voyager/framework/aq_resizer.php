@@ -122,7 +122,7 @@ if(!class_exists('Aq_Resize')) {
 
                     $editor = wp_get_image_editor( $img_path );
 
-                    if ( is_wp_error( $editor ) || is_wp_error( $editor->resize( $width, $height, $crop ) ) )
+                        if ( is_wp_error( $editor ) || is_wp_error( $editor->resize( $width, $height, $crop ) ) )
                         return false;
 
                     $resized_file = $editor->save();
