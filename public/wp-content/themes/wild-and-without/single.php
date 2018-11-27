@@ -40,7 +40,7 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
         </div>
 
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-offset-2 col-md-8">
                 <div class="single-post-content clearfix">
 
                     <?php
