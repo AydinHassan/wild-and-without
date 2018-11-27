@@ -170,3 +170,13 @@
     font-size: 80%;
     font-weight: bold;
 }
+
+.country-menu > .cstheme_mega_menu_wrap {
+    width: 729px;
+    left: auto;
+    margin-top: 20px;
+}
+
+.country-menu > .cstheme_mega_menu_wrap {
+    left: auto;
+}
