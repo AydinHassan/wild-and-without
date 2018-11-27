@@ -6,7 +6,8 @@
 
 class cstheme_widget_instagram extends WP_Widget {
 
-	function __construct() {
+	function cstheme_widget_instagram()
+	{
 		/* Widget settings. */
 		$widget_options = array('classname' => 'cstheme_widget_instagram', 'description' => 'Displays your latest photos from Instagram.');
 		$control_options = array('id_base' => 'cstheme_widget_instagram-widget');

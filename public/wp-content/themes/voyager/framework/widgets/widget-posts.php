@@ -6,7 +6,7 @@
 
 class cstheme_widget_posts extends WP_Widget {
 
-	function __construct() {
+	function cstheme_widget_posts() {
 		parent::__construct( false, esc_html__('Evatheme Latest Posts','voyager') );
 	}
 

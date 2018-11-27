@@ -6,7 +6,7 @@
 
 class cstheme_widget_last_tweets extends WP_Widget
 {
-	function __construct() {
+    function cstheme_widget_last_tweets() {
 		$widget_ops = array( 
             'classname' => 'cstheme_widget_last_tweets', 
             'description' => esc_html__('Retrieve the last tweets.', 'voyager') 
