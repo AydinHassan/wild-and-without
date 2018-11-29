@@ -22,7 +22,7 @@ services:
 
   db:
     container_name: wild-and-without-db
-    image: mysql:latest
+    image: mysql:5.7
     volumes:
       - "./.docker/mysql:/var/lib/mysql"
       - "./.docker/db/:/docker-entrypoint-initdb.d/"
