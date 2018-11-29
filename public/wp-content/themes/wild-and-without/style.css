@@ -55,8 +55,19 @@ body {
     color: rgba(0,0,0,.84) !important;
 }
 
-.header_wrap .header_wrap_bg, #header_mobile_wrap .header_wrap_bg {
+.header_wrap .header_wrap_bg,
+#header_mobile_wrap .header_wrap_bg {
     background-color: #ebf4f1;
+}
+
+#page-content {
+    padding-top: 60px;
+}
+
+.top_slider_blog.type3,
+.top_slider_blog.type4,
+.top_slider_blog.type5 {
+    margin-top: -60px;
 }
 
 h1, h2, h3, h4, h5, h6 {
