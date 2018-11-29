@@ -781,3 +781,7 @@ h2.single-post-title {
     margin-top: 15px;
     font-weight: bold;
 }
+
+.menu-item-mega-parent .cstheme_mega_menu_wrap {
+    top: auto;
+}
