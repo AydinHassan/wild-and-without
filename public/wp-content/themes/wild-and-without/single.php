@@ -76,24 +76,32 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
                         <?php get_template_part( 'templates/blog/authorinfo' ) ?>
                     <?php endif ?>
 
-                    <?php if(cstheme_option('single_post_navigation') != 0) : ?>
-                        <div class="single_post_nav clearfix">
-                            <?php
-                            $prev_post = get_adjacent_post(false, '', true);
-                            $next_post = get_adjacent_post(false, '', false);
+                    <!-- Post Navigation -->
+                    <div class="single_post_nav clearfix">
+                        <?php if ($prevPost = get_adjacent_post()) : ?>
+                            <div class="pull-left">
+                                <a href="<?php esc_url(get_permalink($prevPost->ID)) ?>" title="<?= $prevPost->post_title ?>">
+                                    <p class="heading_font">
+                                        <i class="fa fa-chevron-left"></i>
+                                        <?= esc_html__('Previous', 'voyager') ?>
+                                    </p>
+                                    <b><?= $prevPost->post_title ?></b>
+                                </a>
+                            </div>
+                        <?php endif ?>
 
-                            if ($prev_post){
-                                $post_url = get_permalink($prev_post->ID);
-                                echo '<div class="pull-left"><a href="' . esc_url( $post_url ) . '" title="' . $prev_post->post_title . '"><p class="heading_font"><i class="fa fa-chevron-left"></i>' . esc_html__('Previous','voyager') . '</p><b>' . $prev_post->post_title . '</b></a></div>';
-                            }
-
-                            if ($next_post) {
-                                $post_url = get_permalink($next_post->ID);
-                                echo '<div class="pull-right text-right"><a href="' . esc_url( $post_url ) . '" title="' . $next_post->post_title . '"><p class="heading_font">' . esc_html__('Next','voyager') . '<i class="fa fa-chevron-right"></i></p><b>' . $next_post->post_title . '</b></a></div>';
-                            }
-                            ?>
-                        </div>
-                    <?php endif ?>
+                        <?php if ($nextPost = get_adjacent_post(false, '', false)) : ?>
+                            <div class="pull-right text-right">
+                                <a href="<?php esc_url(get_permalink($nextPost->ID)) ?>" title="<?= $nextPost->post_title ?>">
+                                    <p class="heading_font">
+                                        <?= esc_html__('Next', 'voyager') ?>
+                                        <i class="fa fa-chevron-right"></i>
+                                    </p>
+                                    <b><?= $nextPost->post_title ?></b>
+                                </a>
+                            </div>
+                        <?php endif ?>
+                    </div>
                 </div>
             </div>
 
