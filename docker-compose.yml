@@ -10,9 +10,9 @@ services:
       - .:/var/www/html
     environment:
       - MYSQL_HOST=db
-      - MYSQL_DATABASE=phpschool
-      - MYSQL_USER=phpschool
-      - MYSQL_PASSWORD=phpschool
+      - MYSQL_DATABASE=wild_and_without
+      - MYSQL_USER=wild_and_without
+      - MYSQL_PASSWORD=wild_and_without
       - DEBUG_MODE=true
       - XDEBUG_CONFIG="idekey=PHPSTORM"
     ports:
