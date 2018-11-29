@@ -32,8 +32,19 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
             <div class="single_post_header">
                 <div class="single_post_meta_category"><?php the_category(', '); ?></div>
                 <h2 class="single-post-title"><?php the_title(); ?></h2>
+                <div class="top_slider_blog_post_author">
+                    <div class="post-author-image single-post-author-image">
+                        <a href="<?= get_author_posts_url(get_the_author_meta('ID')) ?>"> <?= get_avatar( get_the_author_meta('user_email'), '70', '' ) ?></a>
+                    </div>
+                    <div class="top_slider_blog_post_author_descr">
+                        <span><?= esc_html__('posted by', 'voyager') ?></span>
+                        <a class="post-author-name heading_font" href="<?= get_author_posts_url(get_the_author_meta('ID')) ?>"> <?= get_the_author() ?></a>
+
+                    </div>
+                </div>
                 <div class="row single_post_header_bottom">
                     <div class="col-md-offset-2 col-md-2 text-left">
+
                         <div class="single_post_meta_author"><?php echo esc_html__('posted by', 'voyager') ?> <a class="heading_font" href="<?php echo esc_url( get_author_posts_url(get_the_author_meta('ID')) ); ?>"><?php echo get_the_author_meta('display_name') ?></a></div>
                     </div>
                     <div class="col-md-4">
