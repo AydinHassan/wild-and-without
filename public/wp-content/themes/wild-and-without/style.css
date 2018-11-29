@@ -181,6 +181,53 @@
     left: auto !important;
 }
 
+.top_slider_blog_post_author {
+    display: flex;
+    justify-content: center;
+}
+
+.top_slider_blog_post_author_descr {
+    padding-left: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .single-post-author-image > a > img {
     border-radius: 50%;
+}
+
+.single_post_meta {
+    line-height: 23px;
+    color: rgba(51,51,51,0.5);
+    margibg-bottom: 25px;
+}
+
+.post-meta-date {
+    padding-left: 0px !important;
+}
+
+.post-author-name {
+    text-transform: uppercase;
+    font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif!important;
+    font-weight: 400;
+}
+
+.u-fontSize12 {
+    font-size: 15px!important;
+}
+
+.middotDivider:after {
+    content: '\00B7';
+}
+
+.single_post_meta_section {
+    padding: 0px !important;
+}
+
+.middotDivider {
+    padding-right: .3em;
+    padding-left: .3em;
+    font-size: 16px;
 }

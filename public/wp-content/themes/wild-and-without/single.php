@@ -32,23 +32,19 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
             <div class="single_post_header">
                 <div class="single_post_meta_category"><?php the_category(', '); ?></div>
                 <h2 class="single-post-title"><?php the_title(); ?></h2>
+
                 <div class="top_slider_blog_post_author">
                     <div class="post-author-image single-post-author-image">
                         <a href="<?= get_author_posts_url(get_the_author_meta('ID')) ?>"> <?= get_avatar( get_the_author_meta('user_email'), '70', '' ) ?></a>
                     </div>
                     <div class="top_slider_blog_post_author_descr">
-                        <span><?= esc_html__('posted by', 'voyager') ?></span>
                         <a class="post-author-name heading_font" href="<?= get_author_posts_url(get_the_author_meta('ID')) ?>"> <?= get_the_author() ?></a>
-
-                    </div>
-                </div>
-                <div class="row single_post_header_bottom">
-                    <div class="col-md-offset-4 col-md-4">
                         <div class="single_post_meta">
-                            <span class="post-meta-date"><?php the_time('M j, Y') ?></span>
-                            <span class="post_meta_views"><i class="fa fa-eye"></i> <span><?php echo (get_post_meta(get_the_ID(), "post_views", true) > 0 ? get_post_meta(get_the_ID(), "post_views", true) : "0"); ?></span></span>
-                            <span class="post-meta-likes"><?php echo cstheme_likes(); ?></span>
-                            <span class="post-meta-comments"><i class="fa fa-comments"></i><?php echo get_comments_number(get_the_ID()); ?></span>
+                            <span class="single_post_meta_section post-meta-date"><?php the_time('M j, Y') ?></span>
+                            <span class="middotDivider u-fontSize12"></span>
+                            <span class="single_post_meta_section post-meta-likes"><?= cstheme_likes(); ?></span>
+                            <span class="middotDivider u-fontSize12"></span>
+                            <span class="single_post_meta_section post-meta-comments"><i class="fa fa-comments"></i><?= get_comments_number(get_the_ID()); ?></span>
                         </div>
                     </div>
                 </div>
