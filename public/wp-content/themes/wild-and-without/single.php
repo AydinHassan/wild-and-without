@@ -58,11 +58,9 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
 
                     <div class="single_sharebox_wrap clearfix">
                         <div class="single_post_meta_tags pull-left">
-
                             <?php if (has_tag()) : ?>
-                                <?php the_tags('','', '') ?>
+                                <?php the_tags('', '', '') ?>
                             <?php endif ?>
-
                         </div>
 
                         <div class="pull-right">
