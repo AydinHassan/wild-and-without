@@ -82,12 +82,12 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
                             $prev_post = get_adjacent_post(false, '', true);
                             $next_post = get_adjacent_post(false, '', false);
 
-                            if($prev_post){
+                            if ($prev_post){
                                 $post_url = get_permalink($prev_post->ID);
                                 echo '<div class="pull-left"><a href="' . esc_url( $post_url ) . '" title="' . $prev_post->post_title . '"><p class="heading_font"><i class="fa fa-chevron-left"></i>' . esc_html__('Previous','voyager') . '</p><b>' . $prev_post->post_title . '</b></a></div>';
                             }
 
-                            if($next_post) {
+                            if ($next_post) {
                                 $post_url = get_permalink($next_post->ID);
                                 echo '<div class="pull-right text-right"><a href="' . esc_url( $post_url ) . '" title="' . $next_post->post_title . '"><p class="heading_font">' . esc_html__('Next','voyager') . '<i class="fa fa-chevron-right"></i></p><b>' . $next_post->post_title . '</b></a></div>';
                             }
@@ -97,9 +97,7 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
                 </div>
             </div>
 
-            <?php if(cstheme_option('single_post_relatedposts') != 0) : ?>
-                <?php get_template_part('templates/blog/related-posts') ?>
-            <?php endif ?>
+            <?php get_template_part('templates/blog/related-posts') ?>
 
             <?php if ( comments_open() || get_comments_number() ) : ?>
                 <?php comments_template(); ?>
