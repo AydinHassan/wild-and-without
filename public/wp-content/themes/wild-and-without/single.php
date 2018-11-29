@@ -51,10 +51,15 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
             </div>
 
             <div class="row">
-                <div class="col-md-offset-2 col-md-8">
+                <div class="col-md-12">
                     <div class="post_format_content mb55 text-center">
                         <?php get_template_part( 'framework/post-format/post', $pf ); ?>
                     </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
                     <div class="single-post-content clearfix">
                         <?php the_content(esc_html__('Read more!', 'voyager')); ?>
                         <?php wp_link_pages(['before' => '<div class="page-link">' . esc_html__('Pages', 'voyager') . ': ', 'after' => '</div>']); ?>
@@ -102,6 +107,7 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
                             </div>
                         <?php endif ?>
                     </div>
+
                 </div>
             </div>
 
