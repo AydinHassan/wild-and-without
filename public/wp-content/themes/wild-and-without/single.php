@@ -1,4 +1,7 @@
 <?php
+/**
+ * The template for displaying all single posts and attachments
+ */
 
 get_header();
 
@@ -8,7 +11,7 @@ $voyager_single_post_sidebar_under = cstheme_option( 'single_post_sidebar_under'
 $single_post_sidebar = cstheme_option( 'single_post_sidebar' );
 $single_post_sidebar_position = '';
 if( $single_post_sidebar == 'left-sidebar' ) {
-	$single_post_sidebar_position = 'pull-right';
+    $single_post_sidebar_position = 'pull-right';
 }
 
 /* ADD 1 view for this post */
@@ -19,11 +22,12 @@ $single_post_featured_img = cstheme_option( 'single_post_featured_img' );
 
 $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
 ?>
-		
+
 <div class="container">
+
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-        <div id="blog-single-wrap" class="<?php echo 'format-' . $pf . ' featured_img_' . $single_post_featured_img ?> clearfix">
+        <div id="blog-single-wrap" class="<?php echo 'format-' . $pf . ' featured_img_fullwidth' ?> clearfix">
 
             <div class="single_post_header">
                 <div class="featured_img_bg" style="background-image:url(<?php echo $featured_image_url; ?>);"></div>
@@ -41,13 +45,13 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
 
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
+                    <div class="post_format_content mb55 text-center">
+                        <?php get_template_part( 'framework/post-format/post', $pf ); ?>
+                    </div>
                     <div class="single-post-content clearfix">
 
-                        <?php
-                        the_content(esc_html__('Read more!', 'voyager'));
-                        wp_link_pages(array('before' => '<div class="page-link">' . esc_html__('Pages', 'voyager') . ': ', 'after' => '</div>'));
-                        ?>
-
+                        <?php the_content(esc_html__('Read more!', 'voyager')); ?>
+                        <?php wp_link_pages(['before' => '<div class="page-link">' . esc_html__('Pages', 'voyager') . ': ', 'after' => '</div>']); ?>
                     </div>
 
                     <div class="posts_nav_link"><?php posts_nav_link(); ?></div>
@@ -55,22 +59,24 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
                     <div class="single_sharebox_wrap clearfix">
                         <div class="single_post_meta_tags pull-left">
 
-                            <?php if( has_tag() ) {
-                                the_tags('','', '');
-                            } ?>
+                            <?php if (has_tag()) : ?>
+                                <?php the_tags('','', '') ?>
+                            <?php endif ?>
 
                         </div>
 
                         <div class="pull-right">
-
-                            <?php if(cstheme_option('single_post_sharebox') != 0) { get_template_part( 'templates/blog/sharebox' ); } ?>
-
+                            <?php if(cstheme_option('single_post_sharebox') != 0): ?>
+                                <?php get_template_part('templates/blog/sharebox') ?>
+                            <?php endif ?>
                         </div>
                     </div>
 
-                    <?php if(cstheme_option('single_post_authorinfo') != 0) { get_template_part( 'templates/blog/authorinfo' ); } ?>
+                    <?php if(cstheme_option('single_post_authorinfo') != 0) : ?>
+                        <?php get_template_part( 'templates/blog/authorinfo' ) ?>
+                    <?php endif ?>
 
-                    <?php if(cstheme_option('single_post_navigation') != 0) { ?>
+                    <?php if(cstheme_option('single_post_navigation') != 0) : ?>
                         <div class="single_post_nav clearfix">
                             <?php
                             $prev_post = get_adjacent_post(false, '', true);
@@ -87,18 +93,17 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
                             }
                             ?>
                         </div>
-                    <?php } ?>
+                    <?php endif ?>
                 </div>
             </div>
 
-            <?php get_template_part('templates/blog/related-posts') ?>
+            <?php if(cstheme_option('single_post_relatedposts') != 0) : ?>
+                <?php get_template_part('templates/blog/related-posts') ?>
+            <?php endif ?>
 
-            <?php
-                if ( comments_open() || get_comments_number() ) :
-                    comments_template();
-                endif;
-            ?>
-
+            <?php if ( comments_open() || get_comments_number() ) : ?>
+                <?php comments_template(); ?>
+            <?php endif ?>
         </div>
 
     <?php endwhile; endif; ?>
