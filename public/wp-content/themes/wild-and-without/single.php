@@ -27,18 +27,18 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-        <div id="blog-single-wrap" class="<?php echo 'format-' . $pf . ' featured_img_fullwidth' ?> clearfix">
+        <div id="blog-single-wrap" class="<?= 'format-' . $pf . ' featured_img_fullwidth' ?> clearfix">
 
             <div class="single_post_header">
-                <div class="featured_img_bg" style="background-image:url(<?php echo $featured_image_url; ?>);"></div>
+                <div class="featured_img_bg" style="background-image:url(<?= $featured_image_url; ?>);"></div>
                 <div class="single_post_meta_category"><?php the_category(', '); ?></div>
                 <h2 class="single-post-title"><?php the_title(); ?></h2>
                 <div class="single_post_header_bottom">
                     <div class="single_post_meta">
                         <span class="post-meta-date"><?php the_time('M j, Y') ?></span>
-                        <span class="post_meta_views"><i class="fa fa-eye"></i> <span><?php echo (get_post_meta(get_the_ID(), "post_views", true) > 0 ? get_post_meta(get_the_ID(), "post_views", true) : "0"); ?></span></span>
-                        <span class="post-meta-likes"><?php echo cstheme_likes(); ?></span>
-                        <span class="post-meta-comments"><i class="fa fa-comments"></i><?php echo get_comments_number(get_the_ID()); ?></span>
+                        <span class="post_meta_views"><i class="fa fa-eye"></i> <span><?= (get_post_meta(get_the_ID(), "post_views", true) > 0 ? get_post_meta(get_the_ID(), "post_views", true) : "0"); ?></span></span>
+                        <span class="post-meta-likes"><?= cstheme_likes(); ?></span>
+                        <span class="post-meta-comments"><i class="fa fa-comments"></i><?= get_comments_number(get_the_ID()); ?></span>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,6 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
                         <?php get_template_part( 'framework/post-format/post', $pf ); ?>
                     </div>
                     <div class="single-post-content clearfix">
-
                         <?php the_content(esc_html__('Read more!', 'voyager')); ?>
                         <?php wp_link_pages(['before' => '<div class="page-link">' . esc_html__('Pages', 'voyager') . ': ', 'after' => '</div>']); ?>
                     </div>
