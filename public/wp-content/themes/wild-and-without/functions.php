@@ -1,8 +1,14 @@
 <?php
 
-add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('voyager-parent-style', get_template_directory_uri() . '/style.css');
-});
+add_action(
+        'wp_enqueue_scripts',
+        function () {
+            wp_enqueue_style('voyager-parent-style', get_template_directory_uri() . '/style.css');
+            wp_enqueue_style('wild-and-without-style', get_stylesheet_directory_uri() . '/style.css', ['voyager-parent-style']);
+
+        },
+        PHP_INT_MAX
+);
 
 add_action('wp_head', function () {
     ?>
