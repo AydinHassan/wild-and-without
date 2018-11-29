@@ -41,9 +41,9 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
                         <a class="post-author-name heading_font" href="<?= get_author_posts_url(get_the_author_meta('ID')) ?>"> <?= get_the_author() ?></a>
                         <div class="single_post_meta">
                             <span class="single_post_meta_section post-meta-date"><?php the_time('M j, Y') ?></span>
-                            <span class="middotDivider u-fontSize12"></span>
+                            <span class="single_post_meta_divider"></span>
                             <span class="single_post_meta_section post-meta-likes"><?= cstheme_likes(); ?></span>
-                            <span class="middotDivider u-fontSize12"></span>
+                            <span class="single_post_meta_divider"></span>
                             <span class="single_post_meta_section post-meta-comments"><i class="fa fa-comments"></i><?= get_comments_number(get_the_ID()); ?></span>
                         </div>
                     </div>
