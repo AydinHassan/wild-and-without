@@ -5,7 +5,7 @@ add_action(
         function () {
             wp_enqueue_style('voyager-parent-style', get_template_directory_uri() . '/style.css');
             wp_enqueue_style('wild-and-without-style', get_stylesheet_directory_uri() . '/style.css', ['voyager-parent-style']);
-
+            wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700%7COpen+Sans%3A300%2C400%2C700&subset=latin&ver=4.9.8');
         },
         PHP_INT_MAX
 );

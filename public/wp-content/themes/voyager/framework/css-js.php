@@ -42,25 +42,6 @@ if (!function_exists('cstheme_css_js_register')) {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
-		
-		// Google Fonts
-		$protocol = is_ssl() ? 'https' : 'http';
-		global $cs_simplefonts;
-		$cs_googlefonts = array(
-			cstheme_option('global_text_font', 'face'),
-			cstheme_option('heading_font'),
-			cstheme_option('blog_category_font'),
-		);
-		$googlefont = '';
-		foreach ($cs_googlefonts as $font) {
-			if (!in_array($font, $cs_simplefonts)) {
-				$googlefont = str_replace(' ', '+', $font) . ':' . cstheme_option('google_font_weight') . '|' . $googlefont;
-			}
-		}
-		if ($googlefont != '') {
-			wp_enqueue_style('google-font', "$protocol://fonts.googleapis.com/css?family=" . substr_replace($googlefont, "", -1) . "&subset=" . cstheme_option('google_font_subset'));
-		}
-		
     }
 }
 add_action('wp_enqueue_scripts', 'cstheme_css_js_register');
