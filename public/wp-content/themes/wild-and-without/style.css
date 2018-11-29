@@ -90,7 +90,7 @@ h3 {
 }
 
 h4 {
-    font-size: 18px;
+    font-size: 24px;
     color: #333333;
 }
 
@@ -762,4 +762,22 @@ h2.single-post-title {
 .single_post_header .single_post_meta_category a:hover {
     color: #fff;
     background-color: hsla(168, 96%, 35%, 0.5);
+}
+
+.facts {
+    background-color: #F0F3F7;
+    padding: 20px;
+}
+
+/** Facts paragraph **/
+.facts p {
+    font-size: 18px;
+}
+
+/** Facts heading **/
+.facts h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    font-weight: bold;
 }
