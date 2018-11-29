@@ -66,15 +66,11 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
                         </div>
 
                         <div class="pull-right">
-                            <?php if(cstheme_option('single_post_sharebox') != 0): ?>
-                                <?php get_template_part('templates/blog/sharebox') ?>
-                            <?php endif ?>
+                            <?php get_template_part('templates/blog/sharebox') ?>
                         </div>
                     </div>
 
-                    <?php if(cstheme_option('single_post_authorinfo') != 0) : ?>
-                        <?php get_template_part( 'templates/blog/authorinfo' ) ?>
-                    <?php endif ?>
+                    <?php get_template_part('templates/blog/authorinfo') ?>
 
                     <!-- Post Navigation -->
                     <div class="single_post_nav clearfix">
