@@ -735,3 +735,7 @@ body.boxed .top_slider_blog.type3 .top_slider_blog_descr,
     padding-left: .3em;
     font-size: 16px;
 }
+
+.site-header {
+    height: 278px;
+}

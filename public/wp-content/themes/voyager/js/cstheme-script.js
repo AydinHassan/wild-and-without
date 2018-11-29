@@ -9,8 +9,8 @@ function csthemeHeaderHeight() {
 		var headerMenuH = jQuery('body.header_type2 .header_wrap').find('.menu-primary-menu-container-wrap').height();
 		jQuery('body.header_type2 #page-wrap > header').css('height', headerLogoH + headerMenuH + 40 + 'px');
 	} else {
-		var headerWrapH = jQuery('.header_wrap').height();
-		jQuery('#page-wrap > header').css('height', headerWrapH + 50 + 'px');
+		//var headerWrapH = jQuery('.header_wrap').height();
+		//jQuery('#page-wrap > header').css('height', headerWrapH + 50 + 'px');
 	}
 }
 	
