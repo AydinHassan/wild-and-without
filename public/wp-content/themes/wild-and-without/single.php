@@ -85,7 +85,7 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
                     <div class="single_post_nav clearfix">
                         <?php if ($prevPost = get_adjacent_post()) : ?>
                             <div class="pull-left">
-                                <a href="<?php esc_url(get_permalink($prevPost->ID)) ?>" title="<?= $prevPost->post_title ?>">
+                                <a href="<?= esc_url(get_permalink($prevPost->ID)) ?>" title="<?= $prevPost->post_title ?>">
                                     <p class="heading_font">
                                         <i class="fa fa-chevron-left"></i>
                                         <?= esc_html__('Previous', 'voyager') ?>
@@ -97,7 +97,7 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
 
                         <?php if ($nextPost = get_adjacent_post(false, '', false)) : ?>
                             <div class="pull-right text-right">
-                                <a href="<?php esc_url(get_permalink($nextPost->ID)) ?>" title="<?= $nextPost->post_title ?>">
+                                <a href="<?= esc_url(get_permalink($nextPost->ID)) ?>" title="<?= $nextPost->post_title ?>">
                                     <p class="heading_font">
                                         <?= esc_html__('Next', 'voyager') ?>
                                         <i class="fa fa-chevron-right"></i>
