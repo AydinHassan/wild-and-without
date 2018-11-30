@@ -523,15 +523,15 @@
         },
         {
             "name": "wpackagist-plugin/instagram-feed",
-            "version": "1.10.1",
+            "version": "1.10.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/instagram-feed/",
-                "reference": "tags/1.10.1"
+                "reference": "tags/1.10.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/instagram-feed.1.10.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/instagram-feed.1.10.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -563,15 +563,15 @@
         },
         {
             "name": "wpackagist-plugin/mailchimp-for-wp",
-            "version": "4.2.5",
+            "version": "4.3.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/mailchimp-for-wp/",
-                "reference": "tags/4.2.5"
+                "reference": "tags/4.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.2.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.3.1.zip",
                 "reference": null,
                 "shasum": null
             },
