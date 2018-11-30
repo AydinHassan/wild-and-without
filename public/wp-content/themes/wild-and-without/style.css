@@ -833,3 +833,19 @@ h2.single-post-title {
 #sb_instagram svg:not(:root).svg-inline--fa {
     height: 1.2em !important;
 }
+
+.top_slider_blog.type3 .top_slider_blog_meta_category a {
+    font-size: 18px;
+}
+
+.top_slider_blog.type3 .top_slider_blog_meta_category {
+    font-size: 18px;
+}
+
+#blog_list.blog_list_style_grid-bg .post_meta_category a, #related_posts_list .post_meta_category a, #author_posts_page .post_meta_category a {
+    font-size: 18px;
+}
+
+#blog_list.blog_list_style_grid-bg .post_meta_category, #related_posts_list .post_meta_category, #author_posts_page .post_meta_category {
+    font-size: 18px;
+}
