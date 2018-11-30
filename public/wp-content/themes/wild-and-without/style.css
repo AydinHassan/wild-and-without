@@ -849,3 +849,7 @@ h2.single-post-title {
 #blog_list.blog_list_style_grid-bg .post_meta_category, #related_posts_list .post_meta_category, #author_posts_page .post_meta_category {
     font-size: 18px;
 }
+
+.top_slider_blog_wrap {
+    height: 1080px;
+}
