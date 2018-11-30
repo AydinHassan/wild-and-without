@@ -43,6 +43,13 @@
     src: local('Marat Sans Bold'), url('fonts/Marat-Sans-Bold.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'Dolce Caffe Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Dolce Caffe Regular'), url('fonts/Dolce-Caffe-Regular.otf') format('opentype');
+}
+
 /** End Webfonts **/
 
 
@@ -599,7 +606,8 @@ body.boxed .top_slider_blog.type3 .top_slider_blog_descr,
 .single_post_header .single_post_meta_category a,
 .blog_list_style_clean_card article.post span.post_meta_category a,
 .post_category_fontfamily {
-    font-family: sans-serif;
+    font-family: 'Dolce Caffe Regular', sans-serif;
+    letter-spacing: 0.15em;
 }
 
 /** Portfolio **/
@@ -755,6 +763,25 @@ h2.single-post-title {
 }
 
 .single_post_header .single_post_meta_category a:hover {
+    color: #fff;
+    background-color: hsla(168, 96%, 35%, 0.5);
+}
+
+#blog_list.blog_list_style_left-image .post_meta_category a {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    /* background-color: #04af8d; */
+    background-color: #9F86B5;
+    border-radius: 15px;
+    line-height: 1;
+}
+
+#blog_list.blog_list_style_left-image .post_meta_category a:hover {
     color: #fff;
     background-color: hsla(168, 96%, 35%, 0.5);
 }
