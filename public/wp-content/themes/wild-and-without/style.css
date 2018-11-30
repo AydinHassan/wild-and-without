@@ -789,6 +789,7 @@ h2.single-post-title {
 .facts {
     background-color: #F0F3F7;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 /** Facts paragraph **/
@@ -814,3 +815,22 @@ h2.single-post-title {
     border-top: 1px solid #9F86B5;
     padding-top: 15px;
 }
+
+.sharebox {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.sharebox_links {
+    display: flex;
+}
+
+.sharebox_links > a {
+    display: none;
+}
+
+.sharebox_active .sharebox_links > a {
+    display: inline-block;
+}
+
