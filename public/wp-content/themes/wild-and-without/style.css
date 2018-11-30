@@ -685,12 +685,7 @@ body.boxed .top_slider_blog.type3 .top_slider_blog_descr,
     left: auto !important;
 }
 
-.top_slider_blog_post_author {
-    display: inline-flex;
-    justify-content: center;
-    border-top: 1px solid #9F86B5;
-    padding-top: 15px;
-}
+
 
 .top_slider_blog_post_author_descr {
     padding-left: 15px;
@@ -784,4 +779,11 @@ h2.single-post-title {
 
 .menu-item-mega-parent .cstheme_mega_menu_wrap {
     top: auto;
+}
+
+.single_post_header .top_slider_blog_post_author {
+    display: inline-flex;
+    justify-content: center;
+    border-top: 1px solid #9F86B5;
+    padding-top: 15px;
 }
