@@ -853,3 +853,7 @@ h2.single-post-title {
 .top_slider_blog_wrap {
     height: 1080px;
 }
+
+.top_slider_blog .top_slider_blog_item {
+    height: 1080px;
+}
