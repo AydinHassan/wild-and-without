@@ -834,3 +834,9 @@ h2.single-post-title {
     display: inline-block;
 }
 
+.single_post_nav {
+    border-top: 1px solid;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
