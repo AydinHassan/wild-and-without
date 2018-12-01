@@ -413,10 +413,6 @@ jQuery(document).ready(function($) {
         jQuery(this).toggleClass( 'active' );
     } );
 	
-	if ((jQuery('.top_slider_blog').hasClass('type3')) || (jQuery('.top_slider_blog').hasClass('type4')) || (jQuery('.top_slider_blog').hasClass('type5'))) {
-		jQuery('#posts_carousel.position_top').css('margin-top', '0')
-	}
-	
 	//	Post Likes
 	PostLikes();
 	
@@ -438,87 +434,7 @@ jQuery(window).load(function(){
 	"use strict";
 	
 	csthemeHeaderHeight();
-	
-	jQuery('.top_slider_blog').css('opacity', '1');
-    jQuery('.top_slider_preloader').hide();
-	
-	if (jQuery('#related_posts_list .owl-carousel').size() > 0) {
-		jQuery('#related_posts_list .owl-carousel').owlCarousel({
-			margin: 30,
-			dots: false,
-			nav: false,
-			loop: true,
-			autoplay: true,
-			autoplaySpeed: 1000,
-			autoplayTimeout: 3000,
-			navSpeed: 1000,
-			autoplayHoverPause: true,
-			responsive: {
-				0: {items: 1},
-				481: {items: 2},
-				769: {items: 3},
-				1025: {items: 4}
-			},
-			thumbs: false
-		});
-	}
-	
-	if (jQuery('.categories_carousel.owl-carousel').size() > 0) {
-		jQuery('.categories_carousel.owl-carousel').owlCarousel({
-			margin: 30,
-			dots: false,
-			nav: false,
-			loop: true,
-			autoplay: true,
-			autoplaySpeed: 1000,
-			autoplayTimeout: 3000,
-			navSpeed: 1000,
-			autoplayHoverPause: true,
-			responsive: {
-				0: {items: 1},
-				320: {items: 2},
-				480: {items: 2},
-				481: {items: 3},
-				960: {items: 4}, 
-				1940: {items: 4}
-			},
-			thumbs: false
-		});
-	}
-	
-	
-	if (jQuery(".cstheme_widget_last_tweets .carousel").size() > 0) {
-		setTimeout(function () {
-			jQuery(".cstheme_widget_last_tweets .carousel").owlCarousel({
-				margin: 0,
-				nav: false,
-				loop: true,
-				autoplay: true,
-				autoplaySpeed: 1000,
-				autoplayTimeout: 5000,
-				navSpeed: 1000,
-				autoplayHoverPause: true,
-				items: 1,
-				thumbs: false
-			});
-		}, 300);
-	}
-	
-	if (jQuery(".recent_posts_list.carousel").size() > 0) {
-		jQuery(".recent_posts_list.carousel").owlCarousel({
-			margin: 0,
-			nav: false,
-			loop: true,
-			autoplay: true,
-			autoplaySpeed: 1000,
-			autoplayTimeout: 5000,
-			navSpeed: 1000,
-			autoplayHoverPause: true,
-			items: 1,
-			thumbs: false
-		});
-	}
-	
+
 	//	Video Iframe Size
 	video_size();
 	

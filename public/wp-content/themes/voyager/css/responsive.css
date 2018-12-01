@@ -11,19 +11,6 @@
 	
 	body.header_type8 .logo_wrap .pull-left{width:17%;}
 	body.header_type8 .logo_wrap .pull-right{width:80%;}
-	
-	.top_slider_blog .top_slider_blog_item,
-	.top_slider_blog_wrap{
-		min-height:522px;
-	}
-	.top_slider_blog.type3 .top_slider_blog_descr{
-		left:0;
-		right:0;
-		padding-left:80px;
-		padding-right:80px;
-	}
-	.top_slider_blog.type1 .top_slider_blog_descr{width:80%;}
-	
 }
 
 @media only screen and (max-width: 1025px) {
@@ -34,13 +21,6 @@
 	
 	.header_search .search_form{width:750px;}
 	body.header_type2.form_focus .header_search i.fa-search{right:-720px;}
-	
-	.top_slider_blog .top_slider_blog_item,
-	.top_slider_blog_wrap{
-		min-height:522px;
-	}
-	.top_slider_blog.type3 .top_slider_blog_descr{left:0;right:0;padding-left:80px;padding-right:80px;}
-	.top_slider_blog.type1 .top_slider_blog_descr{width:80%;}
 	
 	body.header_type3.form_focus header .social_links_wrap,
 	body.header_type6.form_focus header .social_links_wrap{
@@ -334,29 +314,6 @@
 	
 	body.header_type8 header{min-height:100px;}
 	
-	.top_slider_preloader{height:500px;}
-	
-	.top_slider_blog .top_slider_blog_item,
-	.top_slider_blog_wrap{
-		min-height:100px;
-	}
-	.top_slider_blog.type1 .top_slider_blog_meta_category{left:30px;top:30px;}
-	.top_slider_blog.type1 .top_slider_blog_descr{left:30px;width:80%;}
-	.top_slider_blog.type1 .top_slider_blog_post_author{left:30px;bottom:30px;}
-	
-	.top_slider_blog.type3 .top_slider_blog_item,
-	.top_slider_blog.type5 .top_slider_blog_item{
-		min-height:460px;
-	}
-	
-	.top_slider_blog.type1 .top_slider_blog_descr h2,
-	.top_slider_blog.type2 .top_slider_blog_title,
-	.top_slider_blog.type3 .top_slider_blog_title,
-	.top_slider_blog.type4 .top_slider_blog_title,
-	.top_slider_blog.type5 .top_slider_blog_title{
-		font-size:38px;line-height:44px;
-	}
-	
 	#blog_list.blog_list_style_grid-bg.columns3 .post,
 	#blog_list.blog_list_style_grid-bg.columns4 .post,
 	#blog_list.blog_list_style_grid-bg.columns5 .post,
@@ -581,9 +538,7 @@
 	#page-wrap .container{padding-left:0;padding-right:0;margin-left:15px;margin-right:15px;}
 	
 	.col-md-9 > .eva-pagination{width:auto !important;}
-	
-	.top_slider_preloader{height:400px;}
-	
+
 	.page_featured_image{min-height:180px;}
 	
 	#blog_list .post-content-quote-wrapper{padding-left:20px !important;padding-right:20px !important;}
@@ -593,9 +548,7 @@
 	.single_post_header_bottom > div{text-align:center !important;padding:5px 15px;}
 	
 	#blog-single-wrap .col-md-9{padding:0 15px;}
-	
-	.top_slider_blog.type5 .top_slider_blog_post_author{display:none;}
-	
+
 	#comments .commentlist_wrap{padding:0 30px 20px;}
 	.comment-body .comment-avatar{float:none;display:inline-block;vertical-align:top;width:70px;}
 	.commentlist .comment-meta{float:none;display:inline-block;vertical-align:top;width:140px;}
@@ -631,9 +584,7 @@
 	
 	#blog_list.blog_list_style_chess h2.post-title{margin-left:0 !important;}
 	#blog_list.blog_list_style_chess .col-md-6.pull-left h2.post-title{margin-right:0 !important;}
-	
-	.top_slider_preloader{height:300px;}
-}
+	}
 	
 @media only screen and (max-width: 480px) {
     
@@ -642,35 +593,6 @@
 	.sidebar_btn{margin-right:20px;}
 	
 	#instafeed .instafeed_item{width:25%;}
-	
-	.top_slider_blog .owl-controls{display:none;}
-	
-	.top_slider_blog.type1 .top_slider_blog_meta_category,
-	.top_slider_blog.type1 .top_slider_blog_post_author,
-	.top_slider_blog.type5 .top_slider_blog_post_author,
-	.top_slider_blog.type5 .owl-thumbs-wrap,
-	.top_slider_blog.type2 .top_slider_blog_meta_category,
-	.top_slider_blog.type4 .top_slider_blog_meta_category,
-	.top_slider_blog.type2 .top_slider_blog_post_author,
-	.top_slider_blog.type4 .top_slider_blog_post_author{
-		display:none;
-	}
-	.top_slider_blog.type5 .top_slider_blog_descr{left:30px;right:30px;width:auto;}
-	.top_slider_blog.type5 .top_slider_blog_meta_category a{
-		font-size:16px;
-	}
-	.top_slider_blog.type2 .top_slider_blog_descr{left:30px;right:30px;}
-	.top_slider_blog.type1 .top_slider_blog_descr{width:auto;}
-	.top_slider_blog.type1 .top_slider_blog_descr h2,
-	.top_slider_blog.type1 .top_slider_blog_title,
-	.top_slider_blog.type2 .top_slider_blog_title,
-	.top_slider_blog.type3 .top_slider_blog_title,
-	.top_slider_blog.type4 .top_slider_blog_title,
-	.top_slider_blog.type5 .top_slider_blog_title{
-		font-size:22px;line-height:30px;
-	}
-	
-	.top_slider_preloader{height:240px;}
 	
 	#blog_list.blog_list_style_grid-bg.columns2 .post,
 	#blog_list.blog_list_style_grid-bg.columns3 .post,
