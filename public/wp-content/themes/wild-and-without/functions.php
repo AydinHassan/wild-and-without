@@ -3,9 +3,15 @@
 add_action(
         'wp_enqueue_scripts',
         function () {
+            //css
             wp_enqueue_style('voyager-parent-style', get_template_directory_uri() . '/style.css');
-            wp_enqueue_style('wild-and-without-style', get_stylesheet_directory_uri() . '/style.css', ['voyager-parent-style']);
             wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700%7COpen+Sans%3A300%2C400%2C700&subset=latin&ver=4.9.8');
+            wp_enqueue_style('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css');
+            wp_enqueue_style('wild-and-without-style', get_stylesheet_directory_uri() . '/style.css', ['voyager-parent-style', 'swiper']);
+
+            //js
+            wp_enqueue_script('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js', [], false, true);
+            wp_enqueue_script('wild-and-without-js', get_stylesheet_directory_uri() . '/js/wildandwithout.js', [], false, true);
         },
         PHP_INT_MAX
 );
