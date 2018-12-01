@@ -1088,4 +1088,12 @@ h2.single-post-title {
     right: 30px;
 }
 
+.widget-instagram {
+    display: none;
+}
 
+@media only screen and (min-width:991px) {
+    .widget-instagram {
+        display: block;
+    }
+}
