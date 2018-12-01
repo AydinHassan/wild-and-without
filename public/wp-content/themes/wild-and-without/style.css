@@ -1097,3 +1097,26 @@ h2.single-post-title {
         display: block;
     }
 }
+
+@media only screen and (min-width: 580px) {
+    #blog_sidebar {
+        padding-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #blog_sidebar aside {
+        flex: 0 50%;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width:991px) {
+    #blog_sidebar {
+        padding-top: 0px;
+    }
+
+    #blog_sidebar aside {
+        flex: auto;
+    }
+}

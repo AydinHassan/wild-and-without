@@ -29,9 +29,6 @@ if (!function_exists('cstheme_css_js_register')) {
 			wp_enqueue_script('voyager-fluidbox', get_template_directory_uri() . '/js/jquery.fluidbox.min.js', 'jquery', '', true);
 		}
 		wp_enqueue_script('voyager-jscrollpane', get_template_directory_uri() . '/js/jquery.jscrollpane.min.js', 'jquery', '', true);
-		if ( cstheme_option('function_fixed_sidebar_enable') != 0) {
-			wp_enqueue_script('voyager-stickysidebar', get_template_directory_uri() . '/js/theia-sticky-sidebar.min.js', array(), false, true);
-		}
 		if (cstheme_woo_enabled()) {
 			wp_enqueue_script('voyager-woo', get_template_directory_uri() . '/js/woo.js', 'jquery', '', true);
 		}
