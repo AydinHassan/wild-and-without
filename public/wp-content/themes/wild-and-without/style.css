@@ -1216,3 +1216,13 @@ h2.single-post-title {
         width: 25%;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    figure.alignleft, img.alignleft, figure.alignright, img.alignright {
+        float:none;
+    }
+
+    .wp-caption img[class*="wp-image-"] {
+        margin: 0 auto;
+    }
+}
