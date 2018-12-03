@@ -1224,5 +1224,6 @@ h2.single-post-title {
 
     img[class*="wp-image-"] {
         margin: 0 auto;
+        width: 100%;
     }
 }
