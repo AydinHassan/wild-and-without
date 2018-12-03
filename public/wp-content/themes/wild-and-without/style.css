@@ -1222,7 +1222,7 @@ h2.single-post-title {
         float:none;
     }
 
-    .wp-caption img[class*="wp-image-"] {
+    img[class*="wp-image-"] {
         margin: 0 auto;
     }
 }
