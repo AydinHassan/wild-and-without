@@ -1,36 +1,5 @@
 window.jQuery = window.$ = jQuery;
 
-//	Header Height
-function csthemeHeaderHeight() {
-    "use strict";
-	
-	if( jQuery('body').hasClass('header_type2') ) {
-		var headerLogoH = jQuery('body.header_type2 .header_wrap .cstheme-logo').find('img').height();
-		var headerMenuH = jQuery('body.header_type2 .header_wrap').find('.menu-primary-menu-container-wrap').height();
-		jQuery('body.header_type2 #page-wrap > header').css('height', headerLogoH + headerMenuH + 40 + 'px');
-	} else {
-		//var headerWrapH = jQuery('.header_wrap').height();
-		//jQuery('#page-wrap > header').css('height', headerWrapH + 50 + 'px');
-	}
-}
-	
-//	Post Likes
-function PostLikes() {
-    "use strict";
-	jQuery('.cstheme_add_like').live("click", function () {
-        var post_likes_this = jQuery(this);
-        jQuery.post(cstheme_ajaxurl, {
-            action: 'add_like_post',
-            post_id: jQuery(this).attr('data-postid')
-        }, function (response) {
-            jQuery.cookie('like' + post_likes_this.attr('data-postid'), 'true', {expires: 7, path: '/'});
-            post_likes_this.addClass('already_liked').removeClass('cstheme_add_like');
-            post_likes_this.find("span").text(response);
-            post_likes_this.find("i").removeClass("fa-heart-o").addClass("fa-heart");
-        });
-    });
-}
-
 //Topbar Sticky
 function headerSticky() {
 	"use strict";
@@ -50,30 +19,6 @@ function headerSticky() {
 			jQuery('.header_type9 .sidebar_btn').removeClass('hide');
 		}
 		jQuery('.header_ads').removeClass('hide');
-	}
-}
-
-//	Blog Posts Metro Style size
-function csthemeBlogMetroHeight() {
-	if (jQuery('#blog_list.blog_list_style_metro').size() > 0) {
-		jQuery('#blog_list.blog_list_style_metro article.post').each(function(){
-			var postW = jQuery(this).find('.post-content-wrapper').width();
-			if (jQuery(this).hasClass('sizing_width2')) {
-				if (jQuery('.sizing_width2').hasClass('pl0')) {
-					jQuery(this).find('.post-content-wrapper').css('height', postW / 2 + 'px');
-				} else {
-					jQuery(this).find('.post-content-wrapper').css('height', postW / 2 - 15 + 'px');
-				}
-			} else if (jQuery(this).hasClass('sizing_height2')) {
-				if (jQuery('.sizing_height2').hasClass('pl0')) {
-					jQuery(this).find('.post-content-wrapper').css('height', postW * 2 + 'px');
-				} else {
-					jQuery(this).find('.post-content-wrapper').css('height', postW * 2 + 30 + 'px');
-				}
-			} else {
-				jQuery(this).find('.post-content-wrapper').css('height', postW + 'px');
-			}
-		});
 	}
 }
 
@@ -111,99 +56,7 @@ function cstheme_megamenuAfterPosition(){
 		megaElement.css({'left': containerPos.left - megaElementParentPos.left + 'px'});
 	}
 }
-	
-//	Post Single Featured Image full width
-function cstheme_featuredImgFullwidth(){
 
-	if ( jQuery('#blog-single-wrap.featured_img_fullwidth .single_post_header > .featured_img_bg').size() > 0 ) {
-		var $elements = $('#blog-single-wrap.featured_img_fullwidth .single_post_header > .featured_img_bg'),
-			width = $(window).width(),
-			pageWrap_width = jQuery('#page-content > .container').width(),
-			featuredImgBG_left = ( width - pageWrap_width ) / 2,
-			heightHeader = jQuery('body.header_type9.single_featured_img_fullwidth header').height() + 110;
-
-		if( $elements.css({
-			'position': 'absolute',
-			'z-index': '-1',
-			'top': - heightHeader + 'px',
-			'bottom': '0',
-			'left': - featuredImgBG_left + 'px',
-			'right': - featuredImgBG_left + 'px',
-			'background-size': 'cover',
-		}));
-	}
-}
-
-//	Blog Clean Card Style
-function voyager_post_card_clean_Height() {
-	"use strict";
-	
-	if( jQuery('.blog_list_style_clean_card .post').size() > 0 ) {
-		if ( jQuery('.blog_list_style_clean_card').hasClass('container') ) {
-			
-			var postW = jQuery('.blog_list_style_clean_card .isotope_container_wrap').width() / 3;
-			jQuery('.blog_list_style_clean_card .post .post_content_wrapper').css({
-				'height': postW - 30 + 'px'
-			});
-			
-			if ( jQuery('.format-standard.has-post-thumbnail, .format-image.has-post-thumbnail, .format-gallery.has-post-thumbnail, .format-video.has-post-thumbnail').hasClass('clean_card_img_top') ) {
-				var postW = jQuery('.blog_list_style_clean_card .isotope_container_wrap').width() / 3;
-				jQuery('.blog_list_style_clean_card .clean_card_img_top.post .post_content_wrapper').css({
-					'height': postW * 2 - 30 + 'px'
-				});
-				jQuery('.blog_list_style_clean_card .clean_card_img_top.post .featured_img, .blog_list_style_clean_card .clean_card_img_top.post .pf_video_wrap, .blog_list_style_clean_card .clean_card_img_top.post .pf_slider_wrap').css({
-					'height': postW - 30 + 'px'
-				});
-			}
-		} else {
-			var postW = jQuery('.blog_list_style_clean_card .isotope_container_wrap').width() / 4;
-			jQuery('.blog_list_style_clean_card .post .post_content_wrapper').css({
-				'height': postW - 30 + 'px'
-			});
-			
-			if ( jQuery('.format-standard.has-post-thumbnail, .format-image.has-post-thumbnail, .format-gallery.has-post-thumbnail, .format-video.has-post-thumbnail').hasClass('clean_card_img_top') ) {
-				var postW = jQuery('.blog_list_style_clean_card .isotope_container_wrap').width() / 4;
-				jQuery('.blog_list_style_clean_card .clean_card_img_top.post .post_content_wrapper').css({
-					'height': postW * 2 - 30 + 'px'
-				});
-				jQuery('.blog_list_style_clean_card .clean_card_img_top.post .featured_img, .blog_list_style_clean_card .clean_card_img_top.post .pf_video_wrap, .blog_list_style_clean_card .clean_card_img_top.post .pf_slider_wrap').css({
-					'height': postW - 30 + 'px'
-				});
-			}
-		}
-		if ( jQuery('.blog_list_style_clean_card div').hasClass('col-md-9') ) {
-			
-			var postW = jQuery('.blog_list_style_clean_card .isotope_container_wrap').width() / 2;
-			jQuery('.blog_list_style_clean_card .post .post_content_wrapper').css({
-				'height': postW - 30 + 'px'
-			});
-			
-			if ( jQuery('.format-standard.has-post-thumbnail, .format-image.has-post-thumbnail, .format-gallery.has-post-thumbnail, .format-video.has-post-thumbnail').hasClass('clean_card_img_top') ) {
-				var postW = jQuery('.blog_list_style_clean_card .isotope_container_wrap').width() / 2;
-				jQuery('.blog_list_style_clean_card .clean_card_img_top.post .post_content_wrapper').css({
-					'height': postW * 2 - 30 + 'px'
-				});
-				jQuery('.blog_list_style_clean_card .clean_card_img_top.post .featured_img, .blog_list_style_clean_card .clean_card_img_top.post .pf_video_wrap, .blog_list_style_clean_card .clean_card_img_top.post .pf_slider_wrap').css({
-					'height': postW - 30 + 'px'
-				});
-			}
-		}
-	}
-}
-
-function cstheme_fullwidth_block() {
-	"use strict";
-	
-	if( jQuery('.container .row .cstheme_fullwidth_block').size() > 0 ) {
-		var default_pageW = jQuery('#page-content').width(),
-			row_containerW = jQuery('.container').width(),
-			marginLeft = ( default_pageW - row_containerW ) / 2;
-		
-		if ( ! jQuery('div').hasClass('col-md-9') ) {
-			jQuery('.container .row .cstheme_fullwidth_block').css({'margin-left': '-' + marginLeft + 'px', 'width': default_pageW + 'px'});
-		}
-	}
-}
 
 //	Post Format video (play)
 function voyager_video_play() {
@@ -413,18 +266,8 @@ jQuery(document).ready(function($) {
         jQuery(this).toggleClass( 'active' );
     } );
 	
-	//	Post Likes
-	PostLikes();
-	
-	//	Post Single Featured Image full width
-	cstheme_featuredImgFullwidth();
-	
 	cstheme_megamenuAfterPosition();
-	
-	cstheme_fullwidth_block();
-	
-	voyager_post_card_clean_Height();
-	
+
 	voyager_video_play();
 	
 });
@@ -432,16 +275,12 @@ jQuery(document).ready(function($) {
 
 jQuery(window).load(function(){
 	"use strict";
-	
-	csthemeHeaderHeight();
 
 	//	Video Iframe Size
 	video_size();
 	
 	page404_h();
-	
-	csthemeBlogMetroHeight();
-	
+
 });
 
 jQuery(window).resize(function(){
@@ -455,19 +294,7 @@ jQuery(window).resize(function(){
 	
 	page404_h();
 	
-	csthemeHeaderHeight();
-	
-	//	Post Single Featured Image full width
-	cstheme_featuredImgFullwidth();
-	
 	cstheme_megamenuAfterPosition();
-	
-	csthemeBlogMetroHeight();
-	
-	cstheme_fullwidth_block();
-	
-	voyager_post_card_clean_Height();
-	
 });
 
 jQuery(window).scroll(function(){
@@ -475,5 +302,4 @@ jQuery(window).scroll(function(){
 	
 	//Topbar Sticky
 	headerSticky();
-	
 });
