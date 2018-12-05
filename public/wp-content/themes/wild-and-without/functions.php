@@ -23,6 +23,7 @@ add_action('wp_default_scripts', function ($scripts) {
 });
 
 add_action('wp_head', function () {
+    return;
     ?>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
