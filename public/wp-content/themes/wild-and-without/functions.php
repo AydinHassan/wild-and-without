@@ -17,6 +17,10 @@ add_action(
 );
 
 add_action('wp_default_scripts', function ($scripts) {
+    if (is_admin()) {
+        return;
+    }
+
     if (!empty($scripts->registered['jquery'])) {
         $scripts->registered['jquery']->deps = array_diff($scripts->registered['jquery']->deps, ['jquery-migrate']);
     }
