@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e451586be0c61799465b00e19ca5df1",
+    "content-hash": "bbc48d428993fb89a87e4c56d1b73916",
     "packages": [
         {
             "name": "composer/installers",
@@ -440,26 +440,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/contact-form-7/"
-        },
-        {
-            "name": "wpackagist-plugin/envira-gallery-lite",
-            "version": "1.6.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/envira-gallery-lite/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/envira-gallery-lite.zip?timestamp=1540244718",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/envira-gallery-lite/"
         },
         {
             "name": "wpackagist-plugin/featured-images-for-rss-feeds",
