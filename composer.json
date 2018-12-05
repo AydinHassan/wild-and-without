@@ -26,6 +26,7 @@
     "wpackagist-plugin/media-file-renamer": "^4.4",
     "wpackagist-plugin/advanced-custom-fields": "^5.7",
     "wpackagist-plugin/widget-css-classes": "^1.5",
+    "wpackagist-plugin/disable-embeds": "^1.3",
     "wpackagist-plugin/Gutenberg": "^4.6",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^2.4"
