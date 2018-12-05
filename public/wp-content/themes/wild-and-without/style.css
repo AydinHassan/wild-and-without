@@ -288,51 +288,6 @@ input[type="reset"]:hover {
     background-image: url(https://www.wildandwithout.com//wp-content/uploads/2017/08/Ötschergräben.jpg );
 }
 
-.owl-controls .owl-dot {
-    font-family: 'Oswald', sans-serif;
-}
-
-.owl-controls .owl-dot:before {
-    background-color: #04af8d;
-}
-
-.owl-controls .owl-nav>div:hover {
-    border-color: #04af8d;
-    color: #04af8d;
-}
-
-.top_slider_blog.type4 .owl-controls .owl-nav>div:hover i {
-    border-color: #04af8d;
-}
-
-.cstheme_widget_last_tweets .owl-controls .owl-dot:hover,
-.cstheme_widget_last_tweets .owl-controls .owl-dot.active {
-    background-color: #04af8d;
-}
-
-.recent_posts_list.carousel .owl-controls .owl-dot:hover,
-.recent_posts_list.carousel .owl-controls .owl-dot.active {
-    background-color: #04af8d;
-}
-
-.top_slider_blog.type1 .top_slider_blog_descr h2:hover a {
-    color: #04af8d;
-}
-
-.top_slider_blog.type1 .top_slider_blog_post_author .post-author-name:hover {
-    color: #04af8d;
-}
-
-.top_slider_blog.type2 .top_slider_blog_title a:hover,
-.top_slider_blog.type2 .top_slider_blog_post_author a:hover {
-    color: #04af8d;
-}
-
-.top_slider_blog.type3 .top_slider_blog_title a:hover,
-.top_slider_blog.type3 .top_slider_blog_post_author a:hover {
-    color: #04af8d;
-}
-
 #blog_list.blog_list_style_grid-bg .post-title a:hover {
     color: #04af8d;
 }
@@ -439,19 +394,6 @@ h6.comment_author .comment-edit-link {
     border-color: #04af8d;
 }
 
-#related_posts_list.owl-carousel .post-title:hover a {
-    color: #04af8d;
-}
-
-#posts_carousel .owl-carousel .posts_carousel_title:hover a {
-    color: #04af8d;
-}
-
-#posts_carousel .with_title .owl-controls .owl-nav>div {
-    border-color: #04af8d;
-    color: #04af8d;
-}
-
 #blog_list.blog_list_style_default.search-result-list h2.post-title:hover a,
 #blog_list.blog_list_style_default.search-result-list .post_content_readmore:hover {
     color: #04af8d;
@@ -470,9 +412,6 @@ blockquote small {
     font-family: 'Oswald', sans-serif;
 }
 
-#related_posts_list .owl-carousel .post-title a:hover {
-    color: #04af8d;
-}
 
 #categories_list .item:hover .overlay_border:before,
 #categories_list .item:hover .overlay_border:after {
@@ -541,10 +480,6 @@ aside .widget-title span:after {
 }
 
 #three_posts_after_slider .col-md-6 .post-title a:hover {
-    color: #04af8d;
-}
-
-#posts_carousel .owl-carousel .bg_image h2.post-title a:hover {
     color: #04af8d;
 }
 
