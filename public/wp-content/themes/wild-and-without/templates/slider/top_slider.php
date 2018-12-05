@@ -1,7 +1,5 @@
 <?php
 
-wp_enqueue_script('cstheme_owlcarousel_js', get_template_directory_uri() . '/js/owl.carousel.min.js', [], false, true);
-
 $top_slider_style 				= get_metabox('top_slider_style');
 $top_slider_category 			= get_metabox('top_slider_category');
 $top_slider_count 				= get_metabox('top_slider_count');
