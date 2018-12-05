@@ -24,10 +24,6 @@ if (!function_exists('cstheme_css_js_register')) {
         #JS
 		wp_enqueue_script("jquery");
 		wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.4', true);
-		if ( cstheme_option('magnific_popup') != 'disabled') {
-			wp_enqueue_script('voyager-magnificpopup', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', 'jquery', '', true);
-			wp_enqueue_script('voyager-fluidbox', get_template_directory_uri() . '/js/jquery.fluidbox.min.js', 'jquery', '', true);
-		}
 		wp_enqueue_script('voyager-jscrollpane', get_template_directory_uri() . '/js/jquery.jscrollpane.min.js', 'jquery', '', true);
 		if (cstheme_woo_enabled()) {
 			wp_enqueue_script('voyager-woo', get_template_directory_uri() . '/js/woo.js', 'jquery', '', true);
