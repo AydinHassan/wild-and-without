@@ -4,6 +4,10 @@ add_action(
         'wp_enqueue_scripts',
         function () {
             //css
+            wp_dequeue_style('sb_instagram_styles');
+            wp_dequeue_style('sb-font-awesome');
+            wp_dequeue_style('contact-form-7');
+
             wp_enqueue_style('voyager-parent-style', get_template_directory_uri() . '/style.css');
             wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700%7COpen+Sans%3A300%2C400%2C700&subset=latin&ver=4.9.8');
 
