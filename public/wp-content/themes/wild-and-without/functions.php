@@ -3,15 +3,18 @@
 add_action(
         'wp_enqueue_scripts',
         function () {
-            //css
+            //dequeue plugin and theme CSS
             wp_dequeue_style('sb_instagram_styles');
             wp_dequeue_style('sb-font-awesome');
             wp_dequeue_style('contact-form-7');
+            wp_dequeue_style('voyager-default');
+            wp_dequeue_style('voyager-theme');
+            wp_dequeue_style('voyager-responsive');
 
-            wp_enqueue_style('voyager-parent-style', get_template_directory_uri() . '/style.css');
             wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700%7COpen+Sans%3A300%2C400%2C700&subset=latin&ver=4.9.8');
 
-            wp_enqueue_style('wild-and-without-style', get_stylesheet_directory_uri() . '/dist/main.css', ['voyager-parent-style']);
+            //built css
+            wp_enqueue_style('wild-and-without-style', get_stylesheet_directory_uri() . '/dist/main.css');
 
             //js
             wp_enqueue_script('wild-and-without-js', get_stylesheet_directory_uri() . '/dist/bundle.js', [], false, true);
