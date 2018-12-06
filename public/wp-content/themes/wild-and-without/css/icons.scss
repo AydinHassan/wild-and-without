@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons.woff?34vurh') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="fa-"], [class*=" fa-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-search:before {
+  content: "\f002";
+}
+.fa-envelope-o:before {
+  content: "\f003";
+}
+.fa-chevron-left:before {
+  content: "\f053";
+}
+.fa-chevron-right:before {
+  content: "\f054";
+}
+.fa-chevron-up:before {
+  content: "\f077";
+}
+.fa-chevron-down:before {
+  content: "\f078";
+}
+.fa-heart-o:before {
+  content: "\f08a";
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-facebook:before {
+  content: "\f09a";
+}
+.fa-facebook-f:before {
+  content: "\f09a";
+}
+.fa-bars:before {
+  content: "\f0c9";
+}
+.fa-google-plus:before {
+  content: "\f0d5";
+}
+.fa-comments:before {
+  content: "\f0e5";
+}
+.fa-instagram:before {
+  content: "\f16d";
+}
+.fa-tumblr:before {
+  content: "\f173";
+}
+.fa-reddit:before {
+  content: "\f1a1";
+}
+.fa-share-alt:before {
+  content: "\f1e0";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-angle-up:before {
+  content: "\f106";
+}
+.fa-angle-down:before {
+  content: "\f107";
+}

@@ -7,6 +7,8 @@
  Version:      1.0.0
 */
 
+@import "icons";
+
 /** Webfonts **/
 @font-face {
     font-family: 'Marat Sans Regular';
@@ -1160,5 +1162,29 @@ h2.single-post-title {
     img[class*="wp-image-"] {
         margin: 0 auto;
         width: 100%;
+    }
+}
+
+.menu-primary-menu-container-wrap li.menu-item-has-children>a:after {
+    content: "\f107";
+    vertical-align: top;
+    padding-left: 7px;
+    font-family: icons;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+    #header_mobile_wrap li.menu-item-has-children > a:before {
+        content: "\f054";
+        position: absolute;
+        right: 15px;
+        top: 5px;
+        font-family: icons;
+        font-size: 12px;
+        color: #fff;
+        transition: -webkit-transform .2s ease-in-out;
+        transition: transform .2s ease-in-out;
+        transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+        -webkit-transition: -webkit-transform .2s ease-in-out;
     }
 }
