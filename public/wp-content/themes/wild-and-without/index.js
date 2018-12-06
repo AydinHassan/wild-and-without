@@ -12,7 +12,6 @@ import './css/main.scss';
 
 import '../../plugins/instagram-feed/js/sb-instagram.min.js';
 import '../../plugins/contact-form-7/includes/js/scripts.js';
-
 import '../voyager/js/cstheme-script.js';
 import 'swiper/dist/js/swiper.js';
 import './js/wildandwithout.js';

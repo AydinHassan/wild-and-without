@@ -15,6 +15,7 @@ add_action(
             wp_dequeue_style('voyager-responsive');
 
             //dequeue plugin and theme JS
+            wp_dequeue_script('bootstrap');
             wp_dequeue_script('sb_instagram_scripts');
             wp_dequeue_script('voyager-jscrollpane');
             wp_dequeue_script('contact-form-7');

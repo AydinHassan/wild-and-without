@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WrapperPlugin = require('wrapper-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry: "./public/wp-content/themes/wild-and-without/index.js",
@@ -62,6 +63,9 @@ module.exports = {
         new WrapperPlugin({
             test: /\.js$/,
             header: 'var sb_instagram_js_options = {"sb_instagram_at":"","font_method":"svg"};'
-        })
-    ]
+        }),
+    ],
+    externals: {
+        jquery: 'jQuery'
+    },
 }

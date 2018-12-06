@@ -470,7 +470,6 @@ add_action( 'wp_footer', 'cstheme_instagram_jquery' );
  */
 function cstheme_likes()
 {
-    wp_enqueue_script('cstheme_cookie_js', get_template_directory_uri() . '/js/jquery.cookie.js', array(), false, true);
     $all_likes = get_post_meta(get_the_ID(), 'cstheme_likes', true);
     if (!isset($all_likes) || absint($all_likes) < 1) {
         $all_likes = 0;
