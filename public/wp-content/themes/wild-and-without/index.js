@@ -10,5 +10,7 @@ import '../../plugins/gutenberg/build/block-library/style.css'
 import 'swiper/dist/css/swiper.css';
 import './css/main.scss';
 
+import '../../plugins/instagram-feed/js/sb-instagram.min.js';
+
 import 'swiper/dist/js/swiper.js';
 import './js/wildandwithout.js';

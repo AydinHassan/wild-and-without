@@ -1,6 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const WrapperPlugin = require('wrapper-webpack-plugin');
 
 module.exports = {
     entry: "./public/wp-content/themes/wild-and-without/index.js",
@@ -16,7 +16,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env']
+                        presets: ['@babel/preset-env']
                     }
                 }
             },
@@ -59,5 +59,9 @@ module.exports = {
             filename: "[name].css",
             chunkFilename: "[id].css"
         }),
+        new WrapperPlugin({
+            test: /\.js$/,
+            header: 'var sb_instagram_js_options = {"sb_instagram_at":"","font_method":"svg"};'
+        })
     ]
 }

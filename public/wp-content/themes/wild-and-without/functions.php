@@ -14,9 +14,12 @@ add_action(
             wp_dequeue_style('voyager-theme');
             wp_dequeue_style('voyager-responsive');
 
-            wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700%7COpen+Sans%3A300%2C400%2C700&subset=latin&ver=4.9.8');
+            //dequeue plugin and theme JS
+            wp_dequeue_script('sb_instagram_scripts');
+
 
             //built css
+            wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700%7COpen+Sans%3A300%2C400%2C700&subset=latin&ver=4.9.8');
             wp_enqueue_style('wild-and-without-style', get_stylesheet_directory_uri() . '/dist/main.css');
 
             //js
