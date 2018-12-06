@@ -18,6 +18,7 @@ add_action(
             wp_dequeue_script('sb_instagram_scripts');
             wp_dequeue_script('voyager-jscrollpane');
             wp_dequeue_script('contact-form-7');
+            wp_dequeue_script('voyager-theme');
 
             //built css
             wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700%7COpen+Sans%3A300%2C400%2C700&subset=latin&ver=4.9.8');
