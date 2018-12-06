@@ -259,10 +259,10 @@
 	#header_mobile_wrap .nav-menu > li:last-child > a{border:0;}
 	#header_mobile_wrap .nav-menu .sub-menu li:last-child a{border-bottom:1px solid #414141;}
 	#header_mobile_wrap .nav-menu li.menu-item-has-children a:after{display:none;}
-	#header_mobile_wrap .nav-menu .sub-menu{position:static;display:block;opacity:1 !Important;visibility:visible !important;margin:0;border:0;width:100%;}
+	#header_mobile_wrap .nav-menu .sub-menu{position:static;display:block;opacity:1 !important;visibility:visible !important;margin:0;border:0;width:100%;}
 	#header_mobile_wrap .nav-menu .sub-menu li a{padding:6px 60px;}
-	#header_mobile_wrap .nav-menu .sub-menu:after, #header_mobile_wrap .nav-menu .sub-menu:before, #header_mobile_wrap .nav-menu .sub-menu .sub-menu:after, #header_mobile_wrap .nav-menu .sub-menu .sub-menu:before{display:none !Important;}
-	#header_mobile_wrap .nav-menu .sub-menu .sub-menu{position:static;display:block;opacity:1 !Important;visibility:visible !important;margin:0;border:0;width:100%;}
+	#header_mobile_wrap .nav-menu .sub-menu:after, #header_mobile_wrap .nav-menu .sub-menu:before, #header_mobile_wrap .nav-menu .sub-menu .sub-menu:after, #header_mobile_wrap .nav-menu .sub-menu .sub-menu:before{display:none !important;}
+	#header_mobile_wrap .nav-menu .sub-menu .sub-menu{position:static;display:block;opacity:1 !important;visibility:visible !important;margin:0;border:0;width:100%;}
 	#header_mobile_wrap .nav-menu .sub-menu .sub-menu li a{padding:6px 80px;}
 	#header_mobile_wrap li.menu-item-has-children > a:before{
 		content: '\f105';
@@ -384,7 +384,7 @@
 	.subscribe_popup_content{padding:40px;}
 	
 	.fixed-sidebar{right:-320px;width:320px;}
-	.sidebar_btn{top:10px !Important;}
+	.sidebar_btn{top:10px !important;}
 	
 	.widget_cstheme_flickr .flickr-feed li{width:16.6667%;}
 	.fixed-sidebar .widget_cstheme_flickr .flickr-feed li{width:33.33%;}
@@ -577,7 +577,7 @@
 	
 	#blog_list.blog_list_style_chess article.post .pull-left,
 	#blog_list.blog_list_style_chess article.post .pull-right{
-		float:none !Important;
+		float:none !important;
 	}
 	
 	#blog_list.blog_list_style_chess article.post .row{margin-bottom:0;}

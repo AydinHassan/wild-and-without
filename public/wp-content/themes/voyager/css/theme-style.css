@@ -156,7 +156,7 @@ a.delicious:hover {color:#3273cf;}
 	display:block;
 	margin:0;
 	text-align:center;
-	box-shadow:0 0 0 5px #333 inset !Important;
+	box-shadow: inset 0 0 0 5px #333 !important;
 }
 .eva-infinite-scroll>.loading{
 	position:absolute;
@@ -623,7 +623,7 @@ body.sidebar_active #page-wrap:before{
 
 .fixed-sidebar .nicescroll-rails{
 	left:auto !important;
-	right:10px !Important;
+	right:10px !important;
 }
 
 #ascrail2000-hr{
@@ -768,7 +768,7 @@ body.subscribe_popup_show .subscribe_popup_wrap{
 }
 .subscribe_popup_content .mc4wp-form label{display:none;}
 .subscribe_popup_content .mc4wp-form input{
-	display:block !Important;
+	display:block !important;
 	width:100%;
 	height:50px;
 	padding:10px 20px;
@@ -6799,7 +6799,7 @@ body.page-template-page-comingsoon .cstheme-logo{
 	display:block !important;
 	max-height:none !important;
 	padding:50px 0 55px;
-	margin:0 0 81px !Important;
+	margin:0 0 81px !important;
 	background-color:#fff;
 }
 body.page-template-page-comingsoon .cstheme-logo a{
