@@ -59,13 +59,5 @@ module.exports = {
             filename: "[name].css",
             chunkFilename: "[id].css"
         }),
-        // new OptimizeCssAssetsPlugin({
-        //     assetNameRegExp: /\.optimize\.css$/g,
-        //     cssProcessor: require('cssnano'),
-        //     cssProcessorPluginOptions: {
-        //         preset: ['default', { discardComments: { removeAll: true } }],
-        //     },
-        //     canPrint: true
-        // })
     ]
 }
