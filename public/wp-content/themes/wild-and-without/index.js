@@ -1,5 +1,4 @@
-import '../voyager/css/bootstrap.min.css';
-
+import './css/bootstrap.css';
 import '../voyager/style.css';
 import '../voyager/css/theme-style.css';
 import '../voyager/css/responsive.css';
