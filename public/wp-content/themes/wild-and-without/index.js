@@ -11,6 +11,7 @@ import 'swiper/dist/css/swiper.css';
 import './css/main.scss';
 
 import '../../plugins/instagram-feed/js/sb-instagram.min.js';
+import '../../plugins/contact-form-7/includes/js/scripts.js';
 
 import 'swiper/dist/js/swiper.js';
 import './js/wildandwithout.js';
