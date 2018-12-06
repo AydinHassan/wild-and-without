@@ -1,6 +1,5 @@
-// import '../voyager/css/bootstrap.min.css';
-// import '../voyager/css/font-awesome.min.css';
-//
+import '../voyager/css/bootstrap.min.css';
+import '../voyager/css/font-awesome.min.css';
 
 import '../voyager/style.css';
 import '../voyager/css/theme-style.css';
