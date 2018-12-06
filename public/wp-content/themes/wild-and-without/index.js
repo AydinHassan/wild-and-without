@@ -7,8 +7,8 @@
 //
 // import '../../plugins/instagram-feed/css/sb-instagram.css'
 // import '../../plugins/contact-form-7/includes/css/styles.css'
-// import 'swiper/dist/css/swiper.css';
+import 'swiper/dist/css/swiper.css';
 import './css/main.scss';
 
-//import 'swiper/dist/js/swiper.js';
+import 'swiper/dist/js/swiper.js';
 import './js/wildandwithout.js';
