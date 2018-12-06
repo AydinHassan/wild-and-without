@@ -14,7 +14,8 @@ services:
       - MYSQL_USER=wild_and_without
       - MYSQL_PASSWORD=wild_and_without
       - DEBUG_MODE=true
-      - XDEBUG_CONFIG="idekey=PHPSTORM"
+      - PHP_IDE_CONFIG=serverName=wildandwithout
+      - XDEBUG_CONFIG=remote_host=docker.for.mac.localhost remote_port=9001
     ports:
       - 9000
     depends_on:

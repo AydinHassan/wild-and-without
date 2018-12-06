@@ -7,6 +7,7 @@ add_action(
             wp_dequeue_style('sb_instagram_styles');
             wp_dequeue_style('sb-font-awesome');
             wp_dequeue_style('contact-form-7');
+            wp_dequeue_style('wp-block-library');
             wp_dequeue_style('bootstrap');
             wp_dequeue_style('fontawesome');
             wp_dequeue_style('voyager-default');

@@ -6,6 +6,7 @@ import '../voyager/css/theme-style.css';
 import '../voyager/css/responsive.css';
 import '../../plugins/instagram-feed/css/sb-instagram.css'
 import '../../plugins/contact-form-7/includes/css/styles.css'
+import '../../plugins/gutenberg/build/block-library/style.css'
 import 'swiper/dist/css/swiper.css';
 import './css/main.scss';
 
