@@ -1,5 +1,7 @@
-window.onload = function () {
-    var homepageSlider = new Swiper ('.swiper-container', {
+import Swiper from "swiper";
+
+$(document).ready(function () {
+    var homepageSlider = new Swiper('.swiper-container', {
         loop: true,
 
         // If we need pagination
@@ -13,4 +15,4 @@ window.onload = function () {
             prevEl: '.swiper-button-prev',
         },
     })
-}
+});
