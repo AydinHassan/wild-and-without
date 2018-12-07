@@ -7,6 +7,7 @@
  Version:      1.0.0
 */
 
+@import "vars";
 @import "icons";
 
 /** Webfonts **/
@@ -73,12 +74,6 @@ body {
     padding-top: 60px;
 }
 
-.top_slider_blog.type3,
-.top_slider_blog.type4,
-.top_slider_blog.type5 {
-    margin-top: -60px;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
 }
@@ -114,7 +109,7 @@ h6 {
 }
 
 blockquote {
-    border: 1px solid #04af8d;
+    border: 1px solid $dark-green;
 }
 
 .heading_font {
@@ -127,11 +122,11 @@ input {
 }
 
 .contentarea ul li:before, .single-post-content ul li:before {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 .contentarea ol>li:before, .single-post-content ol>li:before {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 input[type="text"]:focus,
@@ -140,7 +135,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-    border-color: #04af8d;
+    border-color: $dark-green;
 }
 
 .contentarea h1,
@@ -161,24 +156,24 @@ textarea:focus {
 
 #respond-inputs input:focus,
 #commentform textarea:focus {
-    border-color: #04af8d;
+    border-color: $dark-green;
 }
 
 /** Menu **/
 
 .menu-primary-menu-container-wrap .sub-menu,
 .menu-primary-menu-container-wrap .sub-menu .sub-menu {
-    border-color: #04af8d;
+    border-color: $dark-green;
 }
 
 .menu-primary-menu-container-wrap .sub-menu:after {
-    border-bottom-color: #04af8d;
-    border-left-color: #04af8d;
+    border-bottom-color: $dark-green;
+    border-left-color: $dark-green;
 }
 
 .menu-primary-menu-container-wrap .sub-menu .sub-menu:after {
-    border-top-color: #04af8d;
-    border-right-color: #04af8d;
+    border-top-color: $dark-green;
+    border-right-color: $dark-green;
 }
 
 .menu-primary-menu-container-wrap li a:hover,
@@ -187,7 +182,7 @@ textarea:focus {
 .menu-primary-menu-container-wrap li.current-menu-parent>a,
 .menu-primary-menu-container-wrap li.current-menu-ancestor>a,
 .menu-primary-menu-container-wrap .sub-menu li.current_page_item a {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 #header_mobile_wrap .menu-primary-menu-container-wrap li a:hover,
@@ -196,67 +191,45 @@ textarea:focus {
 #header_mobile_wrap .menu-primary-menu-container-wrap li.current-menu-parent>a,
 #header_mobile_wrap .menu-primary-menu-container-wrap li.current-menu-ancestor>a,
 #header_mobile_wrap .menu-primary-menu-container-wrap .sub-menu li.current_page_item a {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .menu-item-mega-parent .cstheme_mega_menu_wrap {
-    border-color: #04af8d;
+    border-color: $dark-green;
 }
 
 .menu-item-mega-parent .cstheme_mega_menu_wrap:after {
-    border-bottom-color: #04af8d;
-    border-left-color: #04af8d;
-}
-
-/** Shortcodes **/
-
-.btn {
-    font-family: 'Oswald', sans-serif;
-}
-
-.btn-default.active,
-.btn-default.focus,
-.btn-default:active,
-.btn-default:focus,
-.btn-default:hover,
-.btn-primary {
-    background-color: #04af8d;
-}
-
-.btn-primary.active,
-.btn-primary.focus,
-.btn-primary:active,
-.btn-primary:focus {
-    background: #04af8d;
+    border-bottom-color: $dark-green;
+    border-left-color: $dark-green;
 }
 
 /** Custom Colors **/
 
 a:hover,
 a:focus {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .single-post-content p a,
 .contentarea p a,
 .comment-text a {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 ::selection {
-    background: #04af8d;
+    background: $dark-green;
 }
 
 ::-moz-selection {
-    background: #04af8d;
+    background: $dark-green;
 }
 
 .theme_color {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .bg_primary {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 button,
@@ -275,15 +248,15 @@ input[type="submit"]:hover,
 input[type="submit"]:focus,
 input[type="button"]:hover,
 input[type="reset"]:hover {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 .header_search i.fa-search:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .sidebar_btn:hover span {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 .subscribe_popup_bg {
@@ -291,7 +264,7 @@ input[type="reset"]:hover {
 }
 
 #blog_list.blog_list_style_grid-bg .post-title a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 #blog_list.blog_list_style_grid-bg .format-link .post-title a:hover,
@@ -303,38 +276,38 @@ input[type="reset"]:hover {
 #blog_list .post-content-link-wrapper,
 #related_posts_list .post-content-link-wrapper,
 #author_posts_page .post-content-link-wrapper {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 .cstheme_widget_last_tweets .twitter-text a {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .recent_posts_list.carousel .recent_post_title a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .single_post_meta_tags a:hover,
 .tagcloud a:hover {
-    border-color: #04af8d;
-    color: #04af8d;
+    border-color: $dark-green;
+    color: $dark-green;
 }
 
 .single_post_meta_tags a:hover:before,
 .tagcloud a:hover:before {
-    border-color: #04af8d;
+    border-color: $dark-green;
 }
 
 .single_post_meta_tags a:hover i:before,
 .tagcloud a:hover i:before,
 .single_post_meta_tags a:hover i:after,
 .tagcloud a:hover i:after {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 .post_format_content .post-link:before,
 .post_format_content .post-quote:before {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 h6.comment_author .comment-edit-link {
@@ -346,45 +319,45 @@ h6.comment_author .comment-edit-link {
 }
 
 #blog_list.blog_list_style_chess .format-quote .post-meta-author a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 #blog_list.blog_list_style_chess .format-quote h2.post-title a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 #blog_list.blog_list_style_chess .format-link .post-content-wrapper {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 #categories_list .item a:hover span {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 #blog_list.blog_list_style_default .format-quote .post-meta-author a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 #blog_list.blog_list_style_default .format-quote h2.post-title a:hover,
 #related_posts_list .format-quote h2.post-title a:hover,
 #author_posts_page .format-quote h2.post-title a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 #blog_list.blog_list_style_default .format-link .post-content-wrapper {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 .top_slider_blog.type4 .top_slider_blog_title a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .top_slider_blog.type4 .post-author-name:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .instagram_wrap.type3 .custom_inst_link:hover {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 .contentarea form.wpcf7-form label {
@@ -393,20 +366,20 @@ h6.comment_author .comment-edit-link {
 
 .contentarea form.wpcf7-form input:focus,
 .contentarea form.wpcf7-form textarea:focus {
-    border-color: #04af8d;
+    border-color: $dark-green;
 }
 
 #blog_list.blog_list_style_default.search-result-list h2.post-title:hover a,
 #blog_list.blog_list_style_default.search-result-list .post_content_readmore:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .top_slider_blog.type5 .top_slider_blog_title a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .top_slider_blog.type5 .top_slider_blog_post_author .post-author-name:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 blockquote cite,
@@ -417,7 +390,7 @@ blockquote small {
 
 #categories_list .item:hover .overlay_border:before,
 #categories_list .item:hover .overlay_border:after {
-    border-color: #04af8d;
+    border-color: $dark-green;
 }
 
 #blog_list .post-content-quote-wrapper .overlay_border:before,
@@ -426,12 +399,12 @@ blockquote small {
 #related_posts_list .post-content-quote-wrapper .overlay_border:after,
 #author_posts_page .post-content-quote-wrapper .overlay_border:before,
 #author_posts_page .post-content-quote-wrapper .overlay_border:after {
-    border-color: #04af8d;
+    border-color: $dark-green;
 }
 
 #instafeed .instafeed_item .overlay_border:before,
 #instafeed .instafeed_item .overlay_border:after {
-    border-color: #04af8d;
+    border-color: $dark-green;
 }
 
 .posts_carousel_overlay {
@@ -440,31 +413,31 @@ blockquote small {
 
 .related_posts_list_overlay,
 .portfolio_related_list_overlay {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 #blog_list.blog_list_style_left-image .format-link .post-title:hover a {
-    color: #04af8d !important;
+    color: $dark-green !important;
 }
 
 #blog_list.blog_list_style_left-image h2.post-title {
-    border-left-color: #04af8d !important;
+    border-left-color: $dark-green !important;
 }
 
 #blog_list.blog_list_style_left-image .format-quote h2.post-title,
 #blog_list.blog_list_style_left-image .format-link h2.post-title {
-    border-left-color: #04af8d !important;
+    border-left-color: $dark-green !important;
 }
 
 aside .widget-title span:before,
 aside .widget-title span:after {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 .widget_meta li a:hover,
 .widget_archive li a:hover,
 .widget_categories li a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .social_link,
@@ -478,11 +451,11 @@ aside .widget-title span:after {
 }
 
 .top_slider_blog.type6 .top_slider_blog_title a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 #three_posts_after_slider .col-md-6 .post-title a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 body.header_type9 .menu-primary-menu-container-wrap li a:hover,
@@ -493,11 +466,11 @@ body.header_type9 .menu-primary-menu-container-wrap li.current-menu-ancestor>a,
 body.header_type9 .menu-primary-menu-container-wrap .sub-menu li.current_page_item a,
 body.header_type9 .sidebar_btn:hover i,
 body.header_type9 .search_form_wrap:hover>i {
-    color: #04af8d !important;
+    color: $dark-green !important;
 }
 
 body.header_type9 .sidebar_btn:hover {
-    border-color: #04af8d;
+    border-color: $dark-green;
 }
 
 /** Category Font **/
@@ -550,11 +523,11 @@ body.boxed .top_slider_blog.type3 .top_slider_blog_descr,
 /** Portfolio **/
 #portfolio_related_list .portfolio_descr_wrap .portfolio-title:before,
 #portfolio_list .portfolio_descr_wrap .portfolio-title:before {
-    background-color: #04af8d;
+    background-color: $dark-green;
 }
 
 .filter_block li a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 /** End Dynamic CSS extracted **/
@@ -577,7 +550,7 @@ body.boxed .top_slider_blog.type3 .top_slider_blog_descr,
 .subscribe-success {
     width: 100% !important;
     font-weight: bold;
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .no-spam {
@@ -732,7 +705,7 @@ h2.single-post-title {
     font-size: 12px;
     font-weight: bold;
     color: #fff;
-    /*background-color: #04af8d;*/
+    /*background-color: $dark-green;*/
     background-color: #9F86B5;
     border-radius: 15px;
     line-height: 1;
@@ -751,7 +724,7 @@ h2.single-post-title {
     font-size: 12px;
     font-weight: bold;
     color: #fff;
-    /* background-color: #04af8d; */
+    /* background-color: $dark-green; */
     background-color: #9F86B5;
     border-radius: 15px;
     line-height: 1;
@@ -830,7 +803,7 @@ h2.single-post-title {
 }
 
 .sbi_follow_btn a:hover {
-    background-color: #04af8d !important;
+    background-color: $dark-green !important;
 }
 
 #sb_instagram svg:not(:root).svg-inline--fa {
@@ -895,7 +868,7 @@ h2.single-post-title {
 }
 
 .home-slider-post-info-title a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .home-slider-post-info-date {
@@ -1011,8 +984,8 @@ h2.single-post-title {
 }
 
 .swiper-button:hover {
-    border-color: #04af8d;
-    color: #04af8d;
+    border-color: $dark-green;
+    color: $dark-green;
 }
 
 .swiper-button-prev {
@@ -1127,7 +1100,7 @@ h2.single-post-title {
 }
 
 #related-posts-list .related-post-title a:hover {
-    color: #04af8d;
+    color: $dark-green;
 }
 
 .related-post {
@@ -1187,4 +1160,15 @@ h2.single-post-title {
         transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
         -webkit-transition: -webkit-transform .2s ease-in-out;
     }
+}
+
+.related_posts_list_overlay {
+    background-color: $dark-green;
+    position: absolute;
+    z-index: 1;
+    left: -1000px;
+    right: -1000px;
+    top: 0;
+    height: 100%;
+    opacity: 0.15;
 }
