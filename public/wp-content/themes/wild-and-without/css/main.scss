@@ -1172,3 +1172,11 @@ h2.single-post-title {
     height: 100%;
     opacity: 0.15;
 }
+
+ol, ul {
+    margin: 0;
+}
+
+.contentarea ul>li:before, .single-post-content ul>li:before {
+    content: none;
+}
