@@ -58,9 +58,9 @@ $subscribe_popup_mailChimpid = cstheme_option( 'subscribe_popup_mailChimpid' );
 								if (!data.success) {
 									form.removeClass('mc4wp-form-error').addClass('mc4wp-form-success');
 
-									var errorHtml = data.data.errors.map(function (error) {
-										return '<div class="mc4wp-alert mc4wp-' + error.type + '"><p class="subscribe-error">' + error.text + '</p></div>';
-									}).join();
+									var errorHtml = Object.keys(data.data.errors).map(function(key, index) {
+                                        return '<div class="mc4wp-alert mc4wp-' + key + '"><p class="subscribe-error">' + data.data.errors[key] + '</p></div>';
+                                    }).join('');
 
 									var responseHtml = '<div class="mc4wp-response">' + errorHtml + '</div>';
 									form.append(responseHtml);
