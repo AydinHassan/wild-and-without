@@ -99,7 +99,7 @@ $subscribe = function () {
 
     $errors = array_map(function (string $errorCode) use ($form) {
         return $form->get_message($errorCode);
-    }, $form->messages);
+    }, $form->errors);
 
     wp_send_json_error(['errors' => $errors]);
 };

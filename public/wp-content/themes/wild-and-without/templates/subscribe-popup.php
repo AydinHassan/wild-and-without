@@ -54,7 +54,6 @@ $subscribe_popup_mailChimpid = cstheme_option( 'subscribe_popup_mailChimpid' );
 							success: function(data){
 								$(".mc4wp-response").remove();
 
-								console.log(data);
 								if (!data.success) {
 									form.removeClass('mc4wp-form-error').addClass('mc4wp-form-success');
 
