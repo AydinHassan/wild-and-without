@@ -363,15 +363,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.7.7",
+            "version": "5.7.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.7.7"
+                "reference": "tags/5.7.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.7.7.zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.7.8.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -603,15 +603,15 @@
         },
         {
             "name": "wpackagist-plugin/media-file-renamer",
-            "version": "4.4.3",
+            "version": "4.5.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/media-file-renamer/",
-                "reference": "tags/4.4.3"
+                "reference": "tags/4.5.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.4.4.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.4.5.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -623,15 +623,15 @@
         },
         {
             "name": "wpackagist-plugin/updraftplus",
-            "version": "1.15.6",
+            "version": "1.15.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/updraftplus/",
-                "reference": "tags/1.15.6"
+                "reference": "tags/1.15.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.15.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.15.7.zip",
                 "reference": null,
                 "shasum": null
             },
