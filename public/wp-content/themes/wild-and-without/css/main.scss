@@ -1184,3 +1184,7 @@ ol, ul {
 #author_posts_info {
     background-color: #fff;
 }
+
+#author_posts_page .post-title a:focus, #author_posts_page .post-title a:hover {
+    color: #04af8d;
+}
