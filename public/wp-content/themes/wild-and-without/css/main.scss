@@ -1192,8 +1192,18 @@ ol, ul {
 .contentarea ul,
 .single-post-content ul{
     list-style: initial;
-  
     padding-left: 40px;
+}
+
+.contentarea ul li a,
+.single-post-content ul li a{
+    color: $dark-green;
+}
+
+.contentarea ul li:hover a,
+.single-post-content ul li:hover a{
+    text-decoration: underline;
+    text-decoration-color: $dark-green;
 }
 
 .contentarea ul.wp-block-gallery,
