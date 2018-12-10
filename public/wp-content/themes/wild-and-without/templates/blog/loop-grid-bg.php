@@ -88,7 +88,7 @@ $post_excerpt = cstheme_smarty_modifier_truncate(get_the_excerpt(), 512);
                     style="background-image:url(<?php echo $featured_image_url ?>);"
                 <?php endif ?>
             ></div>
-            <span class="post_meta_category"><?php the_category(', '); ?></span>
+            <span class="post_meta_category"><?php the_category_limit(', ', 1); ?></span>
             <div class="post-descr-wrap">
                 <span class="post-meta-date"><?php the_time('M j, Y') ?></span>
                 <h2 class="post-title">

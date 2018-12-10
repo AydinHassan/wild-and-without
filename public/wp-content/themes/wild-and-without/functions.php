@@ -106,3 +106,28 @@ $subscribe = function () {
 
 add_action('wp_ajax_nopriv_wild_without_subscribe', $subscribe);
 add_action('wp_ajax_wild_without_subscribe', $subscribe);
+
+function the_category_limit(string $separator = ', ', int $limit = null) : string
+{
+    global $wp_rewrite;
+
+    $categories = apply_filters( 'the_category_list', get_the_category(false), false);
+
+    if ($limit !== null) {
+        $categories = array_slice($categories, 0, $limit);
+    }
+
+    $rel = ( is_object( $wp_rewrite ) && $wp_rewrite->using_permalinks() ) ? 'rel="category tag"' : 'rel="category"';
+
+    $thelist = '';
+    $i = 0;
+    foreach ($categories as $category) {
+        if (0 < $i) {
+            $thelist .= $separator;
+        }
+        $thelist .= sprintf('<a href="%s" %s>%s</a>', esc_url(get_category_link($category->term_id)), $rel, $category->name);
+        ++$i;
+    }
+
+    return $thelist;
+}
