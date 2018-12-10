@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "johnpbloch/wordpress": "^4.8",
+    "johnpbloch/wordpress": "^5.0",
     "wpackagist-plugin/akismet": "^4",
     "wpackagist-plugin/w3-total-cache": "^0.9.5",
     "wpackagist-plugin/better-wp-security": "^7.2",
