@@ -1188,3 +1188,15 @@ ol, ul {
 #author_posts_page .post-title a:focus, #author_posts_page .post-title a:hover {
     color: #04af8d;
 }
+
+.contentarea ul,
+.single-post-content ul{
+    list-style: initial;
+  
+    padding-left: 40px;
+}
+
+.contentarea ul.wp-block-gallery,
+.single-post-content ul.wp-block-gallery {
+  padding: 0;
+}
