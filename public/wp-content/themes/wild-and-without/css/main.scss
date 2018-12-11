@@ -1210,3 +1210,23 @@ ol, ul {
 .single-post-content ul.wp-block-gallery {
   padding: 0;
 }
+
+.shutter-stock-widget-landscape {
+    display: none;
+    justify-content: center;
+}
+
+.shutter-stock-widget-mobile {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 480px) {
+    .shutter-stock-widget-mobile {
+        display: none;
+    }
+
+    .shutter-stock-widget-landscape {
+        display: flex;
+    }
+}
