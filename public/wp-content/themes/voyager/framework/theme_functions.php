@@ -561,33 +561,6 @@ function evatheme_author_posts_per_page( $posts_per_page ) {
 	return $posts_per_page;
 }
 
-
-//	Add OpenGraph Meta
-function cstheme_add_opengraph() {
-    global $post; // Ensures we can use post variables outside the loop
-    if(!$post) return;
-    
-    // Start with some values that don't change.
-    echo "<meta property='og:site_name' content='". get_bloginfo('name') ."'/>"; // Sets the site name to the one in your WordPress settings
-    echo "<meta property='og:url' content='" . get_permalink() . "'/>"; // Gets the permalink to the post/page
-
-    if (is_singular()) { // If we are on a blog post/page
-        echo "<meta property='og:title' content='" . get_the_title() . "'/>"; // Gets the page title
-        echo "<meta property='og:type' content='article'/>"; // Sets the content type to be article.
-    } elseif(is_front_page() or is_home()) { // If it is the front page or home page
-        echo "<meta property='og:title' content='" . get_bloginfo("name") . "'/>"; // Get the site title
-        echo "<meta property='og:type' content='website'/>"; // Sets the content type to be website.
-    }
-
-    if(has_post_thumbnail( $post->ID )) { // If the post has a featured image.
-        $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
-        echo "<meta property='og:image' content='" . esc_attr( $thumbnail[0] ) . "'/>"; // If it has a featured image, then display this for Facebook
-    } 
-
-}
-add_action( 'wp_head', 'cstheme_add_opengraph', 5 );
-
-
 //	Custom Post Formats
 function voyager_rename_post_formats( $safe_text ) {
     if ( $safe_text == 'Aside' )
