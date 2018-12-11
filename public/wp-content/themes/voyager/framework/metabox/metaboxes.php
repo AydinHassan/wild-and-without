@@ -23,8 +23,7 @@ if (!function_exists('postsettings_admin_scripts')) {
             }
 
             wp_enqueue_script('post-colorpicker', get_template_directory_uri() . '/framework/assets/js/colorpicker.js');       
-            wp_enqueue_script('post-metaboxes', get_template_directory_uri() . '/framework/assets/js/metaboxes.js');        
-
+            //wp_enqueue_script('post-metaboxes', get_template_directory_uri() . '/framework/assets/js/metaboxes.js');
         }
     }
 }
