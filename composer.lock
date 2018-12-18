@@ -363,15 +363,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.7.8",
+            "version": "5.7.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.7.8"
+                "reference": "tags/5.7.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.7.8.zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.7.9.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -703,15 +703,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "9.2.1",
+            "version": "9.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/9.2.1"
+                "reference": "tags/9.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.2.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.3.zip",
                 "reference": null,
                 "shasum": null
             },
