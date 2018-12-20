@@ -252,8 +252,8 @@
 	footer .scroll_top_wrap{padding-top:30px;}
 	
 	.subscribe_popup_wrap{
-		left:30px;
-		right:30px;
+		left:25px;
+		right:25px;
 		padding:40px;
 		width:auto;
 		transform:translate(0, -50%);
@@ -447,6 +447,10 @@
 		font-size:38px;
 		line-height:40px;
 		margin-bottom:56px;
+	}
+
+	.subscribe_popup_content p {
+		line-height: 1.58;
 	}
 
 	.subscribe_popup_close:before {

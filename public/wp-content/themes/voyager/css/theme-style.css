@@ -391,6 +391,10 @@ body.subscribe_popup_show .subscribe_popup_wrap{
 	width:61%;
 }
 
+.subscribe_popup_content p {
+    line-height: 1.4;
+}
+
  
 /**
  * Header
