@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66ea20d778213bfa169a447dfa79af90",
+    "content-hash": "39d7deef3661ad5785c43125a9e91d1c",
     "packages": [
         {
             "name": "composer/installers",
@@ -620,6 +620,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/media-file-renamer/"
+        },
+        {
+            "name": "wpackagist-plugin/reading-time-wp",
+            "version": "2.0.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/reading-time-wp/",
+                "reference": "tags/2.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/reading-time-wp.2.0.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/reading-time-wp/"
         },
         {
             "name": "wpackagist-plugin/updraftplus",
