@@ -131,3 +131,33 @@ function the_category_limit(string $separator = ', ', int $limit = null) : strin
 
     return $thelist;
 }
+
+function the_reading_time(int $postId) : string {
+    $content        = get_post_field('post_content', $postId);
+    $numberOfImages = substr_count(strtolower($content), '<img ' );
+    $wpm            = 300;
+
+    $content    = wp_strip_all_tags($content);
+    $wordCount  = count(preg_split('/\s+/', $content));
+    // Calculate additional time added to post by images.
+    $wordCount  += calculate_images($numberOfImages, $wpm);
+    $readingTime = (string) ceil($wordCount / $wpm);
+    // If the reading time is 0 then return it as < 1 instead of 0.
+    if ( 1 > $readingTime) {
+        $readingTime = __( '< 1', 'reading-time-wp' );
+    }
+    return $readingTime;
+}
+
+function calculate_images(int $totalImages, int $wpm) : int {
+    $additionalTime = 0;
+    // For the first image add 12 seconds, second image add 11, ..., for image 10+ add 3 seconds.
+    for ( $i = 1; $i <= $totalImages; $i++ ) {
+        if ( $i >= 10 ) {
+            $additionalTime += 3 * $wpm / 60;
+        } else {
+            $additionalTime += (12 - ($i - 1)) * $wpm / 60;
+        }
+    }
+    return $additionalTime;
+}

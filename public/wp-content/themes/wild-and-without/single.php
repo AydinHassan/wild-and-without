@@ -42,7 +42,7 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
                         <div class="single_post_meta">
                             <span class="single_post_meta_section post-meta-date"><?php the_time('M j, Y') ?></span>
                             <span class="single_post_meta_divider"></span>
-                            <span class="single_post_meta_section post-meta-date"><?= do_shortcode('[rt_reading_time]') ?> min read</span>
+                            <span class="single_post_meta_section post-meta-date"><?= the_reading_time(get_the_ID()) ?> min read</span>
                             <span class="single_post_meta_divider"></span>
                             <span class="single_post_meta_section post-meta-likes"><?= cstheme_likes(); ?></span>
                             <span class="single_post_meta_divider"></span>
