@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66ea20d778213bfa169a447dfa79af90",
+    "content-hash": "78e7a554066ba64354616c4b844c5583",
     "packages": [
         {
             "name": "composer/installers",
@@ -620,6 +620,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/media-file-renamer/"
+        },
+        {
+            "name": "wpackagist-plugin/media-net-ads-manager",
+            "version": "v2.1.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/media-net-ads-manager/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/media-net-ads-manager.zip?timestamp=1541504728",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/media-net-ads-manager/"
         },
         {
             "name": "wpackagist-plugin/updraftplus",
