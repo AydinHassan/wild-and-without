@@ -112,7 +112,80 @@ $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
 
                 </div>
             </div>
+            <div class="post-newsletter-signup">
+                <div class="text-center">
+                    <h2>Never miss a post!</h2>
+                </div>
+                <div class="post-newsletter-signup-container flex justify-center">
+                    <p class="signup-text">If you enjoyed this article, subscribe to our mailing list and receive new posts direct to your e-mail!</p>
+                    <?php if (function_exists('mc4wp_show_form')): ?>
+                        <?php mc4wp_show_form($id = esc_html(cstheme_option('subscribe_popup_mailChimpid'))); ?>
+                    <?php endif ?>
+                    <p class="no-spam">(no spam ever, unsubscribe at any time)</p>
+                </div>
+                <div class="post-newsletter-signup-overlay"></div>
+                <script type="text/javascript">
+                    (function($) {
+                        //2 because second form on page after default side bar newsletter
+                        document.querySelector('#mc4wp-form-2').addEventListener('submit', function (e) {
+                            e.preventDefault();
+                            $(".mc4wp-response").remove();
 
+                            //const formData = new FormData(e.target);
+                            const form = $(e.target);
+                            const formData = form.serializeArray();
+                            const data = {};
+
+                            $(formData).each(function(index, obj){
+                                data[obj.name] = obj.value;
+                            });
+
+                            data['action'] = 'wild_without_subscribe';
+
+                            const submitButton = form.find('input[type=submit]').first();
+
+                            submitButton.val('Submitting...');
+                            submitButton.prop('disabled', true);
+
+                            $.ajax({
+                                url: '<?= admin_url('admin-ajax.php') ?>',
+                                data: data,
+                                type: "POST",
+                                dataType: 'JSON',
+                                success: function(data){
+                                    $(".mc4wp-response").remove();
+
+                                    if (!data.success) {
+                                        form.removeClass('mc4wp-form-error').addClass('mc4wp-form-success');
+
+                                        var errorHtml = Object.keys(data.data.errors).map(function(key, index) {
+                                            return '<div class="mc4wp-alert mc4wp-' + key + '"><p class="subscribe-error">' + data.data.errors[key] + '</p></div>';
+                                        }).join('');
+
+                                        var responseHtml = '<div class="mc4wp-response">' + errorHtml + '</div>';
+                                        form.append(responseHtml);
+                                        submitButton.val('Sign up');
+                                        submitButton.prop('disabled', false);
+                                        return;
+                                    }
+
+                                    var responseHtml = '<div class="mc4wp-response"><p class="subscribe-success">Thank you for subscribing. We have sent you a confirmation email.</p></div>';
+                                    form.replaceWith(responseHtml);
+
+                                    form.removeClass('mc4wp-form-success').addClass('mc4wp-form-error');
+                                    submitButton.val('Sign up');
+                                    submitButton.prop('disabled', false);
+                                },
+                                error: function(errorThrown){
+                                    console.log(errorThrown);
+                                    submitButton.val('Sign up');
+                                    submitButton.prop('disabled', false);
+                                }
+                            });
+                        });
+                    })(jQuery);
+                </script>
+            </div>
             <?php get_template_part('templates/blog/related-posts') ?>
 
             <?php if ( comments_open() || get_comments_number() ) : ?>

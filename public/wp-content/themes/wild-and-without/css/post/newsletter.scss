@@ -1,0 +1,68 @@
+.post-newsletter-signup {
+  position: relative;
+  padding: 40px 0;
+}
+
+.post-newsletter-signup-overlay {
+  background-color: #F4F4F4;
+  position: absolute;
+  z-index: 1;
+  left: -1000px;
+  right: -1000px;
+  top: 0;
+  height: 100%;
+}
+
+.post-newsletter-signup h2 {
+  position: relative;
+  z-index: 10;
+  font-size: 38px;
+  line-height: 42px;
+  margin: 0 0 45px;
+  padding: 0;
+  text-transform: uppercase;
+  color: $dark-green;
+}
+
+.post-newsletter-signup-container .signup-text {
+  width: 280px;
+  text-align: center;
+}
+
+
+.post-newsletter-signup-container {
+  position: relative;
+  z-index: 10;
+  margin-left: 0;
+  margin-right: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-newsletter-signup-container .mc4wp-form-fields {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-newsletter-signup-container .mc4wp-form-fields p label {
+  display: none;
+}
+
+.post-newsletter-signup-container .mc4wp-form-fields p input {
+  height: 70px;
+}
+
+.post-newsletter-signup-container .mc4wp-form-fields p input[type=email] {
+  border: 1px solid #333;
+}
+
+.post-newsletter-signup-container .mc4wp-response {
+  padding: 0px;
+}
+
+@media only screen and (min-width: 480px) {
+  .post-newsletter-signup-container .signup-text {
+    width: 400px;
+  }
+}
