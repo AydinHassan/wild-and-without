@@ -2,6 +2,13 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WrapperPlugin = require('wrapper-webpack-plugin');
 const WebpackAssetsManifest = require('webpack-assets-manifest');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+const isDev = process.env.NODE_ENV === "development";
+
+function noop() {
+    return () => {};
+}
 
 module.exports = {
     entry: "./public/wp-content/themes/wild-and-without/index.js",
@@ -54,6 +61,7 @@ module.exports = {
         ]
     },
     plugins: [
+        isDev ? noop() : new CleanWebpackPlugin(['./public/wp-content/themes/wild-and-without/dist']),
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash].css",
             chunkFilename: "[id].css"
