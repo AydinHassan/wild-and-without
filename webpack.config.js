@@ -1,13 +1,13 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WrapperPlugin = require('wrapper-webpack-plugin');
-const webpack = require('webpack');
+const WebpackAssetsManifest = require('webpack-assets-manifest');
 
 module.exports = {
     entry: "./public/wp-content/themes/wild-and-without/index.js",
     output: {
         path: path.resolve('./public/wp-content/themes/wild-and-without', 'dist'),
-        filename: "bundle.js"
+        filename: 'bundle.[contenthash].js',
     },
     module: {
         rules: [
@@ -55,15 +55,14 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
-            filename: "[name].css",
+            filename: "[name].[contenthash].css",
             chunkFilename: "[id].css"
         }),
         new WrapperPlugin({
             test: /\.js$/,
             header: 'var sb_instagram_js_options = {"sb_instagram_at":"","font_method":"svg"};'
         }),
+        new WebpackAssetsManifest()
     ],
     externals: {
         jquery: 'jQuery'

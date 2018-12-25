@@ -23,10 +23,10 @@ add_action(
 
             //built css
             wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700%7COpen+Sans%3A300%2C400%2C700&subset=latin&ver=4.9.8');
-            wp_enqueue_style('wild-and-without-style', get_stylesheet_directory_uri() . '/dist/main.css');
+            wp_enqueue_style('wild-and-without-style', get_stylesheet_directory_uri() . '/dist/' . assetFileName('main.css'));
 
             //js
-            wp_enqueue_script('wild-and-without-js', get_stylesheet_directory_uri() . '/dist/bundle.js', [], false, true);
+            wp_enqueue_script('wild-and-without-js', get_stylesheet_directory_uri() . '/dist/' . assetFileName('main.js'), [], false, true);
         },
         PHP_INT_MAX
 );
@@ -160,4 +160,18 @@ function calculate_images(int $totalImages, int $wpm) : int {
         }
     }
     return $additionalTime;
+}
+
+function assetFileName(string $assetName) : string {
+    static $manifest = null;
+
+    if ($manifest === null) {
+        $manifest = json_decode(file_get_contents(__DIR__ . '/dist/manifest.json'), true);
+    }
+
+    if (!isset($manifest[$assetName])) {
+        throw new \InvalidArgumentException("Asset '$assetName' not found in manifest file");
+    }
+
+    return $manifest[$assetName];
 }
