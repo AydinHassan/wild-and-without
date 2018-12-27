@@ -11,6 +11,7 @@ function noop() {
 
 module.exports = {
     entry: "./public/wp-content/themes/wild-and-without/index.js",
+    mode: process.env.NODE_ENV,
     output: {
         path: path.resolve('./public/wp-content/themes/wild-and-without', 'dist'),
         filename: 'bundle.[contenthash].js',
