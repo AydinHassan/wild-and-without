@@ -61,7 +61,7 @@ module.exports = {
         ]
     },
     plugins: [
-        isDev ? noop() : new CleanWebpackPlugin(['./public/wp-content/themes/wild-and-without/dist']),
+        new CleanWebpackPlugin(['./public/wp-content/themes/wild-and-without/dist']),
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash].css",
             chunkFilename: "[id].css"

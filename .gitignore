@@ -13,6 +13,7 @@ public/wp-content/*
 public/wp-content/mu-plugins/*
 !public/wp-content/plugins/
 public/wp-content/plugins/*
+!public/wp-content/plugins/simple-instagram
 !public/wp-content/themes
 public/wp-content/themes/*
 !public/wp-content/themes/wild-and-without/
