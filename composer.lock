@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e7190f7a8332acc0ed2bb3efcd56dea",
+    "content-hash": "35aac65087c24dd99280851528813c59",
     "packages": [
         {
             "name": "composer/installers",
@@ -443,15 +443,15 @@
         },
         {
             "name": "wpackagist-plugin/disable-embeds",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/disable-embeds/",
-                "reference": "trunk"
+                "reference": "tags/1.4.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/disable-embeds.zip?timestamp=1522053177",
+                "url": "https://downloads.wordpress.org/plugin/disable-embeds.1.4.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -540,26 +540,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/google-analytics-for-wordpress/"
-        },
-        {
-            "name": "wpackagist-plugin/instagram-feed",
-            "version": "1.10.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/instagram-feed/",
-                "reference": "tags/1.10.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/instagram-feed.1.10.2.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/instagram-feed/"
         },
         {
             "name": "wpackagist-plugin/kraken-image-optimizer",
