@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const WrapperPlugin = require('wrapper-webpack-plugin');
 const WebpackAssetsManifest = require('webpack-assets-manifest');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -65,10 +64,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash].css",
             chunkFilename: "[id].css"
-        }),
-        new WrapperPlugin({
-            test: /\.js$/,
-            header: 'var sb_instagram_js_options = {"sb_instagram_at":"","font_method":"svg"};'
         }),
         new WebpackAssetsManifest()
     ],
