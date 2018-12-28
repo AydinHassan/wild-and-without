@@ -21,6 +21,13 @@
 }
 
 @media only screen and (max-width: 768px) {
+
+	#header_mobile_wrap .menu-primary-menu-container-wrap, body.header_type9 #header_mobile_wrap header > .container > .menu-primary-menu-container-wrap {
+		position: static;
+		display: none;
+		margin: 0 -15px;
+		background-color: #333;
+	}
 	
 	header{margin:30px 0 0 !important; min-height:50px; padding-bottom:0;}
 	header .header_wrap{display:none;}
