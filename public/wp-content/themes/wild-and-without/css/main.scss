@@ -1232,3 +1232,32 @@ ol, ul {
         display: flex;
     }
 }
+
+//Mobile Nav
+#header_mobile_wrap .menu-primary-menu-container-wrap {
+    -webkit-transition: height .25s ease;
+    -o-transition: height .25s ease;
+    transition: height .25s ease;
+    overflow: hidden;
+}
+
+#header_mobile_wrap .menu-primary-menu-container-wrap:not(.active) {
+    display: none;
+}
+
+#header_mobile_wrap .nav-menu .sub-menu {
+  -webkit-transition: height .25s ease;
+  -o-transition: height .25s ease;
+  transition: height .25s ease;
+  overflow: hidden;
+}
+
+#header_mobile_wrap .nav-menu .sub-menu:not(.active) {
+  display: none;
+}
+
+.menu-primary-menu-container-wrap .sub-menu li.current_page_item a, .menu-primary-menu-container-wrap .sub-menu li.nav-active a {
+  background-color: #2b2b2b;
+  padding-left: 30px;
+  color: $dark-green;
+}
