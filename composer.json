@@ -30,6 +30,7 @@
     "wpackagist-plugin/enable-media-replace": "^3.2",
     "wpackagist-plugin/widget-context": "^1.1",
     "wpackagist-plugin/rocket-lazy-load": "^1.4",
+    "wpackagist-plugin/transients-manager": "^1.7",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^2.4"
   },

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35aac65087c24dd99280851528813c59",
+    "content-hash": "421e222817622935448261912824463b",
     "packages": [
         {
             "name": "composer/installers",
@@ -620,6 +620,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/rocket-lazy-load/"
+        },
+        {
+            "name": "wpackagist-plugin/transients-manager",
+            "version": "1.7.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/transients-manager/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/transients-manager.zip?timestamp=1532486424",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/transients-manager/"
         },
         {
             "name": "wpackagist-plugin/updraftplus",
