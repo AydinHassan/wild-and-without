@@ -16,7 +16,6 @@ add_action(
 
             //dequeue plugin and theme JS
             wp_dequeue_script('bootstrap');
-            wp_dequeue_script('sb_instagram_scripts');
             wp_dequeue_script('voyager-jscrollpane');
             wp_dequeue_script('contact-form-7');
             wp_dequeue_script('voyager-theme');
@@ -35,6 +34,14 @@ add_action(
         },
         PHP_INT_MAX
 );
+
+add_filter('mc4wp_load_form_scripts', function () {
+    wp_dequeue_script('mc4wp-forms-api');
+});
+
+add_action('wp_footer', function () {
+    wp_deregister_script('mc4wp-forms-api');
+}, PHP_INT_MAX);
 
 add_action('wp_default_scripts', function ($scripts) {
     if (is_admin()) {
