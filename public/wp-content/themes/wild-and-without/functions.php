@@ -21,6 +21,11 @@ add_action(
             wp_dequeue_script('contact-form-7');
             wp_dequeue_script('voyager-theme');
 
+            //deregister jquery
+            if (!is_admin())  {
+                wp_deregister_script('jquery');
+            }
+
             //built css
             wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700%7COpen+Sans%3A300%2C400%2C700&subset=latin&ver=4.9.8');
             wp_enqueue_style('wild-and-without-style', get_stylesheet_directory_uri() . '/dist/' . assetFileName('main.css'));
@@ -95,6 +100,7 @@ $subscribe = function () {
 
     if (!$form->has_errors()) {
         wp_send_json_success(['message' => $form->messages]);
+        return;
     }
 
     $errors = array_map(function (string $errorCode) use ($form) {

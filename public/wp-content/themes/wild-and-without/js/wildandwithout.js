@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", e => {
     fixTags(document.querySelectorAll('.tagcloud a'));
     fixTags(document.querySelectorAll('.single_post_meta_tags a'));
 
-    //newsletter
+    //newsletter modal
     const popupButton = document.querySelectorAll('.subscribe_popup_btn');
     if (popupButton.length > 0) {
         popupButton[0].addEventListener("click", e => {
@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", e => {
             document.querySelectorAll('.header_search input.search-field')[0].focus();
         });
     }
-
 
     document.addEventListener("click", e => {
         if (e.target.closest('.header_search .fa')) {
@@ -252,6 +251,86 @@ document.addEventListener("DOMContentLoaded", e => {
         };
 
         req.send();
+    }
+
+    const serialize = function(obj) {
+        const str = [];
+        for (let p in obj)
+            if (obj.hasOwnProperty(p)) {
+                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+            }
+        return str.join("&");
+    }
+
+    const submitNewsletter = form => {
+        const responses = form.querySelectorAll(".mc4wp-response");
+        for (let response of responses) {
+            response.parentNode.removeChild(response);
+        }
+
+        const inputs = form.elements;
+        const data   = {};
+
+        for (let i = 0; i < inputs.length; i++) {
+            data[inputs[i].name] = inputs[i].value;
+        }
+
+        data['action'] = 'wild_without_subscribe';
+
+        const submitButton = form.querySelector('input[type=submit]');
+        submitButton.value = 'Submitting...';
+        submitButton.setAttribute("disabled", "disabled");
+
+        const req = new XMLHttpRequest();
+        req.open("POST", cstheme_ajaxurl, true);
+        req.setRequestHeader('Accept', 'application/json; charset=utf-8');
+        req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        req.onload = function (response) {
+            if (req.status >= 200 && req.status < 400) {
+                const response = JSON.parse(req.responseText);
+
+                if (response.success) {
+                    const responseHtml = '<div class="mc4wp-response"><p class="subscribe-success">Thank you for subscribing. We have sent you a confirmation email.</p></div>';
+                    form.innerHTML = responseHtml;
+                    return;
+                }
+
+                form.classList.remove('mc4wp-form-error');
+                form.classList.add('mc4wp-form-success');
+
+                const errorHtml = Object.keys(response.data.errors).map(function(key, index) {
+                    return '<div class="mc4wp-alert mc4wp-' + key + '"><p class="subscribe-error">' + response.data.errors[key] + '</p></div>';
+                }).join('');
+                const div = document.createElement('div');
+                div.innerHTML = '<div class="mc4wp-response">' + errorHtml + '</div>';
+                form.appendChild(div);
+                submitButton.value = 'Sign up';
+                submitButton.removeAttribute("disabled");
+
+                const responseHtml = '<div class="mc4wp-response"><p class="subscribe-success">Thank you for subscribing. We have sent you a confirmation email.</p></div>';
+                form.innerHTML = responseHtml;
+            } else {
+                console.log(response);
+                submitButton.value = 'Sign up';
+                submitButton.removeAttribute("disabled");
+            }
+        };
+
+        req.send(serialize(data));
+    }
+
+    //newsletter subscribe
+    document.querySelector('#mc4wp-form-1').addEventListener('submit', e => {
+        e.preventDefault();
+        submitNewsletter(document.querySelector('#mc4wp-form-1'));
+    });
+
+    //2 because second form on page after default side bar newsletter
+    if (document.querySelector('#mc4wp-form-2')) {
+        document.querySelector('#mc4wp-form-2').addEventListener('submit', e => {
+            e.preventDefault();
+            submitNewsletter(document.querySelector('#mc4wp-form-2'));
+        })
     }
 });
 
