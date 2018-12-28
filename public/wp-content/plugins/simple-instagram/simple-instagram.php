@@ -120,10 +120,11 @@ class InstagramWidget {
         $html = '<div class="simple-instagram-carousel"><div class="img-container">';
         foreach ($images as $image) {
             $html .= sprintf(
-                '<div class="simple-instagram-image"><a target="_blank" href="%s"><img src="%s" alt="%s" /></a></div>',
+                '<div class="simple-instagram-image"><a style="background-image: url(%s)" target="_blank" href="%s"><img src="%s" alt="%s" /></a></div>',
+                $image['img'],
                 $image['link'],
                 $image['img'],
-                $image['user']
+                $image['user'],
             );
         }
 
