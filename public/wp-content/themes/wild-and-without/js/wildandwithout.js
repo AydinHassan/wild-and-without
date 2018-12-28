@@ -289,6 +289,8 @@ document.addEventListener("DOMContentLoaded", e => {
             if (req.status >= 200 && req.status < 400) {
                 const response = JSON.parse(req.responseText);
 
+                console.log(response);
+                //return;
                 if (response.success) {
                     const responseHtml = '<div class="mc4wp-response"><p class="subscribe-success">Thank you for subscribing. We have sent you a confirmation email.</p></div>';
                     form.innerHTML = responseHtml;
@@ -306,9 +308,6 @@ document.addEventListener("DOMContentLoaded", e => {
                 form.appendChild(div);
                 submitButton.value = 'Sign up';
                 submitButton.removeAttribute("disabled");
-
-                const responseHtml = '<div class="mc4wp-response"><p class="subscribe-success">Thank you for subscribing. We have sent you a confirmation email.</p></div>';
-                form.innerHTML = responseHtml;
             } else {
                 console.log(response);
                 submitButton.value = 'Sign up';
