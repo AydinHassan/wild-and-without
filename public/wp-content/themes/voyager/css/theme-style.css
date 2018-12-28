@@ -2581,55 +2581,6 @@ body.error404 .instagram_wrap{
 }
 
 
-/**
- * Footer
- */
-
-
-#prefooter_area{
-	margin-top:56px;
-}
-
-#prefooter_area aside.widget{
-	padding-bottom:0;
-	border-bottom:0;
-}
-
-footer .container{
-	padding:50px 0;
-}
-
-footer .copyright{
-	padding:5px 0;
-	line-height:20px;
-	font-size:12px;
-}
-
-footer .social_links_wrap{text-align:center;}
-footer .social_link{margin:0 9px;}
-
-footer .scroll_top_wrap{text-align:right;}
-footer .btn-scroll-top{
-	display:inline-block;
-	text-transform:uppercase;
-	font-weight:700;
-	line-height:30px;
-	font-size:14px;
-	letter-spacing:2px;
-}
-footer .btn-scroll-top i{
-	vertical-align: top;
-	margin-left:20px;
-	font-size: 10px;
-    line-height: 26px;
-	transition: transform 0.2s ease-in-out;
-	-webkit-transition: transform 0.2s ease-in-out;
-}
-footer .btn-scroll-top:hover i{
-	transform:rotateX(180deg);
-	-webkit-transform:rotateX(180deg);
-}
-
 
 /**
  * Custom class styles
