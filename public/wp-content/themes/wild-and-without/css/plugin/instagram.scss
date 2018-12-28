@@ -161,8 +161,12 @@
     font-weight: 700;
     line-height: 50px;
     font-size: 15px;
-    font-family: Oswald,sans-serif;
+    font-family: Oswald, sans-serif;
     letter-spacing: 2px;
+  }
+
+  .follow-me-instagram-btn:hover {
+    color: $dark-green;
   }
 }
 
