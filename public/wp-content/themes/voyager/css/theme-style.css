@@ -941,10 +941,6 @@ aside .widget-title span:after{right:-3px;}
 #blog_list.left_sidebar .col-md-9.pull-right > .row{padding-left:30px;}
 #blog_list.right_sidebar .col-md-9.pull-left > .row{padding-right:30px;}
 
-#blog_list{
-	margin-bottom:56px;
-}
- 
 
 /**
  *	Blog Posts Page Grid Background
