@@ -13,6 +13,43 @@ const stickyHeader = e => {
     }
 }
 
+const isInViewport = elem => {
+    const bounding = elem.getBoundingClientRect();
+    return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
+
+const downloadInstagramPosts = container => {
+    let type;
+    if (container.classList.contains('instagram-grid')) {
+        type = 'grid';
+    } else if (container.classList.contains('instagram-carousel')) {
+        type = 'carousel';
+    }
+
+    const req = new XMLHttpRequest();
+    req.open("GET", cstheme_ajaxurl + '?action=instagram_posts' + '&type=' + type , true);
+    req.onload = function() {
+        if (req.status >= 200 && req.status < 400) {
+            const response = JSON.parse(req.responseText);
+
+            if (response.success === true) {
+                container.innerHTML = response['data']['html'];
+            } else {
+                container.innerHTML = response['data']['message'];
+            }
+        } else {
+            container.innerHTML = '<p>There was a problem fetching instagram posts.</p>';
+        }
+    };
+
+    req.send();
+}
+
 window.addEventListener("resize", stickyHeader);
 window.addEventListener('scroll', stickyHeader);
 
@@ -227,30 +264,18 @@ document.addEventListener("DOMContentLoaded", e => {
     const instagramContainers = document.querySelectorAll('.instagram-container');
     for(let container of instagramContainers) {
 
-        let type;
-        if (container.classList.contains('instagram-grid')) {
-            type = 'grid';
-        } else if (container.classList.contains('instagram-carousel')) {
-            type = 'carousel';
-        }
-
-        const req = new XMLHttpRequest();
-        req.open("GET", cstheme_ajaxurl + '?action=instagram_posts' + '&type=' + type , true);
-        req.onload = function() {
-            if (req.status >= 200 && req.status < 400) {
-                const response = JSON.parse(req.responseText);
-
-                if (response.success === true) {
-                    container.innerHTML = response['data']['html'];
-                } else {
-                    container.innerHTML = response['data']['message'];
+        if (isInViewport(container)) {
+            downloadInstagramPosts(container);
+        } else {
+            const handler = e => {
+                if (isInViewport(container)) {
+                    downloadInstagramPosts(container);
+                    window.removeEventListener('scroll', handler);
                 }
-            } else {
-                container.innerHTML = '<p>There was a problem fetching instagram posts.</p>';
-            }
-        };
+            };
 
-        req.send();
+            window.addEventListener('scroll', handler);
+        }
     }
 
     const serialize = function(obj) {
@@ -289,8 +314,6 @@ document.addEventListener("DOMContentLoaded", e => {
             if (req.status >= 200 && req.status < 400) {
                 const response = JSON.parse(req.responseText);
 
-                console.log(response);
-                //return;
                 if (response.success) {
                     const responseHtml = '<div class="mc4wp-response"><p class="subscribe-success">Thank you for subscribing. We have sent you a confirmation email.</p></div>';
                     form.innerHTML = responseHtml;
