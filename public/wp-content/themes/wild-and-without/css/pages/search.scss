@@ -77,6 +77,10 @@
     padding: 10px;
   }
 
+  #blog_list.search-result-list .post-meta > span {
+    padding-right: 0px;
+  }
+
   #blog_list.search-result-list .no-image .post-meta-date {
     padding: 0px!important;
   }
