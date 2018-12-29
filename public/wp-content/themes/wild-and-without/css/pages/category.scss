@@ -1,3 +1,58 @@
+body.category .category-feature {
+  position: relative;
+  background-color: #212121;
+  margin-bottom: 56px;
+}
+
+body.category .featured-image {
+  opacity: 0.6;
+  width: 100%;
+}
+
+body.category .category-info {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+body.category .category-info .page_title h1 {
+  font-family: "Dolce Caffe Regular";
+  color: #fff;
+  margin-bottom: 0;
+}
+
+body.category .category-info .description {
+  display: none;
+  font-family: 'Marat Sans Regular', Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  body.category .category-info .page_title h1 {
+    margin-bottom: 47px;
+  }
+
+  body.category .category-info .description {
+    display: flex;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  body.category .category-info .description {
+    font-size: 26px;
+    width: 60%;
+  }
+}
+
+
 #blog_list.blog_list_style_grid-bg .post{
 }
 
