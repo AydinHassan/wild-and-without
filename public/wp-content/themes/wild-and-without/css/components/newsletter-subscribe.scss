@@ -124,6 +124,23 @@ body.subscribe_popup_show .subscribe_popup_wrap{
   line-height: 1.4;
 }
 
+.subscribe-error {
+  width: 100% !important;
+  font-size: 80%;
+  color: #dc3545;
+}
+
+.subscribe-success {
+  width: 100% !important;
+  font-weight: bold;
+  color: $dark-green;
+}
+
+.no-spam {
+  font-size: 80%;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 767px) {
   .subscribe_popup_wrap {
     left:25px;
@@ -175,4 +192,8 @@ body.subscribe_popup_show .subscribe_popup_wrap{
   .mc4wp-response {
     padding: 80px;
   }
+}
+
+.subscribe_popup_bg {
+  background-image: url(https://www.wildandwithout.com//wp-content/uploads/2017/08/Ötschergräben.jpg );
 }

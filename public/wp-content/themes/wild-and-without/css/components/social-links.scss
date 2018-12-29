@@ -1,0 +1,96 @@
+header .social_links_wrap {
+  margin: 42px 0 0;
+  transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+}
+
+body.header-fixed header .social_links_wrap {
+  margin: 23px 0;
+}
+
+.form_focus header .social_links_wrap {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.social_link {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  margin: 0 18px 0 0;
+  text-align: center;
+  line-height: 28px;
+  font-size: 20px;
+  color: #333;
+}
+
+.social_link i {
+  transition: transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+}
+
+.social_link:hover i {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+a.facebook:hover {
+  color: #3b5998;
+}
+
+a.flickr:hover {
+  color: #fd0070;
+}
+
+a.google-plus:hover {
+  color: #f63e28;
+}
+
+a.twitter:hover {
+  color: #58ccff;
+}
+
+a.instagram:hover {
+  color: #685044;
+}
+
+a.pinterest:hover {
+  color: #d73532;
+}
+
+a.skype:hover {
+  color: #04b3ec;
+}
+
+a.vimeo-square:hover {
+  color: #1ab7ea;
+}
+
+a.youtube:hover {
+  color: #e02921;
+}
+
+a.dribbble:hover {
+  color: #e4508a;
+}
+
+a.linkedin:hover {
+  color: #0085ae;
+}
+
+a.rss:hover {
+  color: #ff9900;
+}
+
+a.reddit:hover {
+  color: #f93f40;
+}
+
+a.digg:hover {
+  color: #1b5791;
+}
+
+a.delicious:hover {
+  color: #3273cf;
+}

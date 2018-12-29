@@ -1,0 +1,156 @@
+aside.widget {
+  margin-bottom: 35px;
+}
+
+aside.widget:last-child {
+  border-bottom: 0;
+}
+
+aside h4.widget-title {
+  position: relative;
+  margin: 0 0 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 27px;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+aside .widget-title:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 13px;
+  height: 1px;
+  width: 100%;
+  background-color: #dedede;
+}
+
+aside .widget-title span {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+aside .widget-title span:before,
+aside .widget-title span:after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  width: 3px;
+  height: 3px;
+  background-color: $dark-green;
+}
+
+aside .widget-title span:before {
+  left: -3px;
+}
+
+aside .widget-title span:after {
+  right: -3px;
+}
+
+
+.widget-instagram {
+  display: none;
+}
+
+@media only screen and (min-width: 991px) {
+  .widget-instagram {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 580px) {
+  #blog_sidebar {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #blog_sidebar aside {
+    flex: 0 50%;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  #blog_sidebar {
+    padding-top: 0px;
+  }
+
+  #blog_sidebar aside {
+    flex: auto;
+  }
+}
+
+.widget_meta li a:hover,
+.widget_archive li a:hover,
+.widget_categories li a:hover {
+  color: $dark-green;
+}
+
+/* Widget Categories, Archive, Meta */
+.widget_meta ul,
+.widget_archive ul,
+.widget_categories ul {
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.widget_meta li,
+.widget_archive li,
+.widget_categories li {
+  margin-bottom: 11px;
+}
+
+.widget_meta li:last-child,
+.widget_archive li:last-child,
+.widget_categories li:last-child {
+  margin-bottom: 0;
+}
+
+.widget_meta li,
+.widget_archive li,
+.widget_categories li {
+  line-height: 0;
+  font-size: 0;
+}
+
+.widget_meta li a,
+.widget_archive li a,
+.widget_categories li a {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 29px;
+  font-size: 13px;
+  color: #666;
+}
+
+.widget_categories li a {
+  padding: 0 5px;
+}
+
+.widget_categories li .val {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 29px;
+  font-size: 11px;
+  color: #ccc;
+}
+
+.widget_meta li a:hover,
+.widget_archive li a:hover,
+.widget_categories li a:hover {
+  text-decoration: none !important;
+}

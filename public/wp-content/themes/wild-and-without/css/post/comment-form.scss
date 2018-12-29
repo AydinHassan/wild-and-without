@@ -1,0 +1,91 @@
+#respond.comment-respond {
+  position: relative;
+  padding: 56px 23% 32px;
+  text-align: center;
+}
+
+#respond.comment-respond:before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  left: -1000px;
+  right: -1000px;
+  top: 0;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+h3#reply-title {
+  position: relative;
+  z-index: 3;
+  margin: 0 0 45px;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 42px;
+  font-size: 38px;
+}
+
+p.comment-notes {
+  display: none !important;
+}
+
+#commentform {
+  position: relative;
+  z-index: 3;
+}
+
+#respond-inputs {
+  margin: 0 -5px;
+}
+
+#respond-inputs .comment-form-author,
+#respond-inputs .comment-form-email,
+#respond-inputs .comment-form-url {
+  float: left;
+  width: 33.3334%;
+  padding: 0 5px 10px;
+}
+
+#respond-inputs input,
+#commentform textarea {
+  width: 100%;
+  height: 50px;
+  padding: 10px 13px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #333;
+  border: 0;
+  border: 1px solid #e4e4e4;
+  background: #fff;
+}
+
+#respond-inputs input:focus {
+  border-color: $dark-green;
+}
+
+#commentform textarea {
+  height: 150px;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+#commentform textarea:focus {
+  border-color: $dark-green;
+}
+
+#commentform .form-submit {
+  text-align: center;
+}
+
+#commentform .form-submit input[type="submit"] {
+  margin: 0;
+  padding: 0 26px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 15px;
+  border: 0;
+  box-shadow: 0;
+}

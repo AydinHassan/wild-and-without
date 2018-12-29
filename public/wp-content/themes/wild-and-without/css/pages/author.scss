@@ -2,6 +2,30 @@
  *	Author Archive pages
  */
 
+#author_posts_page .post-content-wrapper {
+  overflow: hidden;
+  position: relative;
+  padding: 24px 30px 26px;
+  min-height: 630px;
+}
+
+#author_posts_page .post-content {
+  line-height: 28px;
+  font-size: 15px;
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-20px, 0, 0);
+  transform: translate3d(-20px, 0, 0);
+}
+
+#author_posts_page .post-content-wrapper:hover .post-content {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
 #author_posts_page .row{
   margin-bottom:30px;
 }
@@ -47,6 +71,17 @@ h5.author_posts_name{
   letter-spacing:2px;
 }
 
+#author_posts_page .post-title {
+  margin-bottom: 41px;
+  text-transform: uppercase;
+  line-height: 50px;
+  font-size: 38px;
+}
+
+#author_posts_page .post-title a {
+  color: #fff;
+}
+
 #author_posts_page .post-title a:focus,
 #author_posts_page .post-title a:hover {
   color: #04af8d;
@@ -54,6 +89,16 @@ h5.author_posts_name{
 
 #author_posts_page article.post {
   width: 100%;
+}
+
+#author_posts_page .post-meta > span {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+#author_posts_page .post-meta i {
+  padding-right: 10px;
 }
 
 @media only screen and (min-width: 480px) {
@@ -70,11 +115,31 @@ h5.author_posts_name{
 }
 
 #author_posts_page .post_meta_category {
+  overflow: hidden;
+  position: absolute;
+  z-index: 15;
+  top: 24px;
+  left: 30px;
+  right: 115px;
+  width: 75%;
+  height: 64px;
+  opacity: 1;
+  line-height: 30px;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
+  font-family: 'Dolce Caffe Regular', sans-serif;
+  letter-spacing: 0.15em;
 }
 
 #author_posts_page .post_meta_category a {
   font-size: 18px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Dolce Caffe Regular', sans-serif;
+  letter-spacing: 0.15em;
 }
 
 #author_posts_page .post-content-link-wrapper {
@@ -94,8 +159,47 @@ h5.author_posts_name{
   border-color: $dark-green;
 }
 
-#author_posts_page .post_meta_category,
-#author_posts_page .post_meta_category a {
-  font-family: 'Dolce Caffe Regular', sans-serif;
-  letter-spacing: 0.15em;
+#author_posts_page .post-meta {
+  position: absolute;
+  z-index: 8;
+  bottom: 26px;
+  right: 30px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#author_posts_page .post-meta-date {
+  position: absolute;
+  z-index: 9;
+  top: -71px;
+  right: 0;
+  text-transform: uppercase;
+  line-height: 20px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#author_posts_page .post-descr-wrap {
+  position: absolute;
+  z-index: 11;
+  top: 102px;
+  right: 30px;
+  left: 30px;
+}
+
+#author_posts_page .read_more {
+  position: absolute;
+  z-index: 9;
+  left: 30px;
+  bottom: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 2px;
+}
+
+#author_posts_page .read_more:hover {
+  color: #fff;
 }

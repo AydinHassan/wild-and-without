@@ -78,3 +78,13 @@ body.error404 #page-content {
   transform:rotateY(180deg);
   -webkit-transform:rotateY(180deg);
 }
+
+@media only screen and (max-width: 480px) {
+  #error404_container h1 {
+    font-size: 200px;
+    line-height: 180px;
+  }
+  #error404_container .search_form_wrap {
+    width: 250px;
+  }
+}

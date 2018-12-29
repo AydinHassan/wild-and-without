@@ -55,3 +55,15 @@ footer .btn-scroll-top:hover i {
   transform:rotateX(180deg);
   -webkit-transform:rotateX(180deg);
 }
+
+@media only screen and (max-width: 768px) {
+  .copyright_wrap {
+    padding-bottom: 30px;
+  }
+  .copyright_wrap, footer .scroll_top_wrap {
+    text-align: center;
+  }
+  footer .scroll_top_wrap {
+    padding-top: 30px;
+  }
+}
