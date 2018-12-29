@@ -1,0 +1,19 @@
+#blog_list.blog_list_style_grid-bg .post{
+}
+
+#blog_list.blog_list_style_grid-bg.columns3 .post {
+  width: 100%;
+}
+
+@media only screen and (min-width: 480px) {
+  #blog_list.blog_list_style_grid-bg.columns3 .post {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  #blog_list.blog_list_style_grid-bg.columns3 .post {
+    width: 33.33%;
+  }
+}

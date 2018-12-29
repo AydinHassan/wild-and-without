@@ -945,14 +945,6 @@ aside .widget-title span:after{right:-3px;}
 /**
  *	Blog Posts Page Grid Background
  */
-
-#blog_list.blog_list_style_grid-bg .post{float:left;}
-#blog_list.blog_list_style_grid-bg.columns1 .post{width:100%;}
-#blog_list.blog_list_style_grid-bg.columns2 .post{width:50%;}
-#blog_list.blog_list_style_grid-bg.columns3 .post{width:33.33%;}
-#blog_list.blog_list_style_grid-bg.columns4 .post{width:25%;}
-#blog_list.blog_list_style_grid-bg.columns5 .post{width:20%;}
-
 body.boxed #blog_list.blog_list_style_grid-bg.columns3 .post,
 body.boxed #blog_list.blog_list_style_grid-bg.columns4 .post,
 body.boxed #blog_list.blog_list_style_grid-bg.columns5 .post{

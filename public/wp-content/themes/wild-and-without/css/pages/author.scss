@@ -47,20 +47,19 @@ h5.author_posts_name{
   letter-spacing:2px;
 }
 
-#author_posts_page article.post{
-  float:left;
-  width:33.33%;
+#author_posts_page article.post {
+  width: 100%;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 480px) {
   #author_posts_page article.post {
-    float: none;
-    width: 100%;
+    float: left;
+    width: 50%;
   }
 }
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (min-width: 1025px) {
   #author_posts_page article.post {
-    width: 50%;
+    width: 33.33%;
   }
 }
