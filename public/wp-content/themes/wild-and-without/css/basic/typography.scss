@@ -105,6 +105,7 @@ pre {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  font-size: 1em;
 }
 
 pre {
@@ -145,10 +146,12 @@ sub {
 
 sup {
   bottom: 1ex;
+  top: -.5em;
 }
 
 sub {
   top: .5ex;
+  bottom: -.25em;
 }
 
 small {

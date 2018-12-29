@@ -121,3 +121,7 @@ del{
 :-moz-placeholder{opacity:1 !important;}
 ::-moz-placeholder{ opacity:1 !important;}
 :-ms-input-placeholder{ opacity:1 !important;}
+
+svg:not(:root) {
+  overflow: hidden;
+}

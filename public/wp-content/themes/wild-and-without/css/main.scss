@@ -17,6 +17,7 @@
 @import "basic/captions";
 @import "basic/icons";
 @import "basic/utilities";
+@import "basic/grid";
 @import "post";
 @import "plugin/instagram";
 @import "widgets";
@@ -61,9 +62,14 @@ body {
   overflow: hidden;
 }
 
-.container {
-  padding-left: 0;
-  padding-right: 0;
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
 }
 
 a:hover,
