@@ -36,7 +36,7 @@ $post_excerpt = (cstheme_smarty_modifier_truncate(get_the_excerpt(), $post_excer
 				<?php } ?>
 						<div class="post-descr-wrap clearfix">
 							<div class="post-meta clearfix">
-								<span class="post_meta_category"><?= the_category_limit(', ', 2); ?></span>
+								<span class="post_meta_category"><?= the_category_limit(' ', 2); ?></span>
 								<span class="post-meta-date"><?php the_time('M j, Y') ?></span>
 								<span class="post-meta-comments"><i class="fa fa-comments"></i><?php echo get_comments_number(get_the_ID()); ?></span>
 							</div>

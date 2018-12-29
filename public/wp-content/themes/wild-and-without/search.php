@@ -25,7 +25,7 @@ get_header(); ?>
                                     <div class="post-descr-wrap">
                                         <div class="post-meta clearfix">
                                             <?php if ( has_category() ) { ?>
-                                                <span class="blog_meta_category"><?php the_category(', '); ?></span>
+                                                <span class="blog_meta_category"><?= the_category_limit(' ', 2); ?></span>
                                             <?php } ?>
                                             <span class="post-meta-date"><?php the_time('M j, Y') ?></span>
                                         </div>
