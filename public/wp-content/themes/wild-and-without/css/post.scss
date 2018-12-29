@@ -1,3 +1,18 @@
+.single_post_header .top_slider_blog_post_author {
+  display: inline-flex;
+  justify-content: center;
+  border-top: 1px solid #9f86b5;
+  padding-top: 15px;
+}
+
+.top_slider_blog_post_author_descr {
+  padding-left: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .single-post-content p {
   text-align: justify;
   hyphens: auto;

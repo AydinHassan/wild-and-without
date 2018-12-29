@@ -1,0 +1,17 @@
+.single_post_meta_tags a:hover,
+.tagcloud a:hover {
+  border-color: $dark-green;
+  color: $dark-green;
+}
+
+.single_post_meta_tags a:hover:before,
+.tagcloud a:hover:before {
+  border-color: $dark-green;
+}
+
+.single_post_meta_tags a:hover i:before,
+.tagcloud a:hover i:before,
+.single_post_meta_tags a:hover i:after,
+.tagcloud a:hover i:after {
+  background-color: $dark-green;
+}

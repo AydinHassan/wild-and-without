@@ -193,9 +193,7 @@
 	#error404_container h1{font-size:200px;line-height:180px;}
 	#error404_container .search_form_wrap{width:250px;}
 	
-	.search-result-list .post-content-wrapper a.featured_image{position:static;margin-bottom:20px;}
-	#blog_list.blog_list_style_default.search-result-list .has-post-thumbnail .post-content-wrapper{padding:0;}
-	
+
 	.subscribe_popup_content .mc4wp-form p{float:none !important;width:100% !important;display:block;margin:0 0 10px;}
 	
 	#blog_list.left_sidebar .col-md-9.pull-right .eva_pagination_wrap,

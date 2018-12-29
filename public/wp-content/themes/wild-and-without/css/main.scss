@@ -18,10 +18,12 @@
 @import "contact-us";
 @import "components/footer";
 @import "components/related-posts";
+@import "components/tags";
 @import "pages/author";
 @import "pages/category";
 @import "pages/404";
 @import "pages/archive";
+@import "pages/search";
 
 /** Webfonts **/
 @font-face {
@@ -132,14 +134,6 @@ blockquote {
 textarea,
 input {
     font-family: 'Marat Sans Regular', Arial, Helvetica, sans-serif;
-}
-
-.contentarea ul li:before, .single-post-content ul li:before {
-    background-color: $dark-green;
-}
-
-.contentarea ol>li:before, .single-post-content ol>li:before {
-    color: $dark-green;
 }
 
 input[type="text"]:focus,
@@ -288,32 +282,6 @@ input[type="reset"]:hover {
     background-color: $dark-green;
 }
 
-.cstheme_widget_last_tweets .twitter-text a {
-    color: $dark-green;
-}
-
-.recent_posts_list.carousel .recent_post_title a:hover {
-    color: $dark-green;
-}
-
-.single_post_meta_tags a:hover,
-.tagcloud a:hover {
-    border-color: $dark-green;
-    color: $dark-green;
-}
-
-.single_post_meta_tags a:hover:before,
-.tagcloud a:hover:before {
-    border-color: $dark-green;
-}
-
-.single_post_meta_tags a:hover i:before,
-.tagcloud a:hover i:before,
-.single_post_meta_tags a:hover i:after,
-.tagcloud a:hover i:after {
-    background-color: $dark-green;
-}
-
 .post_format_content .post-link:before,
 .post_format_content .post-quote:before {
     background-color: $dark-green;
@@ -327,45 +295,7 @@ h6.comment_author .comment-edit-link {
     font-family: 'Oswald', sans-serif;
 }
 
-#blog_list.blog_list_style_chess .format-quote .post-meta-author a:hover {
-    color: $dark-green;
-}
-
-#blog_list.blog_list_style_chess .format-quote h2.post-title a:hover {
-    color: $dark-green;
-}
-
-#blog_list.blog_list_style_chess .format-link .post-content-wrapper {
-    background-color: $dark-green;
-}
-
 #categories_list .item a:hover span {
-    color: $dark-green;
-}
-
-#blog_list.blog_list_style_default .format-quote .post-meta-author a:hover {
-    color: $dark-green;
-}
-
-#blog_list.blog_list_style_default .format-quote h2.post-title a:hover {
-    color: $dark-green;
-}
-
-#blog_list.blog_list_style_default .format-link .post-content-wrapper {
-    background-color: $dark-green;
-}
-
-.contentarea form.wpcf7-form label {
-    font-family: 'Oswald', sans-serif;
-}
-
-.contentarea form.wpcf7-form input:focus,
-.contentarea form.wpcf7-form textarea:focus {
-    border-color: $dark-green;
-}
-
-#blog_list.blog_list_style_default.search-result-list h2.post-title:hover a,
-#blog_list.blog_list_style_default.search-result-list .post_content_readmore:hover {
     color: $dark-green;
 }
 
