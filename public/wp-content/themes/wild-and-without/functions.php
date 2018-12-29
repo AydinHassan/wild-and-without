@@ -120,6 +120,19 @@ $subscribe = function () {
 add_action('wp_ajax_nopriv_wild_without_subscribe', $subscribe);
 add_action('wp_ajax_wild_without_subscribe', $subscribe);
 
+//limit number of tags in tag cloud
+add_filter('widget_tag_cloud_args', function ($args) {
+
+    if (isset($args['taxonomy']) && $args['taxonomy'] == 'post_tag'){
+        $args['number'] = 10;
+    }
+
+    return $args;
+});
+
+//Limit number of tags inside widget
+
+
 function the_category_limit(string $separator = ', ', int $limit = null) : string
 {
     global $wp_rewrite;
