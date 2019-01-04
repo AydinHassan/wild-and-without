@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f4faf0be1d35cad56309d6907016f2e",
+    "content-hash": "8fdfcfb39eb8e06ccdbdf03c52f75a3a",
     "packages": [
         {
             "name": "composer/installers",
@@ -623,23 +623,14 @@
         },
         {
             "name": "wpackagist-plugin/schema",
-            "version": "1.7.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/schema/",
-                "reference": "trunk"
-            },
+            "version": "1.7.3",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/schema.zip?timestamp=1543103200",
+                "url": "https://github.com/AydinHassan/Schema/archive/patch-1.zip",
                 "reference": null,
                 "shasum": null
             },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/schema/"
+            "type": "wordpress-plugin"
         },
         {
             "name": "wpackagist-plugin/transients-manager",
