@@ -57,6 +57,6 @@ if ( is_single() ){
 	</div><!-- //Page Wrap -->
 
 <?php wp_footer(); ?>
-<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+<script async defer data-pin-hover="true" data-pin-tall="true" data-pin-round="true" src="//assets.pinterest.com/js/pinit.js"></script>
 </body>
 </html>
