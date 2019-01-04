@@ -577,7 +577,7 @@ add_filter( 'esc_html', 'voyager_rename_post_formats' );
 function voyager_live_rename_formats() { 
     global $current_screen;
 
-    if ( $current_screen->id == 'edit-post' ) { ?>
+    if ($current_screen && $current_screen->id == 'edit-post' ) { ?>
         <script type="text/javascript">
         jQuery('document').ready(function() {
 
