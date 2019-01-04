@@ -26,7 +26,6 @@
     "wpackagist-plugin/akismet": "^4",
     "wpackagist-plugin/w3-total-cache": "^0.9.5",
     "wpackagist-plugin/better-wp-security": "^7.2",
-    "wpackagist-plugin/google-analytics-for-wordpress": "^7.3",
     "wpackagist-plugin/wordpress-seo": "^9.2",
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "^5.1",
     "wpackagist-plugin/kraken-image-optimizer": "^2.6",
