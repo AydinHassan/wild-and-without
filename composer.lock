@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d62bf65d9ec5542938f331270803513a",
+    "content-hash": "f8053a45ecfa398b069671809b8c61e6",
     "packages": [
         {
             "name": "composer/installers",
@@ -580,6 +580,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/media-file-renamer/"
+        },
+        {
+            "name": "wpackagist-plugin/pre-publish-post-checklist",
+            "version": "3.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/pre-publish-post-checklist/",
+                "reference": "tags/3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/pre-publish-post-checklist.3.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/pre-publish-post-checklist/"
         },
         {
             "name": "wpackagist-plugin/rocket-lazy-load",
