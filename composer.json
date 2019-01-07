@@ -7,18 +7,6 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "wpackagist-plugin/schema",
-        "version": "1.7.3",
-        "type": "wordpress-plugin",
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/AydinHassan/Schema/archive/patch-1.zip"
-        }
-      }
     }
   ],
   "require": {
@@ -42,7 +30,6 @@
     "wpackagist-plugin/widget-context": "^1.1",
     "wpackagist-plugin/rocket-lazy-load": "^1.4",
     "wpackagist-plugin/transients-manager": "^1.7",
-    "wpackagist-plugin/schema": "1.7.3",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^2.4"
   },
