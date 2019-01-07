@@ -112,9 +112,9 @@ function cstheme_logo() {
     } else {
         echo '<a class="logo" href="' . esc_url( home_url( '/' ) ) . '">';
         if (cstheme_option("logo_retina")) {
-            echo '<img class="logo-img" src="'. cstheme_option( 'theme_logo_retina' ) .'" style="width:'. cstheme_option('logo_width') .'px" alt="'. get_bloginfo( 'name' ) .'"/>';
+            echo '<img data-pin-nopin="true" class="logo-img" src="'. cstheme_option( 'theme_logo_retina' ) .'" style="width:'. cstheme_option('logo_width') .'px" alt="'. get_bloginfo( 'name' ) .'"/>';
         } else {
-            echo '<img class="logo-img" src="'. cstheme_option( 'theme_logo' ) .'" alt="'. get_bloginfo( 'name' ) .'"/>';
+            echo '<img data-pin-nopin="true" class="logo-img" src="'. cstheme_option( 'theme_logo' ) .'" alt="'. get_bloginfo( 'name' ) .'"/>';
         }
         echo '</a>';        
     }
