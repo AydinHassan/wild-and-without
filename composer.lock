@@ -422,15 +422,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.7.10",
+            "version": "5.7.12",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.7.10"
+                "reference": "tags/5.7.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.7.10.zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.7.12.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -462,15 +462,15 @@
         },
         {
             "name": "wpackagist-plugin/better-wp-security",
-            "version": "7.2.0",
+            "version": "7.3.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/better-wp-security/",
-                "reference": "tags/7.2.0"
+                "reference": "tags/7.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/better-wp-security.7.2.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/better-wp-security.7.3.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -662,15 +662,15 @@
         },
         {
             "name": "wpackagist-plugin/rocket-lazy-load",
-            "version": "2.0.3.2",
+            "version": "2.0.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/rocket-lazy-load/",
-                "reference": "tags/2.0.3.2"
+                "reference": "tags/2.0.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.0.3.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -702,15 +702,15 @@
         },
         {
             "name": "wpackagist-plugin/updraftplus",
-            "version": "1.16.5",
+            "version": "1.16.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/updraftplus/",
-                "reference": "tags/1.16.5"
+                "reference": "tags/1.16.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.16.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.16.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -782,15 +782,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "9.5",
+            "version": "9.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/9.5"
+                "reference": "tags/9.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.6.zip",
                 "reference": null,
                 "shasum": null
             },
