@@ -24,7 +24,7 @@ $wp_query_2->query($args);
             <?php $wp_query_2->the_post(); ?>
                 <?php if (has_post_thumbnail()) : ?>
                 <div class="swiper-slide home-slider-slide">
-                    <img class="home-slider-post-img" src="<?= get_field('slider_image') ?>">
+                    <img data-no-lazy="1" class="home-slider-post-img" src="<?= get_field('slider_image') ?>">
                     <div class="home-slider-post-info">
                         <div class="home-slider-post-author">
                             <div class="home-slider-post-author-image">
