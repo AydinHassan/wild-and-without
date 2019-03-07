@@ -114,7 +114,7 @@ class InstagramWidget {
             ];
         }, $this->posts['data']);
 
-        $images = array_slice($images, 0, 4);
+        $images = array_slice($images, 0, 8);
 
         $html = '<div class="simple-instagram-carousel"><div class="img-container">';
         foreach ($images as $image) {
