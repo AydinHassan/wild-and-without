@@ -522,15 +522,15 @@
         },
         {
             "name": "wpackagist-plugin/enable-media-replace",
-            "version": "3.2.8",
+            "version": "3.2.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/enable-media-replace/",
-                "reference": "tags/3.2.8"
+                "reference": "tags/3.2.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.2.8.zip",
+                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.2.9.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -542,7 +542,7 @@
         },
         {
             "name": "wpackagist-plugin/featured-images-for-rss-feeds",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/featured-images-for-rss-feeds/",
@@ -550,7 +550,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1546749127",
+                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1551221015",
                 "reference": null,
                 "shasum": null
             },
@@ -602,15 +602,15 @@
         },
         {
             "name": "wpackagist-plugin/mailchimp-for-wp",
-            "version": "4.3.3",
+            "version": "4.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/mailchimp-for-wp/",
-                "reference": "tags/4.3.3"
+                "reference": "tags/4.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.3.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -662,15 +662,15 @@
         },
         {
             "name": "wpackagist-plugin/rocket-lazy-load",
-            "version": "2.0.4",
+            "version": "2.1.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/rocket-lazy-load/",
-                "reference": "tags/2.0.4"
+                "reference": "tags/2.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.0.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.1.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -782,15 +782,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "9.6",
+            "version": "9.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/9.6"
+                "reference": "tags/9.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.6.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.7.zip",
                 "reference": null,
                 "shasum": null
             },
