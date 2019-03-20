@@ -462,15 +462,15 @@
         },
         {
             "name": "wpackagist-plugin/better-wp-security",
-            "version": "7.3.1",
+            "version": "7.3.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/better-wp-security/",
-                "reference": "tags/7.3.1"
+                "reference": "tags/7.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/better-wp-security.7.3.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/better-wp-security.7.3.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -782,15 +782,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "10.0",
+            "version": "10.0.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/10.0"
+                "reference": "tags/10.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.10.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.10.0.1.zip",
                 "reference": null,
                 "shasum": null
             },
