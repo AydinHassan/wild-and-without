@@ -458,15 +458,15 @@
         },
         {
             "name": "wpackagist-plugin/better-wp-security",
-            "version": "7.3.2",
+            "version": "7.3.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/better-wp-security/",
-                "reference": "tags/7.3.2"
+                "reference": "tags/7.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/better-wp-security.7.3.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/better-wp-security.7.3.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -674,15 +674,15 @@
         },
         {
             "name": "wpackagist-plugin/updraftplus",
-            "version": "1.16.9",
+            "version": "1.16.10",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/updraftplus/",
-                "reference": "tags/1.16.9"
+                "reference": "tags/1.16.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.16.9.zip"
+                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.16.10.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -764,15 +764,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/1.4.1"
+                "reference": "tags/1.4.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.4.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.4.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
