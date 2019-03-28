@@ -584,15 +584,15 @@
         },
         {
             "name": "wpackagist-plugin/mailchimp-for-wp",
-            "version": "4.4",
+            "version": "4.5.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/mailchimp-for-wp/",
-                "reference": "tags/4.4"
+                "reference": "tags/4.5.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.5.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -602,15 +602,15 @@
         },
         {
             "name": "wpackagist-plugin/media-file-renamer",
-            "version": "4.5.2",
+            "version": "4.5.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/media-file-renamer/",
-                "reference": "tags/4.5.2"
+                "reference": "tags/4.5.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.4.5.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.4.5.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -692,15 +692,15 @@
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
-            "version": "0.9.7.2",
+            "version": "0.9.7.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "tags/0.9.7.2"
+                "reference": "tags/0.9.7.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.7.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.7.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
