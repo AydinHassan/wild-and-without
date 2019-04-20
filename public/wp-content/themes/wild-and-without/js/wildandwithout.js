@@ -1,4 +1,5 @@
 import Swiper from "swiper";
+import Masonry from 'masonry-layout';
 
 const stickyHeader = e => {
     const headerHeight = parseInt(window.getComputedStyle(document.querySelector('header')).height, 10);

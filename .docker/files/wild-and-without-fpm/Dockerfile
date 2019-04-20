@@ -10,7 +10,7 @@ RUN apt-get -qq update && apt-get install -qqy libzip-dev git zlib1g-dev libfree
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Xdebug
-RUN pecl install xdebug-beta
+RUN pecl install xdebug
 
 ADD .docker/etc/php-xdebug.ini /usr/local/etc/php/conf.d/php-xdebug.ini
 RUN docker-php-ext-enable xdebug

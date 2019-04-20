@@ -1,19 +1,22 @@
-.shutter-stock-widget-landscape {
-  display: none;
-  justify-content: center;
-}
-
-.shutter-stock-widget-mobile {
-  display: flex;
-  justify-content: center;
-}
-
-@media only screen and (min-width: 480px) {
-  .shutter-stock-widget-mobile {
-    display: none;
+.image-profile-grid {
+  .grid-sizer,
+  .grid-item {
+    width: 33.333%;
+  }
+  /* 2 columns wide */
+  .grid-item--width2 {
+    width: 66.666%;
   }
 
-  .shutter-stock-widget-landscape {
-    display: flex;
+  @media screen and (min-width: 768px) {
+      /* 5 columns for larger screens */
+      .grid-sizer,
+      .grid-item {
+        width: 20%;
+      }
+
+      .grid-item--width2 {
+        width: 40%;
+      }
   }
 }
