@@ -131,8 +131,6 @@ add_filter('widget_tag_cloud_args', function ($args) {
 });
 
 //Limit number of tags inside widget
-
-
 function the_category_limit(string $separator = ', ', int $limit = null) : string
 {
     global $wp_rewrite;
@@ -201,3 +199,10 @@ function assetFileName(string $assetName) : string {
 
     return $manifest[$assetName];
 }
+
+add_filter('pre_get_posts', function (WP_Query $query) {
+    if ($query->is_category) {
+        $query->set('posts_per_archive_page', 12);
+    }
+});
+
