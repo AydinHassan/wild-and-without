@@ -341,8 +341,8 @@ if (!function_exists('cstheme_pagination')) {
 			
 			if (1 != $pages) {
 				$big = 9999; // need an unlikely integer
-				echo "<div class='eva-pagination container heading_font'>";
-					echo "<div class='eva_pagination_wrap heading_font'>";
+				echo "<div class='blog-pagination heading_font'>";
+					echo "<div class='blog-pagination-wrap heading_font'>";
 						$pagination = paginate_links(
 							array(
 								'base' 			=> str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
