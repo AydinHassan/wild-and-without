@@ -201,6 +201,11 @@ function assetFileName(string $assetName) : string {
 }
 
 add_filter('pre_get_posts', function (WP_Query $query) {
+
+    if (!$query->is_main_query() ) {
+        return;
+    }
+
     if ($query->is_category) {
         $query->set('posts_per_archive_page', 12);
     }
