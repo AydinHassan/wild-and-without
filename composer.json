@@ -31,7 +31,8 @@
     "wpackagist-plugin/rocket-lazy-load": "^2",
     "wpackagist-plugin/transients-manager": "^1.7",
     "wpackagist-plugin/pre-publish-post-checklist": "^3.1",
-    "wpackagist-plugin/taxonomy-terms-order": "^1.5",
+    "wpackagist-plugin/tag-list-widget": "^1.3",
+    "wpackagist-plugin/broken-link-checker": "^1.11",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^2.4"
   },

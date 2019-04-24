@@ -21,7 +21,7 @@
 
 /* Widget Tags Cloud */
 /* TODO: extrace tag css to component */
-.widget_tag_cloud .tagcloud {
+.widget_tag_cloud .tagcloud, .widget_taxonomy_list_widget .tagcloud {
   text-align:center;
 }
 .single_post_meta_tags a,
