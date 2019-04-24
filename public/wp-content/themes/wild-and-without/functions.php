@@ -212,6 +212,7 @@ add_filter('pre_get_posts', function (WP_Query $query) {
 });
 
 add_shortcode('tagcloud', function () {
+    ob_start();
     the_widget(
         'taxonomy_list_widget',
         [
@@ -221,6 +222,9 @@ add_shortcode('tagcloud', function () {
             'post_counts' => true
         ]
     );
+    $output = ob_get_contents();
+    ob_end_clean();
+    return $output;
 });
 
 
