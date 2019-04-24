@@ -42,7 +42,8 @@ class taxonomy_list_widget_plugin {
 		'incexc_ids' => array(),
 		'hide_empty' => true,
 		'post_counts' => false,
-		'rel' => 'nofollow'
+		'rel' => 'nofollow',
+        'view_all' => true
 	);
 
 	/*
@@ -205,7 +206,11 @@ class taxonomy_list_widget_plugin {
 
 			//Delimiters
 			$before_list = '<div class="tagcloud">';
-			$after_list = '</div><a class="all-tags-link" href="/tags">View all tags</a>';
+			$after_list = '</div>';
+
+            if ($view_all) {
+                $after_list .= '<a class="all-tags-link" href="/tags">View all tags</a>';
+            }
 
 			//Start list
 			$output = $before_list;

@@ -219,7 +219,8 @@ add_shortcode('tagcloud', function () {
             'title' => '',
             'orderby' => 'count',
             'order' => 'DESC',
-            'post_counts' => true
+            'post_counts' => true,
+            'view_all' => false
         ]
     );
     $output = ob_get_contents();
