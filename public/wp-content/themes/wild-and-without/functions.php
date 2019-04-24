@@ -211,3 +211,16 @@ add_filter('pre_get_posts', function (WP_Query $query) {
     }
 });
 
+add_shortcode('tagcloud', function () {
+    the_widget(
+        'taxonomy_list_widget',
+        [
+            'title' => '',
+            'orderby' => 'count',
+            'order' => 'DESC',
+            'post_counts' => true
+        ]
+    );
+});
+
+

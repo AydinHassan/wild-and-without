@@ -205,7 +205,7 @@ class taxonomy_list_widget_plugin {
 
 			//Delimiters
 			$before_list = '<div class="tagcloud">';
-			$after_list = '</div>';
+			$after_list = '</div><a class="all-tags-link" href="/tags">View all tags</a>';
 
 			//Start list
 			$output = $before_list;
@@ -229,7 +229,7 @@ class taxonomy_list_widget_plugin {
 					$output .= ' (' . intval( $term->count ) . ')';
 
 				//Close item
-				$output .= '<i></i></a>';
+				$output .= '</a>';
 			}
 
 			//End list

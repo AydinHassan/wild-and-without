@@ -95,3 +95,20 @@
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
 }
+
+.widget_taxonomy_list_widget .all-tags-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  vertical-align: top;
+  font-weight: 400;
+  color: #666;
+  font-size: 18px;
+}
+
+.widget_taxonomy_list_widget .all-tags-link:hover {
+  color: #04af8d;
+  text-decoration: none!important;
+}
+
