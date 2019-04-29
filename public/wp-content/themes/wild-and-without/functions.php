@@ -31,6 +31,10 @@ add_action(
 
             //js
             wp_enqueue_script('wild-and-without-js', get_stylesheet_directory_uri() . '/dist/' . assetFileName('main.js'), [], false, true);
+
+            if (is_page('photography')) {
+                wp_enqueue_script('wild-and-without-photography-js', get_stylesheet_directory_uri() . '/dist/' . assetFileName('photography.js'), [], false, true);
+            }
         },
         PHP_INT_MAX
 );

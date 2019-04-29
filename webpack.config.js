@@ -4,8 +4,11 @@ const WebpackAssetsManifest = require('webpack-assets-manifest');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: "./public/wp-content/themes/wild-and-without/index.js",
     mode: process.env.NODE_ENV,
+    entry: {
+        main: "./public/wp-content/themes/wild-and-without/index.js",
+        photography: "./public/wp-content/themes/wild-and-without/photography.js"
+    },
     output: {
         path: path.resolve('./public/wp-content/themes/wild-and-without', 'dist'),
         filename: 'bundle.[contenthash].js',
