@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "951b7cc5170a0c5443190cfd9cf210a9",
+    "content-hash": "bcfa56d09da7ef1bf75df38da1457312",
     "packages": [
         {
             "name": "composer/installers",
@@ -493,6 +493,24 @@
             "homepage": "https://wordpress.org/plugins/broken-link-checker/"
         },
         {
+            "name": "wpackagist-plugin/cloudinary-image-management-and-manipulation-in-the-cloud-cdn",
+            "version": "1.1.12",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/cloudinary-image-management-and-manipulation-in-the-cloud-cdn/",
+                "reference": "tags/1.1.12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/cloudinary-image-management-and-manipulation-in-the-cloud-cdn.1.1.12.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/cloudinary-image-management-and-manipulation-in-the-cloud-cdn/"
+        },
+        {
             "name": "wpackagist-plugin/contact-form-7",
             "version": "5.1.1",
             "source": {
@@ -656,15 +674,15 @@
         },
         {
             "name": "wpackagist-plugin/rocket-lazy-load",
-            "version": "2.2",
+            "version": "2.2.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/rocket-lazy-load/",
-                "reference": "tags/2.2"
+                "reference": "tags/2.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.2.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -692,15 +710,15 @@
         },
         {
             "name": "wpackagist-plugin/transients-manager",
-            "version": "1.7.6",
+            "version": "1.7.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/transients-manager/",
-                "reference": "tags/1.7.6"
+                "reference": "tags/1.7.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/transients-manager.1.7.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/transients-manager.1.7.7.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
