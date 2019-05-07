@@ -674,15 +674,15 @@
         },
         {
             "name": "wpackagist-plugin/rocket-lazy-load",
-            "version": "2.2.1",
+            "version": "2.2.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/rocket-lazy-load/",
-                "reference": "tags/2.2.1"
+                "reference": "tags/2.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.2.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.2.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -746,15 +746,15 @@
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
-            "version": "0.9.7.3",
+            "version": "0.9.7.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "tags/0.9.7.3"
+                "reference": "tags/0.9.7.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.7.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.7.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -800,15 +800,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "11.1",
+            "version": "11.1.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/11.1"
+                "reference": "tags/11.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.11.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.11.1.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
