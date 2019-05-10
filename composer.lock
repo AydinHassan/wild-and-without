@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bcfa56d09da7ef1bf75df38da1457312",
+    "content-hash": "5399fdfe55b04dbe67d9f255d4a42b1a",
     "packages": [
         {
             "name": "composer/installers",
@@ -422,15 +422,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.7.12",
+            "version": "5.8.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.7.12"
+                "reference": "tags/5.8.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.7.12.zip"
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -599,24 +599,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/google-analytics-dashboard-for-wp/"
-        },
-        {
-            "name": "wpackagist-plugin/kraken-image-optimizer",
-            "version": "2.6.3",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/kraken-image-optimizer/",
-                "reference": "tags/2.6.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/kraken-image-optimizer.2.6.3.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/kraken-image-optimizer/"
         },
         {
             "name": "wpackagist-plugin/mailchimp-for-wp",
