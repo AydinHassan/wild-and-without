@@ -422,15 +422,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.8.0",
+            "version": "5.8.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.8.0"
+                "reference": "tags/5.8.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -458,15 +458,15 @@
         },
         {
             "name": "wpackagist-plugin/better-wp-security",
-            "version": "7.3.3",
+            "version": "7.4.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/better-wp-security/",
-                "reference": "tags/7.3.3"
+                "reference": "tags/7.4.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/better-wp-security.7.3.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/better-wp-security.7.4.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -548,15 +548,15 @@
         },
         {
             "name": "wpackagist-plugin/enable-media-replace",
-            "version": "3.2.9",
+            "version": "3.3.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/enable-media-replace/",
-                "reference": "tags/3.2.9"
+                "reference": "tags/3.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.2.9.zip"
+                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.3.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -710,15 +710,15 @@
         },
         {
             "name": "wpackagist-plugin/updraftplus",
-            "version": "1.16.14",
+            "version": "1.16.15",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/updraftplus/",
-                "reference": "tags/1.16.14"
+                "reference": "tags/1.16.15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.16.14.zip"
+                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.16.15.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -728,15 +728,15 @@
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
-            "version": "0.9.7.4",
+            "version": "0.9.7.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "tags/0.9.7.4"
+                "reference": "tags/0.9.7.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.7.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.7.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -746,15 +746,15 @@
         },
         {
             "name": "wpackagist-plugin/widget-context",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/widget-context/",
-                "reference": "tags/1.1.0"
+                "reference": "tags/1.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/widget-context.1.1.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/widget-context.1.1.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
