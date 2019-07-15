@@ -574,7 +574,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1551221015"
+                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1557521732"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -782,15 +782,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "11.5",
+            "version": "11.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/11.5"
+                "reference": "tags/11.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.11.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.11.6.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -800,15 +800,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "1.4.2",
+            "version": "1.5.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/1.4.2"
+                "reference": "tags/1.5.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.4.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.5.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
