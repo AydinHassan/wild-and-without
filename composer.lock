@@ -422,15 +422,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.8.1",
+            "version": "5.8.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.8.1"
+                "reference": "tags/5.8.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -548,15 +548,15 @@
         },
         {
             "name": "wpackagist-plugin/enable-media-replace",
-            "version": "3.3.1",
+            "version": "3.3.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/enable-media-replace/",
-                "reference": "tags/3.3.1"
+                "reference": "tags/3.3.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.3.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.3.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -602,15 +602,15 @@
         },
         {
             "name": "wpackagist-plugin/mailchimp-for-wp",
-            "version": "4.5.2",
+            "version": "4.5.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/mailchimp-for-wp/",
-                "reference": "tags/4.5.2"
+                "reference": "tags/4.5.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.5.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.5.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -656,15 +656,15 @@
         },
         {
             "name": "wpackagist-plugin/rocket-lazy-load",
-            "version": "2.2.2",
+            "version": "2.2.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/rocket-lazy-load/",
-                "reference": "tags/2.2.2"
+                "reference": "tags/2.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.2.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.2.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -710,15 +710,15 @@
         },
         {
             "name": "wpackagist-plugin/updraftplus",
-            "version": "1.16.15",
+            "version": "1.16.16",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/updraftplus/",
-                "reference": "tags/1.16.15"
+                "reference": "tags/1.16.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.16.15.zip"
+                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.16.16.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -782,15 +782,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "11.6",
+            "version": "11.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/11.6"
+                "reference": "tags/11.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.11.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.11.7.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -800,15 +800,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/1.5.1"
+                "reference": "tags/1.5.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.5.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.5.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
