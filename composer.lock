@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e294e3eb7940e05147906522188fb65d",
+    "content-hash": "ff174cff2f3d3e232b56b250d5166acc",
     "packages": [
         {
             "name": "composer/installers",
@@ -622,15 +622,15 @@
         },
         {
             "name": "wpackagist-plugin/media-file-renamer",
-            "version": "4.5.6",
+            "version": "4.5.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/media-file-renamer/",
-                "reference": "tags/4.5.6"
+                "reference": "tags/4.5.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.4.5.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.4.5.7.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -784,15 +784,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "11.9",
+            "version": "12.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/11.9"
+                "reference": "tags/12.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.11.9.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -802,15 +802,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "1.5.2",
+            "version": "1.6.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/1.5.2"
+                "reference": "tags/1.6.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.5.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.6.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
