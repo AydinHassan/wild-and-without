@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff174cff2f3d3e232b56b250d5166acc",
+    "content-hash": "f87e1b07c8fccb722f69f02a7c2188a0",
     "packages": [
         {
             "name": "composer/installers",
@@ -550,15 +550,15 @@
         },
         {
             "name": "wpackagist-plugin/enable-media-replace",
-            "version": "3.3.5",
+            "version": "3.3.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/enable-media-replace/",
-                "reference": "tags/3.3.5"
+                "reference": "tags/3.3.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.3.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.3.6.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -658,15 +658,15 @@
         },
         {
             "name": "wpackagist-plugin/rocket-lazy-load",
-            "version": "2.2.3",
+            "version": "2.3.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/rocket-lazy-load/",
-                "reference": "tags/2.2.3"
+                "reference": "tags/2.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.2.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.3.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -730,15 +730,15 @@
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
-            "version": "0.9.7.5",
+            "version": "0.10.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "tags/0.9.7.5"
+                "reference": "tags/0.10.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.7.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.10.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
