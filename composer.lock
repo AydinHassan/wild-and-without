@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f87e1b07c8fccb722f69f02a7c2188a0",
+    "content-hash": "94fa84a61120927d5c2ea2203b0fb447",
     "packages": [
         {
             "name": "composer/installers",
@@ -547,6 +547,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/disable-embeds/"
+        },
+        {
+            "name": "wpackagist-plugin/disable-xml-rpc",
+            "version": "1.0.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/disable-xml-rpc/",
+                "reference": "tags/1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-xml-rpc.1.0.1.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/disable-xml-rpc/"
         },
         {
             "name": "wpackagist-plugin/enable-media-replace",
