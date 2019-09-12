@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "277c00c216c117b60889dbba496effa6",
+    "content-hash": "6c95ef20bb7bb8b2bb3d9b305d4898fe",
     "packages": [
         {
             "name": "composer/installers",
@@ -639,24 +639,6 @@
             "homepage": "https://wordpress.org/plugins/media-file-renamer/"
         },
         {
-            "name": "wpackagist-plugin/otter-blocks",
-            "version": "1.2.5",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/otter-blocks/",
-                "reference": "tags/1.2.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/otter-blocks.1.2.5.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/otter-blocks/"
-        },
-        {
             "name": "wpackagist-plugin/pre-publish-post-checklist",
             "version": "3.1",
             "source": {
@@ -835,6 +817,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-mail-smtp/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-post-block",
+            "version": "1.0.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-post-block/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-post-block.zip?timestamp=1564393491"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-post-block/"
         },
         {
             "name": "wpackagist-theme/twentynineteen",
