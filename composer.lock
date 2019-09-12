@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c95ef20bb7bb8b2bb3d9b305d4898fe",
+    "content-hash": "f87e1b07c8fccb722f69f02a7c2188a0",
     "packages": [
         {
             "name": "composer/installers",
@@ -817,24 +817,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-mail-smtp/"
-        },
-        {
-            "name": "wpackagist-plugin/wp-post-block",
-            "version": "1.0.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-post-block/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-post-block.zip?timestamp=1564393491"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-post-block/"
         },
         {
             "name": "wpackagist-theme/twentynineteen",
