@@ -1,0 +1,39 @@
+[
+    {
+        "name": "freemius/wordpress-sdk",
+        "version": "2.3.0",
+        "version_normalized": "2.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Freemius/wordpress-sdk.git",
+            "reference": "5beaaab059370ac646356107ba01de256d5e93a9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Freemius/wordpress-sdk/zipball/5beaaab059370ac646356107ba01de256d5e93a9",
+            "reference": "5beaaab059370ac646356107ba01de256d5e93a9",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2"
+        },
+        "time": "2019-06-05T14:07:53+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0-only"
+        ],
+        "description": "Freemius WordPress SDK",
+        "homepage": "https://freemius.com",
+        "keywords": [
+            "freemius",
+            "plugin",
+            "sdk",
+            "theme",
+            "wordpress",
+            "wordpress-plugin",
+            "wordpress-theme"
+        ]
+    }
+]

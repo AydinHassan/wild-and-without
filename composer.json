@@ -34,7 +34,6 @@
     "wpackagist-plugin/taxonomy-terms-order": "^1.5",
     "wpackagist-plugin/broken-link-checker": "^1.11",
     "wpackagist-plugin/cloudinary-image-management-and-manipulation-in-the-cloud-cdn": "^1.1",
-    "wpackagist-plugin/wp-post-block": "^1.0",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^2.4"
   },
