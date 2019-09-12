@@ -25,7 +25,7 @@ const schema = {
 };
 
 function renderTitle( title ) {
-	return title ? ( <h2>{ title }</h2> ) : '';
+	return title ? ( <h3>{ title }</h3> ) : '';
 }
 
 const settings = {
