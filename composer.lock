@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f87e1b07c8fccb722f69f02a7c2188a0",
+    "content-hash": "6c95ef20bb7bb8b2bb3d9b305d4898fe",
     "packages": [
         {
             "name": "composer/installers",
@@ -604,15 +604,15 @@
         },
         {
             "name": "wpackagist-plugin/mailchimp-for-wp",
-            "version": "4.5.4",
+            "version": "4.5.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/mailchimp-for-wp/",
-                "reference": "tags/4.5.4"
+                "reference": "tags/4.5.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.5.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.5.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -712,15 +712,15 @@
         },
         {
             "name": "wpackagist-plugin/updraftplus",
-            "version": "1.16.16",
+            "version": "1.16.17",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/updraftplus/",
-                "reference": "tags/1.16.16"
+                "reference": "tags/1.16.17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.16.16.zip"
+                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.16.17.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -730,15 +730,15 @@
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
-            "version": "0.10.0",
+            "version": "0.10.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "tags/0.10.0"
+                "reference": "tags/0.10.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.10.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.10.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -817,6 +817,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-mail-smtp/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-post-block",
+            "version": "1.0.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-post-block/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-post-block.zip?timestamp=1564393491"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-post-block/"
         },
         {
             "name": "wpackagist-theme/twentynineteen",
