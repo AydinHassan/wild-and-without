@@ -31,7 +31,6 @@
     "wpackagist-plugin/rocket-lazy-load": "^2",
     "wpackagist-plugin/transients-manager": "^1.7",
     "wpackagist-plugin/pre-publish-post-checklist": "^3.1",
-    "wpackagist-plugin/taxonomy-terms-order": "^1.5",
     "wpackagist-plugin/broken-link-checker": "^1.11",
     "wpackagist-plugin/cloudinary-image-management-and-manipulation-in-the-cloud-cdn": "^1.1",
     "wpackagist-plugin/disable-xml-rpc": "^1.0",
