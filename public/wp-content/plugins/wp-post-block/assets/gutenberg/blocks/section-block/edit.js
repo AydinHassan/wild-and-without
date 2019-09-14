@@ -15,7 +15,7 @@ const { __ } = wp.i18n;
 class SectionBlock extends Component {
 	renderTitle() {
 		const title = this.props.attributes.sectionTitle || __( 'Grid title', 'wp-post-block' );
-		return <h2 className="section-title">{ title }</h2>;
+		return <h3 className="section-title">{ title }</h3>;
 	}
 
 	render() {
