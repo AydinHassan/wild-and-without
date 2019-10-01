@@ -17,7 +17,7 @@ define( 'WP_CONTENT_URL', WP_HOME . '/wp-content' );
 // Include the Composer autoload file.
 require_once( __DIR__ . '/../vendor/autoload.php' );
 
-(new \Dotenv\Dotenv(__DIR__.'/../'))->load();
+\Dotenv\Dotenv::create(__DIR__.'/../')->load();
 
 // ** Cache Settings ** //
 define('WP_CACHE', true);
