@@ -36,7 +36,7 @@
     "wpackagist-plugin/disable-xml-rpc": "^1.0",
     "wpackagist-plugin/custom-taxonomy-order-ne": "^2.1.0",
     "roots/wp-password-bcrypt": "^1.0",
-    "vlucas/phpdotenv": "^2.4"
+    "vlucas/phpdotenv": "^3.6"
   },
   "extra" : {
     "wordpress-install-dir": "public/wp",
