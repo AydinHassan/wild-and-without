@@ -516,15 +516,15 @@
         },
         {
             "name": "wpackagist-plugin/better-wp-security",
-            "version": "7.4.1",
+            "version": "7.5.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/better-wp-security/",
-                "reference": "tags/7.4.1"
+                "reference": "tags/7.5.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/better-wp-security.7.4.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/better-wp-security.7.5.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
