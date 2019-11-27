@@ -1,15 +1,10 @@
 <?php
 
-$top_slider_style 				= get_metabox('top_slider_style');
-$top_slider_category 			= get_metabox('top_slider_category');
-$top_slider_count 				= get_metabox('top_slider_count');
-$voyager_top_slider_orderby 	= get_metabox('top_slider_orderby');
-
 $args = [
-    'posts_per_page' 		=> (isset($top_slider_count) && $top_slider_count) ? $top_slider_count : '6',
+    'posts_per_page' 		=> 4,
     'post_type' 			=> 'post',
-    'cat' 					=> (isset($top_slider_category) && $top_slider_category) ? $top_slider_category : 'all',
-    'orderby' 				=> (isset($voyager_top_slider_orderby) && $voyager_top_slider_orderby) ? $voyager_top_slider_orderby : 'DESC',
+    'cat' 					=> 0,
+    'orderby' 				=> 'date',
     'post_status' 			=> 'publish',
     'ignore_sticky_posts' 	=> 1
 ];
