@@ -30,6 +30,7 @@ define('DB_HOST', getenv('MYSQL_HOST'));
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
+define('FS_METHOD','direct');
 /**#@+
  * Authentication Unique Keys and Salts.
  *
