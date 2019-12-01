@@ -1,18 +1,10 @@
-<?php
-/**
- * The template for displaying all single posts and attachments
- */
-
-get_header();
-
-$pf = get_post_format();
-?>
+<?php get_header() ?>
 
 <div class="container">
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-        <div id="blog-single-wrap" class="<?= 'format-' . $pf . ' featured_img_' ?> clearfix">
+        <div id="blog-single-wrap" class="clearfix">
 
             <div class="single_post_header">
                 <h2 class="single-post-title"><?php the_title(); ?></h2>
@@ -40,7 +32,11 @@ $pf = get_post_format();
             <div class="row">
                 <div class="col-md-12">
                     <div class="post_format_content mb55 text-center">
-                        <?php get_template_part( 'framework/post-format/post', $pf ); ?>
+                        <?php if (has_post_thumbnail()) : ?>
+                            <div class="post-image">
+                                <img src="<?= wp_get_attachment_url(get_post_thumbnail_id()) ?>" alt="" />
+                            </div>
+                        <?php endif ?>
                     </div>
                 </div>
             </div>
