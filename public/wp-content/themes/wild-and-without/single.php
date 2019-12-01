@@ -6,21 +6,6 @@
 get_header();
 
 $pf = get_post_format();
-
-$voyager_single_post_sidebar_under = cstheme_option( 'single_post_sidebar_under' );
-$single_post_sidebar = cstheme_option( 'single_post_sidebar' );
-$single_post_sidebar_position = '';
-if( $single_post_sidebar == 'left-sidebar' ) {
-    $single_post_sidebar_position = 'pull-right';
-}
-
-/* ADD 1 view for this post */
-$post_views = (get_post_meta(get_the_ID(), "post_views", true) > 0 ? get_post_meta(get_the_ID(), "post_views", true) : "0");
-update_post_meta(get_the_ID(), "post_views", (int)$post_views + 1);
-
-$single_post_featured_img = cstheme_option( 'single_post_featured_img' );
-
-$featured_image_url = wp_get_attachment_url(get_post_thumbnail_id());
 ?>
 
 <div class="container">
