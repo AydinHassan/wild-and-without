@@ -220,10 +220,12 @@ if (!function_exists('settings_select')) {
             </th>
             <td>
                 <div class="type_select add_item_medium">
-                    <select class="medium" name="<?php echo $settings['id']; ?>" data-value="<?php print $settings['value'];?>"><?php
-                        foreach($settings['options'] as $key=>$value) { 
-                                echo '<option value="'.$key.'">'.$value.'</option>';
-                        } ?>
+                    <select class="medium" name="<?php echo $settings['id']; ?>">
+                        <?php foreach($settings['options'] as $key=>$value) : ?>
+                            <option value="<?= $key?>" <?= $key === $settings['value'] ? 'selected ' : '' ?>>
+                                <?= $value ?>
+                            </option>
+                        <?php endforeach ?>
                     </select>
                 </div>
             </td>
@@ -323,7 +325,7 @@ function metabox_render($post, $metabox) {
                     <?php	                              
                     foreach ($metabox['args'] as $settings) {
                         $settings['value'] = isset($options[$settings['id']]) ? $options[$settings['id']] : (isset($settings['std']) ? $settings['std'] : '');
-                        call_user_func('settings_'.$settings['type'], $settings);	
+                        call_user_func('settings_'.$settings['type'], $settings);
                     }
                     ?>
             </tbody>
@@ -333,7 +335,7 @@ function metabox_render($post, $metabox) {
 
 add_action('save_post', 'savePostMeta');
 function savePostMeta($post_id) {
-    global $cs_custom_layout_settings, $cs_page_settings, $cs_post_settings, $cs_page_portfolio_settings, $cs_portfolio_single, $cs_portfolio_single_gallery, $cs_portfolio_single_video, $cs_portfolio_single_audio, $cs_comingsoon_settings;
+    global $cs_post_settings, $cs_portfolio_single, $cs_portfolio_single_gallery, $cs_portfolio_single_video, $cs_portfolio_single_audio;
 
     $meta = 'cstheme_'.strtolower(THEMENAME).'_options';
     
@@ -358,7 +360,7 @@ function savePostMeta($post_id) {
     if($_POST['post_type']=='post') {
         $metaboxes = $cs_post_settings;
 	} elseif($_POST['post_type']=='page') {
-        $metaboxes = array_merge( $cs_custom_layout_settings, $cs_page_settings, $cs_page_portfolio_settings, $cs_comingsoon_settings );
+        $metaboxes = [['id' => 'sidebar_layout']];
 	} elseif($_POST['post_type']=='portfolio') {
         $metaboxes = array_merge($cs_portfolio_single, $cs_portfolio_single_gallery, $cs_portfolio_single_video, $cs_portfolio_single_audio);
     }
