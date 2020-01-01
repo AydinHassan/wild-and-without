@@ -160,8 +160,8 @@ ol, ul {
   text-decoration-color: $dark-green;
 }
 
-.contentarea ul.wp-block-gallery,
-.single-post-content ul.wp-block-gallery {
+.contentarea .wp-block-gallery,
+.single-post-content .wp-block-gallery {
   padding: 0;
 }
 
