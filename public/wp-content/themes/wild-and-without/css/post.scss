@@ -149,13 +149,22 @@ ol, ul {
   padding-left: 40px;
 }
 
+.contentarea ol,
+.single-post-content ol {
+  padding-left: 40px;
+}
+
 .contentarea ul li a,
-.single-post-content ul li a {
+.single-post-content ul li a,
+.contentarea ol li a,
+.single-post-content ol li a {
   color: $dark-green;
 }
 
 .contentarea ul li:hover a,
-.single-post-content ul li:hover a {
+.single-post-content ul li:hover a,
+.contentarea ol li:hover a,
+.single-post-content ol li:hover a {
   text-decoration: underline;
   text-decoration-color: $dark-green;
 }
