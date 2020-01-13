@@ -474,6 +474,7 @@ class cstheme_MegaMenu_Walker extends Walker_Nav_Menu {
 								</div>
 							';
 						endwhile;
+						echo '<div class="category-nav-all"><a href="' . $item->url . '">View all ' . $item->title . ' posts</a></div>';
 						echo '</div>';
 					}
 				$this->mega_menu_content .= ob_get_contents();

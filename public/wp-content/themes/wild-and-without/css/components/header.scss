@@ -609,6 +609,19 @@ body.header-fixed .menu-primary-menu-container-wrap .sub-menu .sub-menu:before {
   color: $dark-green;
 }
 
+.category-nav-all {
+  display: flex;
+  text-align: center;
+
+  a {
+    colo: #fff;
+  }
+
+  a:hover {
+    color: $dark-green;
+  }
+}
+
 //Mobile Nav
 #header_mobile_wrap .menu-primary-menu-container-wrap {
   -webkit-transition: height .25s ease;
