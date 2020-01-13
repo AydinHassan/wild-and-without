@@ -610,11 +610,15 @@ body.header-fixed .menu-primary-menu-container-wrap .sub-menu .sub-menu:before {
 }
 
 .category-nav-all {
-  display: flex;
+  display: block;
   text-align: center;
 
   a {
-    colo: #fff;
+    color: #fff;
+    font-weight: 700;
+    line-height: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
   }
 
   a:hover {
