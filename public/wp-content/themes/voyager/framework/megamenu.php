@@ -1,185 +1,96 @@
 <?php
 
-/* Mega Menu */
-class cstheme_MegaMenu_menu {
-
-    /*--------------------------------------------*
-     * Constructor
-     *--------------------------------------------*/
-
-    /**
-     * Initializes the plugin by setting localization, filters, and administration functions.
-     */
-    function __construct() {
-
-        
+class cstheme_MegaMenu_menu
+{
+    public function __construct()
+    {
         // add custom menu fields to menu
-        add_filter( 'wp_setup_nav_menu_item', array( $this, 'cstheme_add_custom_nav_fields' ) );
+        add_filter('wp_setup_nav_menu_item', function ($menuItem) {
+            $menuItem->megamenu = get_post_meta($menuItem->ID, '_menu_item_megamenu', true);
+            return $menuItem;
+        });
 
         // save menu custom fields
-        add_action( 'wp_update_nav_menu_item', array( $this, 'cstheme_update_custom_nav_fields'), 10, 3 );
+        add_action('wp_update_nav_menu_item', function ($menu_id, $menu_item_db_id, $args) {
+            if (!isset($_REQUEST['edit-menu-item-megamenu'][$menu_item_db_id])) {
+                $_REQUEST['edit-menu-item-megamenu'][$menu_item_db_id] = '';
+            }
+            $menu_mega_enabled_value = $_REQUEST['edit-menu-item-megamenu'][$menu_item_db_id];
+            update_post_meta($menu_item_db_id, '_menu_item_megamenu', $menu_mega_enabled_value );
+        }, 10, 3 );
         
         // edit menu walker
-        add_filter( 'wp_edit_nav_menu_walker', array( $this, 'cstheme_edit_walker'), 10, 2 );
+        add_filter('wp_edit_nav_menu_walker', function () {
+            return cstheme_Walker_Nav_Menu_Edit_Custom::class;
+        }, 10, 2 );
 		
 		// Addition style
-		add_action( 'admin_enqueue_scripts', array( $this, 'cstheme_add_megamenu_css' ) );
-
-    } // end constructor
-    
-
-    /**
-     * Add custom fields to $item nav object
-     * in order to be used in custom Walker
-     *
-     * @access      public
-     * @since       1.0 
-     * @return      void
-    */
-    function cstheme_add_custom_nav_fields( $menu_item ) {
-    	
-        $menu_item->megamenu = get_post_meta( $menu_item->ID, '_menu_item_megamenu', true );
-        return $menu_item;
-    }
-    
-    /**
-     * Save menu custom fields
-     *
-     * @access      public
-     * @since       1.0 
-     * @return      void
-    */
-    function cstheme_update_custom_nav_fields( $menu_id, $menu_item_db_id, $args ) {
-
-        if (!isset($_REQUEST['edit-menu-item-megamenu'][$menu_item_db_id])) {
-            $_REQUEST['edit-menu-item-megamenu'][$menu_item_db_id] = '';
-        }
-        $menu_mega_enabled_value = $_REQUEST['edit-menu-item-megamenu'][$menu_item_db_id];        
-        update_post_meta( $menu_item_db_id, '_menu_item_megamenu', $menu_mega_enabled_value );
-    }
-    
-    /**
-     * Define new Walker edit
-     *
-     * @access      public
-     * @since       1.0 
-     * @return      void
-    */
-    function cstheme_edit_walker($walker,$menu_id) {
-    
-        return 'cstheme_Walker_Nav_Menu_Edit_Custom'; 
-    }
-	
-	public function cstheme_add_megamenu_css() {
-		$css = "
+		add_action('admin_enqueue_scripts', function () {
+            $css = '
 			.menu-item.menu-item-depth-0 .cstheme_menu_options { display: block; }
 			.menu-item.menu-item-depth-1 .cstheme_menu_options { display: none; }
 			.menu-item.menu-item-depth-2 .cstheme_menu_options { display: none; }
 			.menu-item.menu-item-depth-3 .cstheme_menu_options { display: none; }
-		";
-		wp_add_inline_style('wp-admin', $css);
-	}
+		';
+            wp_add_inline_style('wp-admin', $css);
+        });
+    }
 }
 
 // instantiate plugin's class
 $GLOBALS['cstheme_custom_menu'] = new cstheme_MegaMenu_menu();
 
-/**
- *  /!\ This is a copy of Walker_Nav_Menu_Edit class in core
- * 
- * Create HTML list of nav menu input items.
- *
- * @package WordPress
- * @since 3.0.0
- * @uses Walker_Nav_Menu
- */
-class cstheme_Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu {
-	/**
-	 * Starts the list before the elements are added.
-	 *
-	 * @see Walker_Nav_Menu::start_lvl()
-	 *
-	 * @since 3.0.0
-	 *
-	 * @param string $output Passed by reference.
-	 * @param int    $depth  Depth of menu item. Used for padding.
-	 * @param array  $args   Not used.
-	 */
-	public function start_lvl( &$output, $depth = 0, $args = array() ) {}
+class cstheme_Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu
+{
+	public function start_lvl(&$output, $depth = 0, $args = [])
+    {
+    }
 
-	/**
-	 * Ends the list of after the elements are added.
-	 *
-	 * @see Walker_Nav_Menu::end_lvl()
-	 *
-	 * @since 3.0.0
-	 *
-	 * @param string $output Passed by reference.
-	 * @param int    $depth  Depth of menu item. Used for padding.
-	 * @param array  $args   Not used.
-	 */
-	public function end_lvl( &$output, $depth = 0, $args = array() ) {}
+	public function end_lvl(&$output, $depth = 0, $args = [])
+    {
+    }
 
-	/**
-	 * Start the element output.
-	 *
-	 * @see Walker_Nav_Menu::start_el()
-	 * @since 3.0.0
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param object $item   Menu item data object.
-	 * @param int    $depth  Depth of menu item. Used for padding.
-	 * @param array  $args   Not used.
-	 * @param int    $id     Not used.
-	 */
-	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+
+	public function start_el(&$output, $item, $depth = 0, $args = [], $id = 0 )
+    {
 		global $_wp_nav_menu_max_depth;
 		$_wp_nav_menu_max_depth = $depth > $_wp_nav_menu_max_depth ? $depth : $_wp_nav_menu_max_depth;
 
 		ob_start();
-		$item_id = esc_attr( $item->ID );
-		$removed_args = array(
+		$item_id = esc_attr($item->ID);
+		$removed_args = [
 			'action',
 			'customlink-tab',
 			'edit-menu-item',
 			'menu-item',
 			'page-tab',
 			'_wpnonce',
-		);
+        ];
 
 		$original_title = '';
-		if ( 'taxonomy' == $item->type ) {
-			$original_title = get_term_field( 'name', $item->object_id, $item->object, 'raw' );
-			if ( is_wp_error( $original_title ) )
-				$original_title = false;
-		} elseif ( 'post_type' == $item->type ) {
-			$original_object = get_post( $item->object_id );
-			$original_title = get_the_title( $original_object->ID );
+		if ($item->type == 'taxonomy') {
+			$original_title = get_term_field('name', $item->object_id, $item->object, 'raw');
+			if (is_wp_error($original_title)) {
+                $original_title = false;
+            }
+		} elseif ($item->type == 'post_type') {
+			$original_object = get_post($item->object_id);
+			$original_title = get_the_title($original_object->ID);
 		}
 
-		$classes = array(
+		$classes = [
 			'menu-item menu-item-depth-' . $depth,
 			'menu-item-' . esc_attr( $item->object ),
-			'menu-item-edit-' . ( ( isset( $_GET['edit-menu-item'] ) && $item_id == $_GET['edit-menu-item'] ) ? 'active' : 'inactive'),
-		);
+			'menu-item-edit-' . ((isset( $_GET['edit-menu-item'] ) && $item_id == $_GET['edit-menu-item'] ) ? 'active' : 'inactive'),
+        ];
 
 		$title = $item->title;
-
-		if ( ! empty( $item->_invalid ) ) {
-			$classes[] = 'menu-item-invalid';
-			/* translators: %s: title of menu item which is invalid */
-			$title = sprintf( esc_attr__( '%s (Invalid)', 'voyager' ), $item->title );
-		} elseif ( isset( $item->post_status ) && 'draft' == $item->post_status ) {
-			$classes[] = 'pending';
-			/* translators: %s: title of menu item in draft status */
-			$title = sprintf( esc_attr__('%s (Pending)', 'voyager'), $item->title );
-		}
-
-		$title = ( ! isset( $item->label ) || '' == $item->label ) ? $title : $item->label;
+		$title = (!isset( $item->label) || '' === $item->label ) ? $title : $item->label;
 
 		$submenu_text = '';
-		if ( 0 == $depth )
-			$submenu_text = 'style="display: none;"';
+		if ($depth === 0) {
+            $submenu_text = 'style="display: none;"';
+        }
 
 		?>
 		<li id="menu-item-<?php echo $item_id; ?>" class="<?php echo implode(' ', $classes ); ?>">
@@ -326,206 +237,212 @@ class cstheme_Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu {
 	}
 
 }
-/**
- * Custom Walker
- *
- * @access      public
- * @since       1.0 
- * @return      void
-*/
-class cstheme_MegaMenu_Walker extends Walker_Nav_Menu {
+
+class cstheme_MegaMenu_Walker extends Walker_Nav_Menu
+{
 	private $in_sub_menu = 0;
-	var $active_megamenu = 0;
-	var $mega_menu_content;
+	private $active_megamenu = 0;
+    private $mega_menu_content;
 	
-	/**
-	* @see Walker::start_lvl()
-	*
-	* @param string $output Passed by reference. Used to append additional content.
-	* @param int $depth Depth of page. Used for padding.
-	*/
-	function start_lvl(&$output, $depth = 0, $args = array()) {
-	  $indent = str_repeat("\t", $depth);
-	  if($depth === 0) $output .= "\n{replace_one}\n";
-	  $output .= "\n$indent<ul class=\"sub-menu ".(($depth === 0) ? "{locate_class}": "")."\">\n";
+
+	function start_lvl(&$output, $depth = 0, $args = []) : void
+    {
+	    if ($depth === 0) {
+	        $output .= "\n{replace_one}\n";
+        }
+	    $output .= "\n<ul class='sub-menu " . (($depth === 0) ? '{locate_class}' : '') . "'>\n";
 	}
-	
-	/**
-	* @see Walker::end_lvl()
-	*
-	* @param string $output Passed by reference. Used to append additional content.
-	* @param int $depth Depth of page. Used for padding.
-	*/
-	function end_lvl(&$output, $depth = 0, $args = array()) {
-	  $indent = str_repeat("\t", $depth);
-	  $output .= "$indent</ul>\n";
-	  if($depth === 0 && $this->active_megamenu) {
-	  	$output.= '<div class="category-children">'.$this->mega_menu_content.'</div>';
-	  	$this->mega_menu_content = '';
-	  }
-		if($depth === 0) {
-			if($this->active_megamenu) {
-				$output = str_replace("{replace_one}", '<div class="container cstheme_mega_menu_wrap">', $output);
-				$output = str_replace("{locate_class}", "cstheme_mega_menu", $output);
-			}
-			else {
-			  $output = str_replace("{locate_class}", "", $output);
-			  $output = str_replace("{replace_one}", "", $output);
-			}
+
+	function end_lvl(&$output, $depth = 0, $args = [])
+    {
+	    $output .= "</ul>\n";
+
+	    if ($depth === 0 && $this->active_megamenu) {
+	  	    $output.= '<div class="category-children">' . $this->mega_menu_content . '</div>';
+	        $this->mega_menu_content = '';
+	    }
+
+	    if ($depth === 0) {
+		    if ($this->active_megamenu) {
+                $output = str_replace(
+                    ['{replace_one}', '{locate_class}'],
+                    ['<div class="container cstheme_mega_menu_wrap">', 'cstheme_mega_menu'],
+                    $output
+                );
+            } else {
+                $output = str_replace(['{locate_class}', '{replace_one}'], '', $output);
+            }
 		} 
 	}
-	function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_id = 0) {      
-	  $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-	  
-	  $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-	  $classes[] = 'menu-item-' . $item->ID;
-	  
-	  if( $depth == 1 ) {
-	      if( ! $this->in_sub_menu ) {
+	function start_el(&$output, $item, $depth = 0, $args = [], $current_object_id = 0)
+    {
+	    $classes = empty($item->classes) ? [] : (array) $item->classes;
+	    $classes[] = 'menu-item-' . $item->ID;
+
+	    if ($depth === 1 && !$this->in_sub_menu) {
 	          $this->in_sub_menu = 1;
-	          array_push($classes, 'active');
-	      }
-	  }
-	  if( $depth == 0 ) {
-	      $this->in_sub_menu = 0;
-	      $this->active_megamenu = get_post_meta( $item->ID, '_menu_item_megamenu', true);
-	  }
-	  
-	  if($depth === 0 && $this->active_megamenu) 
-	  {
-	  	 array_push($classes, 'menu-item-mega-parent');
-	  }
-	  
-	  $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
-	  $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
-	  
-	  
+	          $classes[] = 'active';
+	    }
+
+	    if ($depth === 0 ) {
+	        $this->in_sub_menu = 0;
+	        $this->active_megamenu = get_post_meta($item->ID, '_menu_item_megamenu', true);
+	    }
+
+	    if($depth === 0 && $this->active_megamenu)
+	    {
+	        $classes[] = 'menu-item-mega-parent';
+	    }
+
+	    $class_names = implode(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args, $depth));
+	    $class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
 	   
-	  $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args, $depth );
-		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+	    $id = apply_filters('nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args, $depth);
+		$id = $id ? ' id="' . esc_attr($id) . '"' : '';
 	
-		$output .= $indent . '<li' . $id . $class_names .'>';
+		$output .=  '<li' . $id . $class_names .'>';
 		
-	    $atts = array();
-		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
-		$atts['target'] = ! empty( $item->target )     ? $item->target     : '';
-		$atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
-		$atts['href']   = ! empty( $item->url )        ? $item->url        : '';
-	    
-	    $atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
-	    
-		$attributes = '';
-		foreach ( $atts as $attr => $value ) {
-			if ( ! empty( $value ) ) {
-				$value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
-				$attributes .= ' ' . $attr . '="' . $value . '"';
-			}
-		}
-		
-	  $item_output = $args->before;
+	    $attrs = [
+	         'title'  => !empty($item->attr_title ) ? $item->attr_title : '',
+             'target' => !empty($item->target )     ? $item->target     : '',
+             'rel'    => !empty($item->xfn )        ? $item->xfn        : '',
+             'href'   => !empty($item->url )        ? $item->url        : ''
+        ];
+
+		$attributes = $this->getAttributeString(apply_filters('nav_menu_link_attributes', $attrs, $item, $args, $depth));
+
+	    $item_output = $args->before;
 		$item_output .= '<a'. $attributes .'>';
 		$this->in_sub_menu = 1;
-		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+		$item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
 		$item_output .= '</a>';
 		$item_output .= $args->after;
 	
-	  $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+	    $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
-	public function end_el( &$output, $item, $depth = 0, $args = array() ) {
-		global $post;
-		
-		if( $depth == 1 && $this->in_sub_menu ) {
-			if (in_array($item->object, array('post_tag','category'))) {
-				if ($item->object == 'post_tag') {
-					
-					$args = array(
-					    'tag_id' => $item->object_id,
-					    'posts_per_page' => 4,
-					    'no_found_rows' => true
-					);
-					
-				} else {
-					$args = array(
-					    'cat' => $item->object_id,
-					    'posts_per_page' => 4,
-					    'no_found_rows' => true					
-					);
-				}
-				$query = new WP_Query($args);
-				
-				ob_start();
-					if ($query->have_posts()) {
-						echo '<div class="category-children-wrap clearfix menu-item-' . $item->ID . '">';
-						while ($query->have_posts()) : $query->the_post();
-							
-							$class = '';
-							$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
-							
-							echo '<div class="category-children-item">';
-								if (!empty($featured_image)) {
-									$class = 'with_featured_img';
-									echo '<a class="category_post_img" href="'. get_permalink() .'"><img src="' . aq_resize($featured_image[0], "235", "120", true) . '" alt="'. get_the_title() .'" /></a>';
-								}
-								echo '
-									<div class="category_post_content ' . $class . '">
-										<span class="category_post_date">' . get_the_time('M j, Y') . '</span>
-										<h6 class="category_post_title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h6>
-									</div>
-								</div>
-							';
-						endwhile;
-						echo '<div class="category-nav-all"><a href="' . $item->url . '">View all ' . $item->title . ' posts</a></div>';
-						echo '</div>';
-					}
-				$this->mega_menu_content .= ob_get_contents();
-				ob_end_clean();
-				wp_reset_query();
-				wp_reset_postdata();
-			}
+
+	public function end_el(&$output, $item, $depth = 0, $args = [])
+    {
+		if ($depth === 1 && $this->in_sub_menu) {
+		    $this->posts($item);
 		}
-		if( $depth == 0 && $this->active_megamenu){
+
+		if($depth === 0 && $this->active_megamenu){
 			$output .= '</div>';
 		}
+
 		$output .= "</li>\n";
 	}
+
+	private function posts($item) : void
+    {
+        if (!in_array($item->object, ['post_tag', 'category'])) {
+            return;
+        }
+
+        $query = new WP_Query([
+            'cat' => $item->object_id,
+            'posts_per_page' => 4,
+            'no_found_rows' => true
+        ]);
+
+        $content = '';
+        if ($query->have_posts()) {
+            $content .= "<div class='category-children-wrap clearfix menu-item-{$item->ID}'><div class='posts'>";
+            while ($query->have_posts()) {
+                $query->the_post();
+
+                $featured_image = wp_get_attachment_image_src(
+                    get_post_thumbnail_id(get_the_ID()), 'single-post-thumbnail'
+                );
+                $content .= '<div class="category-children-item">';
+
+                if (!empty($featured_image)) {
+                    $content .= sprintf(
+                        "<a class='category_post_img' href='%s'><img src='%s' alt='%s' /></a>",
+                        get_permalink(),
+                        aq_resize($featured_image[0], 235, 120, true),
+                        get_the_title()
+                    );
+                }
+
+                $content .= sprintf(
+                    '<div class="category_post_content %s">
+                        <span class="category_post_date">%s</span>
+                        <h6 class="category_post_title"><a href="%s">%s</a></h6>
+                    </div>',
+                    !empty($featured_image) ? 'with_featured_img' : '',
+                    get_the_time('M j, Y'),
+                    get_permalink(),
+                    get_the_title()
+                );
+
+                $content .= '</div>';
+            }
+
+            $content .= "</div><div class='category-nav-all'><a href='{$item->url}'>View all {$item->title} posts</a></div>";
+            $content .= '</div>';
+        }
+        $this->mega_menu_content .= $content;
+        wp_reset_query();
+        wp_reset_postdata();
+    }
 	
-	/* Menu Fallback */
-	public static function fallback( $args ) {
-		if ( current_user_can( 'manage_options' ) ) {
+	public static function fallback($args)
+    {
+		if (!current_user_can('manage_options')) {
+            return;
+        }
 
-			extract( $args );
+        extract($args);
 
-			$fb_output = null;
-			
-			if ( $container ) {
-				$fb_output = '<' . $container;
+        $fb_output = null;
 
-				if ( $container_id )
-					$fb_output .= ' id="' . $container_id . '"';
+        if ($args['container']) {
+            $fb_output = '<' . $args['container'];
 
-				if ( $container_class )
-					$fb_output .= ' class="' . $container_class . '"';
+            if ($args['container_id']) {
+                $fb_output .= ' id="' . $args['container_id'] . '"';
+            }
 
-				$fb_output .= '>';
-			}
+            if ($args['container_class']) {
+                $fb_output .= ' class="' . $args['container_class'] . '"';
+            }
 
-			$fb_output .= '<ul';
+            $fb_output .= '>';
+        }
 
-			if ( $menu_id )
-				$fb_output .= ' id="' . $menu_id . '"';
+        $fb_output .= '<ul';
 
-			if ( $menu_class )
-				$fb_output .= ' class="' . $menu_class . '"';
+        if ($args['menu_id']) {
+            $fb_output .= ' id="' . $args['menu_id'] . '"';
+        }
 
-			$fb_output .= '>';
-			$fb_output .= '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '">Add a menu</a></li>';
-			$fb_output .= '</ul>';
+        if ($args['menu_class']) {
+            $fb_output .= ' class="' . $args['menu_class'] . '"';
+        }
 
-			if ( $container )
-				$fb_output .= '</' . $container . '>';
+        $fb_output .= '>';
+        $fb_output .= '<li><a href="' . esc_url( admin_url('nav-menus.php')) . '">Add a menu</a></li>';
+        $fb_output .= '</ul>';
 
-			echo wp_kses_post( $fb_output );
-		}
+        if ($args['container']) {
+            $fb_output .= '</' . $args['container'] . '>';
+        }
+
+        echo wp_kses_post($fb_output);
 	}
+
+	private function getAttributeString(array $attrs) : string
+    {
+        $attributes = '';
+        foreach ($attrs as $attr => $value) {
+            if (!empty($value)) {
+                $value = ('href' === $attr) ? esc_url($value) : esc_attr($value);
+                $attributes .= ' ' . $attr . '="' . $value . '"';
+            }
+        }
+        return $attributes;
+    }
 	
 }

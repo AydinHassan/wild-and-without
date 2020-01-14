@@ -207,19 +207,19 @@ document.addEventListener("DOMContentLoaded", e => {
     const megaParents = document.querySelectorAll('.menu-item-mega-parent');
     for(let megaParent of megaParents) {
         const tabs = megaParent.querySelectorAll('.category-children-wrap');
-        let minHeight = 0;
-        for (let tab of tabs) {
-            const height = getAbsoluteHeight(tab);
-
-            if (height > minHeight) {
-                minHeight = height;
-            }
-        }
+        // let minHeight = 0;
+        // for (let tab of tabs) {
+        //     const height = getAbsoluteHeight(tab);
+        //
+        //     if (height > minHeight) {
+        //         minHeight = height;
+        //     }
+        // }
 
         //set all tabs to the same height of the tallest
-        for (let tab of tabs) {
-            tab.style.height = minHeight + 'px';
-        }
+        // for (let tab of tabs) {
+        //     tab.style.height = minHeight + 'px';
+        // }
 
         //hide all tabs
         for (let tab of tabs) {
