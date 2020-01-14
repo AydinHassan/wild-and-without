@@ -80,12 +80,23 @@ body.header_type7 .menu-primary-menu-container-wrap {
   margin-top: 32px;
 }
 
+
 body.header_type7 header .social_links_wrap {
   position: absolute;
-  right: 0;
-  top: -17px;
   margin: 0;
+  left: 0;
+  right: auto;
+  top: -7px;
 }
+
+@media only screen and (max-width: 768px) {
+  body.header_type7 header .social_links_wrap {
+    left: auto;
+    right: 0;
+    top: -17px;
+  }
+}
+
 
 body.header_type7 header .social_links_wrap .social_link {
   text-align: left;
