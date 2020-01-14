@@ -173,8 +173,9 @@ document.addEventListener("DOMContentLoaded", e => {
         const mobileMenuButtons = document.querySelectorAll('.mobile_menu_btn');
         for(let mobileButton of mobileMenuButtons) {
             mobileButton.addEventListener("click", e => {
+                e.preventDefault();
                 const menu = document.querySelector('#header_mobile_wrap .menu-primary-menu-container-wrap');
-                slideToggle(menu);
+                menu.classList.toggle('active');
             });
         }
 
@@ -187,7 +188,7 @@ document.addEventListener("DOMContentLoaded", e => {
                 menuItem.classList.toggle('submenu_open');
 
                 if (menuItem.nextElementSibling) {
-                    slideToggle(menuItem.nextElementSibling);
+                    menuItem.nextElementSibling.classList.toggle('active');
                 }
             });
         }
@@ -207,19 +208,6 @@ document.addEventListener("DOMContentLoaded", e => {
     const megaParents = document.querySelectorAll('.menu-item-mega-parent');
     for(let megaParent of megaParents) {
         const tabs = megaParent.querySelectorAll('.category-children-wrap');
-        // let minHeight = 0;
-        // for (let tab of tabs) {
-        //     const height = getAbsoluteHeight(tab);
-        //
-        //     if (height > minHeight) {
-        //         minHeight = height;
-        //     }
-        // }
-
-        //set all tabs to the same height of the tallest
-        // for (let tab of tabs) {
-        //     tab.style.height = minHeight + 'px';
-        // }
 
         //hide all tabs
         for (let tab of tabs) {
@@ -355,38 +343,4 @@ document.addEventListener("DOMContentLoaded", e => {
         })
     }
 });
-
-function slideToggle(element) {
-    if (!element.classList.contains('active')) {
-        element.classList.add('active');
-        element.style.height = 'auto';
-
-        const height = element.clientHeight + "px";
-
-        element.style.height = '0px';
-
-        setTimeout(function () {
-            element.style.height = height;
-        }, 0);
-    } else {
-        element.style.height = '0px';
-
-        element.addEventListener('transitionend', function () {
-            element.classList.remove('active');
-        }, {
-            once: true
-        });
-    }
-}
-
-function getAbsoluteHeight(el) {
-    // Get the DOM Node if you pass in a string
-    el = (typeof el === 'string') ? document.querySelector(el) : el;
-
-    var styles = window.getComputedStyle(el);
-    var margin = parseFloat(styles['marginTop']) +
-        parseFloat(styles['marginBottom']);
-
-    return Math.ceil(el.offsetHeight + margin);
-}
 
