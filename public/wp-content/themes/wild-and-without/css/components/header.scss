@@ -82,8 +82,8 @@ body.header_type7 .menu-primary-menu-container-wrap {
 
 body.header_type7 header .social_links_wrap {
   position: absolute;
-  left: 0;
-  top: -7px;
+  right: 0;
+  top: -17px;
   margin: 0;
 }
 
@@ -666,7 +666,7 @@ body.header-fixed .menu-primary-menu-container-wrap .sub-menu .sub-menu:before {
     content: "\f054";
     position: absolute;
     right: 15px;
-    top: 16px;
+    top: 16social_links_wrappx;
     font-family: icons;
     font-size: 12px;
     color: #fff;
@@ -808,7 +808,6 @@ body.header-fixed .menu-primary-menu-container-wrap .sub-menu .sub-menu:before {
   #header_mobile_wrap .header_search i.fa-search{
     top:auto;
   }
-  body #header_mobile_wrap header .social_links_wrap{position:static;}
   body #header_mobile_wrap .header_search,
   body.header-fixed #header_mobile_wrap .header_search{
     margin-right:0;
