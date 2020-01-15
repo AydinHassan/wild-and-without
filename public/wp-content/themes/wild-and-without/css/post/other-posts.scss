@@ -1,0 +1,36 @@
+@import '../../../../plugins/wp-post-block/assets/public/styles/variables';
+
+body:not(.wp-admin) .dip-block-container {
+  margin-bottom: 30px;
+
+  .is-style-normal,
+  .is-style-vertical-image {
+    flex-basis: 50%;
+  }
+
+  .dip-article-block {
+    padding: 15px;
+  }
+}
+
+@media (min-width: #{$tablet-breakpoint}) {
+  body:not(.wp-admin) .dip-block-container.section-block-container {
+    .is-style-normal,
+    .is-style-vertical-image,
+    .is-style-image-highlight,
+    .is-style-text-highlight {
+      flex-basis: 25%;
+    }
+  }
+}
+
+body:not(.wp-admin) .dip-block-container .dip-article-block:nth-child(n+4) {
+  display: none;
+}
+
+@media (min-width: #{$tablet-breakpoint}) {
+  body:not(.wp-admin) .dip-block-container .dip-article-block:nth-child(n+4) {
+    display: block;
+  }
+}
+
