@@ -343,7 +343,6 @@ class cstheme_MegaMenu_Walker extends Walker_Nav_Menu
         $query = new WP_Query([
             'cat' => $item->object_id,
             'posts_per_page' => 4,
-            'no_found_rows' => true
         ]);
 
         $content = '';
@@ -380,7 +379,10 @@ class cstheme_MegaMenu_Walker extends Walker_Nav_Menu
                 $content .= '</div>';
             }
 
-            $content .= "</div><div class='category-nav-all'><a href='{$item->url}'>View all {$item->title} posts</a></div>";
+            $content .= '</div>';
+            $content .= "<div class='category-nav-all'>";
+            $content .= "<a href='{$item->url}'>View all ({$query->found_posts}) {$item->title} posts</a>";
+            $content .= '</div>';
             $content .= '</div>';
         }
         $this->mega_menu_content .= $content;
