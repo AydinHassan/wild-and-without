@@ -673,7 +673,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1574186406"
+                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1578601777"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -701,15 +701,15 @@
         },
         {
             "name": "wpackagist-plugin/google-site-kit",
-            "version": "1.1.4",
+            "version": "1.2.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-site-kit/",
-                "reference": "tags/1.1.4"
+                "reference": "tags/1.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-site-kit.1.1.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/google-site-kit.1.2.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
