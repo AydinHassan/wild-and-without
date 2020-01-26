@@ -701,15 +701,15 @@
         },
         {
             "name": "wpackagist-plugin/google-site-kit",
-            "version": "1.1.4",
+            "version": "1.2.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-site-kit/",
-                "reference": "tags/1.1.4"
+                "reference": "tags/1.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-site-kit.1.1.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/google-site-kit.1.2.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -737,15 +737,15 @@
         },
         {
             "name": "wpackagist-plugin/media-file-renamer",
-            "version": "4.6.3",
+            "version": "4.6.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/media-file-renamer/",
-                "reference": "tags/4.6.3"
+                "reference": "tags/4.6.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.4.6.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.4.6.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -881,15 +881,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "12.8.1",
+            "version": "12.9.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/12.8.1"
+                "reference": "tags/12.9.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.8.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.12.9.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
