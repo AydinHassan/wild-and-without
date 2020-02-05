@@ -539,15 +539,15 @@
         },
         {
             "name": "wpackagist-plugin/broken-link-checker",
-            "version": "1.11.10",
+            "version": "1.11.11",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/broken-link-checker/",
-                "reference": "tags/1.11.10"
+                "reference": "tags/1.11.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/broken-link-checker.1.11.10.zip"
+                "url": "https://downloads.wordpress.org/plugin/broken-link-checker.1.11.11.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -673,7 +673,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1578601777"
+                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1574186406"
             },
             "require": {
                 "composer/installers": "~1.0"
