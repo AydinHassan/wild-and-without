@@ -15,7 +15,7 @@
     "wpackagist-plugin/akismet": "^4",
     "wpackagist-plugin/w3-total-cache": "^0.13",
     "wpackagist-plugin/better-wp-security": "^7.2",
-    "wpackagist-plugin/wordpress-seo": "^12.0",
+    "wpackagist-plugin/wordpress-seo": "^13.0",
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "^5.1",
     "wpackagist-plugin/contact-form-7": "^5.0",
     "wpackagist-plugin/updraftplus": "^1.13",
