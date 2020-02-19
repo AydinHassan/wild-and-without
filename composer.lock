@@ -675,7 +675,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1574186406"
+                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1578601777"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -883,15 +883,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "13.0",
+            "version": "13.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/13.0"
+                "reference": "tags/13.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.13.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.13.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
