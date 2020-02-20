@@ -649,15 +649,15 @@
         },
         {
             "name": "wpackagist-plugin/enable-media-replace",
-            "version": "3.3.8",
+            "version": "3.3.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/enable-media-replace/",
-                "reference": "tags/3.3.8"
+                "reference": "tags/3.3.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.3.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.3.9.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -675,7 +675,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1574186406"
+                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1578601777"
             },
             "require": {
                 "composer/installers": "~1.0"
