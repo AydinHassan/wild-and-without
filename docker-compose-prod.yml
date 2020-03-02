@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  reverse-proxy:
+    image: traefik:v2.1
+    # Enables the web UI and tells Traefik to listen to docker
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=aydin@hotmail.co.uk"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      # So that Traefik can listen to the Docker events
+      - /var/run/docker.sock:/var/run/docker.sock
+      - "./letsencrypt:/letsencrypt"
+
+  varnish:
+    build:
+      context: ./.docker/files/wild-and-without-varnish
+      dockerfile: Dockerfile
+    restart: always
+    logging:
+      options:
+        max-size: 10m
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.middlewares.varnish-redirect-websecure.redirectscheme.scheme=https"
+      - "traefik.http.routers.varnish-web.middlewares=whoami-redirect-websecure"
+      - "traefik.http.routers.varnish-web.rule=Host(`photowalk.club`)"
+      - "traefik.http.routers.varnish-web.entrypoints=web"
+      - "traefik.http.routers.varnish-websecure.rule=Host(`photowalk.club`)"
+      - "traefik.http.routers.varnish-websecure.entrypoints=websecure"
+      - "traefik.http.routers.varnish-websecure.tls.certresolver=myresolver"
+
+  dockerhost:
+    image: qoomon/docker-host
+    cap_add: [ 'NET_ADMIN', 'NET_RAW' ]
+    restart: always
