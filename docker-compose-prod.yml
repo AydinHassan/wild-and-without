@@ -32,11 +32,17 @@ services:
         max-size: 10m
     labels:
       - "traefik.enable=true"
+      - "traefik.http.middlewares.redirect-www.redirectregex.regex=^https?://wildandwithout.com/(.*)"
+      - "traefik.http.middlewares.redirect-www.redirectregex.replacement=https://www.wildandwithout.com/$${1}"
+      - "traefik.http.middlewares.redirect-www.redirectregex.permanent=true"
+      - "traefik.http.routers.varnish-web.middlewares=redirect-www"
+      - "traefik.http.routers.varnish-websecure.middlewares=redirect-www"
       - "traefik.http.middlewares.varnish-redirect-websecure.redirectscheme.scheme=https"
-      - "traefik.http.routers.varnish-web.middlewares=whoami-redirect-websecure"
-      - "traefik.http.routers.varnish-web.rule=Host(`photowalk.club`)"
+      - "traefik.http.middlewares.varnish-redirect-websecure.redirectscheme.permanent=true"
+      - "traefik.http.routers.varnish-web.middlewares=varnish-redirect-websecure"
+      - "traefik.http.routers.varnish-web.rule=Host(`www.wildandwithout.com`, `wildandwithout.com`)"
       - "traefik.http.routers.varnish-web.entrypoints=web"
-      - "traefik.http.routers.varnish-websecure.rule=Host(`photowalk.club`)"
+      - "traefik.http.routers.varnish-websecure.rule=Host(`www.wildandwithout.com`, `wildandwithout.com`)"
       - "traefik.http.routers.varnish-websecure.entrypoints=websecure"
       - "traefik.http.routers.varnish-websecure.tls.certresolver=myresolver"
 
