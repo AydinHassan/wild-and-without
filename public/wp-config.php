@@ -1,12 +1,14 @@
 <?php
 
+$_SERVER['HTTPS'] = 'on';
+
 // BEGIN iThemes Security - Do not modify or remove this line
 // iThemes Security Config Details: 2
 define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settings > WordPress Tweaks > File Editor
 // END iThemes Security - Do not modify or remove this line
 
-define('WP_HOME', 'https://' . $_SERVER['HTTP_HOST'] . '/');
-define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST'] . '/wp/');
+define('WP_HOME', 'https://' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST'] . '/wp');
 
 /*
 * Define wp-content directory outside of WordPress core directory

@@ -1,8 +1,11 @@
 vcl 4.0;
 
+include "hit-miss.vcl";
+import std;
+
 backend default {
-    .host = "dockerhost";
-    .port = "8080";
+    .host = "nginx";
+    .port = "80";
 }
 
 acl purge {
@@ -28,18 +31,27 @@ sub vcl_recv {
 
     # Did not cache the RSS feed
     if (req.url ~ "/feed") {
-            return (pass);
+        return (pass);
     }
 
-    if (req.url ~ "/wp-(login|admin)") {
+    if (req.url ~ "/(login|admin)") {
+        return (pass);
+    }
+
+    if (req.url ~ "/wp/wp-(login|admin)") {
         return (pass);
     }
 
     set req.http.Cookie = regsuball(req.http.Cookie, "has_js=[^;]+(; )?", "");
     set req.http.Cookie = regsuball(req.http.Cookie, "__utm.=[^;]+(; )?", "");
+    set req.http.Cookie = regsuball(req.http.Cookie, "_ga=[^;]+(; )?", "");
+    set req.http.Cookie = regsuball(req.http.Cookie, "_gat=[^;]+(; )?", "");
+    set req.http.Cookie = regsuball(req.http.Cookie, "_gid=[^;]+(; )?", "");
+    set req.http.Cookie = regsuball(req.http.Cookie, "session_depth=[^;]+(; )?", "");
     set req.http.cookie = regsuball(req.http.cookie, "wp-settings-\d+=[^;]+(; )?", "");
     set req.http.cookie = regsuball(req.http.cookie, "wp-settings-time-\d+=[^;]+(; )?", "");
     set req.http.cookie = regsuball(req.http.cookie, "wordpress_test_cookie=[^;]+(; )?", "");
+    set req.http.cookie = regsuball(req.http.cookie, "wordpress_logged_in_[a-z0-9]+=[^;]+(; )?", "");
 
     if (req.http.cookie ~ "^ *$") {
         unset req.http.cookie;
@@ -88,7 +100,7 @@ sub vcl_backend_response {
     }
 
     # Only allow cookies to be set if we're in admin area
-    if (beresp.http.Set-Cookie && bereq.url !~ "^/wp-(login|admin)") {
+    if (beresp.http.Set-Cookie && bereq.url !~ "^/wp/wp-(login|admin)" && bereq.url !~ "^/(login|admin)") {
         unset beresp.http.Set-Cookie;
     }
 
