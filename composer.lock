@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b97c7b016b80f8e1b10dc690a7ad3b9b",
+    "content-hash": "35300279cb4daf5382bd3c67af1ecc5c",
     "packages": [
         {
             "name": "composer/installers",
@@ -828,22 +828,22 @@
             "homepage": "https://wordpress.org/plugins/updraftplus/"
         },
         {
-            "name": "wpackagist-plugin/w3-total-cache",
-            "version": "0.13.1",
+            "name": "wpackagist-plugin/varnish-http-purge",
+            "version": "4.8.1",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "tags/0.13.1"
+                "url": "https://plugins.svn.wordpress.org/varnish-http-purge/",
+                "reference": "tags/4.8.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.13.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/varnish-http-purge.4.8.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/w3-total-cache/"
+            "homepage": "https://wordpress.org/plugins/varnish-http-purge/"
         },
         {
             "name": "wpackagist-plugin/widget-context",

@@ -13,7 +13,6 @@
     "johnpbloch/wordpress": "^5.0",
     "wpackagist-theme/twentynineteen": "^1.4",
     "wpackagist-plugin/akismet": "^4",
-    "wpackagist-plugin/w3-total-cache": "^0.13",
     "wpackagist-plugin/better-wp-security": "^7.2",
     "wpackagist-plugin/wordpress-seo": "^13.0",
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "^6.0",
@@ -36,6 +35,7 @@
     "wpackagist-plugin/disable-xml-rpc": "^1.0",
     "wpackagist-plugin/custom-taxonomy-order-ne":"^3.0",
     "wpackagist-plugin/google-site-kit":"^1.0",
+    "wpackagist-plugin/varnish-http-purge":"^4.8",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^3.6"
   },
