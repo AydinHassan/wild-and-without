@@ -12,6 +12,7 @@ acl purge {
     "localhost";
     "127.0.0.1";
     "dockerhost";
+    "php";
 }
 
 sub vcl_recv {
