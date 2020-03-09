@@ -22,6 +22,7 @@ public/wp-content/themes/*
 !public/wp-content/themes/voyager/
 /.env
 /.docker/mysql
+/.docker/files/acme.json
 /log
 
 #cache

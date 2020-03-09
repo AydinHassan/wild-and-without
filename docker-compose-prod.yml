@@ -3,7 +3,6 @@ version: '3'
 services:
   reverse-proxy:
     image: traefik:v2.1
-    # Enables the web UI and tells Traefik to listen to docker
     command:
       - "--api.insecure=true"
       - "--providers.docker=true"
@@ -19,7 +18,14 @@ services:
       - "8081:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /opt/traefik/acme.json:/acme.json
+      - /opt/traefik/acme.json:/letsencrypt/acme.json
+    labels:
+      traefik.enable: true
+      traefik.http.routers.http_catchall.rule: HostRegexp(`{any:.+}`)
+      traefik.http.routers.http_catchall.entrypoints: web
+      traefik.http.routers.http_catchall.middlewares: https_redirect
+      traefik.http.middlewares.https_redirect.redirectscheme.scheme: https
+      traefik.http.middlewares.https_redirect.redirectscheme.permanent: true
 
   varnish:
     build:
@@ -30,15 +36,16 @@ services:
       options:
         max-size: 10m
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.middlewares.varnish-redirect-websecure.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.varnish-redirect-websecure.redirectscheme.permanent=true"
-      - "traefik.http.routers.varnish-web.middlewares=varnish-redirect-websecure"
-      - "traefik.http.routers.varnish-web.rule=Host(`www.wildandwithout.com`)"
-      - "traefik.http.routers.varnish-web.entrypoints=web"
-      - "traefik.http.routers.varnish-websecure.rule=Host(`www.wildandwithout.com`)"
-      - "traefik.http.routers.varnish-websecure.entrypoints=websecure"
-      - "traefik.http.routers.varnish-websecure.tls.certresolver=myresolver"
+      traefik.enable: true
+      traefik.http.middlewares.nonwww-redirect.redirectregex.regex: ^https://wildandwithout.com/(.*)
+      traefik.http.middlewares.nonwww-redirect.redirectregex.replacement: https://www.wildandwithout.com/$${1}
+      traefik.http.middlewares.nonwww-redirect.redirectregex.permanent: true
+      traefik.http.routers.varnish-websecure.rule: Host(`www.wildandwithout.com`, `wildandwithout.com`)
+      traefik.http.routers.varnish-websecure.middlewares: nonwww-redirect
+      traefik.http.routers.varnish-websecure.entrypoints: websecure
+      traefik.http.routers.varnish-websecure.tls.certresolver: myresolver
+    depends_on:
+        - "nginx"
 
   dockerhost:
     image: qoomon/docker-host

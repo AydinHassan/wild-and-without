@@ -3,7 +3,6 @@ version: '3'
 services:
   reverse-proxy:
     image: traefik:v2.1
-    # Enables the web UI and tells Traefik to listen to docker
     command:
       - "--api.insecure=true"
       - "--providers.docker=true"
@@ -19,6 +18,14 @@ services:
       - "8081:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - .docker/files/acme.json:/letsencrypt/acme.json
+    labels:
+      traefik.enable: true
+      traefik.http.routers.http_catchall.rule: HostRegexp(`{any:.+}`)
+      traefik.http.routers.http_catchall.entrypoints: web
+      traefik.http.routers.http_catchall.middlewares: https_redirect
+      traefik.http.middlewares.https_redirect.redirectscheme.scheme: https
+      traefik.http.middlewares.https_redirect.redirectscheme.permanent: true
 
   php:
     container_name: wild-and-without-fpm
@@ -35,12 +42,8 @@ services:
       - DEBUG_MODE=true
       - PHP_IDE_CONFIG=serverName=wildandwithout
       - XDEBUG_CONFIG=remote_host=docker.for.mac.localhost remote_port=9001
-    ports:
-      - 9000
     depends_on:
       - "db"
-    labels:
-      - "traefik.enable=false"
 
   db:
     container_name: wild-and-without-db
@@ -48,16 +51,12 @@ services:
     volumes:
       - "./.docker/mysql:/var/lib/mysql"
       - "./.docker/db/:/docker-entrypoint-initdb.d/"
-    ports:
-      - "3306"
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=wild_and_without
       - MYSQL_USER=wild_and_without
       - MYSQL_PASSWORD=wild_and_without
-    labels:
-      - "traefik.enable=false"
 
   varnish:
     build:
@@ -68,15 +67,16 @@ services:
       options:
         max-size: 10m
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.middlewares.varnish-redirect-websecure.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.varnish-redirect-websecure.redirectscheme.permanent=true"
-      - "traefik.http.routers.varnish-web.middlewares=varnish-redirect-websecure"
-      - "traefik.http.routers.varnish-web.rule=Host(`wildandwithout.local`)"
-      - "traefik.http.routers.varnish-web.entrypoints=web"
-      - "traefik.http.routers.varnish-websecure.rule=Host(`wildandwithout.local`)"
-      - "traefik.http.routers.varnish-websecure.entrypoints=websecure"
-      - "traefik.http.routers.varnish-websecure.tls.certresolver=myresolver"
+      traefik.enable: true
+      traefik.http.middlewares.nonwww-redirect.redirectregex.regex: ^https://wildandwithout.local/(.*)
+      traefik.http.middlewares.nonwww-redirect.redirectregex.replacement: https://www.wildandwithout.local/$${1}
+      traefik.http.middlewares.nonwww-redirect.redirectregex.permanent: true
+      traefik.http.routers.varnish-websecure.rule: Host(`www.wildandwithout.local`, `wildandwithout.local`)
+      traefik.http.routers.varnish-websecure.middlewares: nonwww-redirect
+      traefik.http.routers.varnish-websecure.entrypoints: websecure
+      traefik.http.routers.varnish-websecure.tls.certresolver: myresolver
+    depends_on:
+      - "nginx"
 
   nginx:
     container_name: wild-and-without-nginx
