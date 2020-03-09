@@ -37,7 +37,7 @@
     "wpackagist-plugin/google-site-kit":"^1.0",
     "wpackagist-plugin/varnish-http-purge":"^4.8",
     "roots/wp-password-bcrypt": "^1.0",
-    "vlucas/phpdotenv": "^3.6"
+    "vlucas/phpdotenv": "^4.1"
   },
   "extra" : {
     "wordpress-install-dir": "public/wp",
