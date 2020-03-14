@@ -44,8 +44,6 @@ services:
       traefik.http.routers.varnish-websecure.middlewares: nonwww-redirect
       traefik.http.routers.varnish-websecure.entrypoints: websecure
       traefik.http.routers.varnish-websecure.tls.certresolver: myresolver
-    depends_on:
-        - "nginx"
 
   dockerhost:
     image: qoomon/docker-host
