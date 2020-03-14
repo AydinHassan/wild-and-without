@@ -200,7 +200,7 @@ class Main
         $dist_path = self::$asset_path;
         if ($manifest !== false) {
             if (array_key_exists($filename, $manifest)) {
-                return "{$dist_path}{$manifest->$filename}";
+                return "{$dist_path}{$manifest[$filename]}";
             }
         }
         return "{$dist_path}{$filename}";
@@ -222,7 +222,7 @@ class Main
         $manifest_file  = "{$plugin_dir}{$dist_path}/manifest.json";
         if (file_exists($manifest_file)) {
             $manifest_data = file_get_contents($manifest_file);
-            self::$manifest = json_decode($manifest_data);
+            self::$manifest = json_decode($manifest_data, true);
         }
         self::$asset_path = "{$plugin_url}/{$dist_path}/";
     }
