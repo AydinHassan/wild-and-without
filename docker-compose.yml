@@ -68,11 +68,14 @@ services:
         max-size: 10m
     labels:
       traefik.enable: true
+      traefik.http.middlewares.admin-redirect.redirectregex.regex: ^https://www.wildandwithout.local/admin/(.*)
+      traefik.http.middlewares.admin-redirect.redirectregex.replacement: https://www.wildandwithout.local/wp/wp-admin/$${1}
+      traefik.http.middlewares.admin-redirect.redirectregex.permanent: true
       traefik.http.middlewares.nonwww-redirect.redirectregex.regex: ^https://wildandwithout.local/(.*)
       traefik.http.middlewares.nonwww-redirect.redirectregex.replacement: https://www.wildandwithout.local/$${1}
       traefik.http.middlewares.nonwww-redirect.redirectregex.permanent: true
       traefik.http.routers.varnish-websecure.rule: Host(`www.wildandwithout.local`, `wildandwithout.local`)
-      traefik.http.routers.varnish-websecure.middlewares: nonwww-redirect
+      traefik.http.routers.varnish-websecure.middlewares: nonwww-redirect, admin-redirect
       traefik.http.routers.varnish-websecure.entrypoints: websecure
       traefik.http.routers.varnish-websecure.tls.certresolver: myresolver
     depends_on:
