@@ -8,18 +8,17 @@ backend default {
     .port = "8080";
 }
 
-acl purge {
-    "localhost";
-    "127.0.0.1";
-    "dockerhost";
-}
-
 sub vcl_recv {
-    # Allow purging from ACL
+    set req.http.X-VC-My-Purge-Key = std.getenv("VARNISH_PURGE_KEY");
     if (req.method == "PURGE") {
-        # If not allowed then a error 405 is returned
-        if (!client.ip ~ purge) {
-            return(synth(405, "This IP is not allowed to send PURGE requests."));
+        if (req.http.X-VC-Purge-Key == req.http.X-VC-My-Purge-Key) {
+            set req.http.X-VC-Purge-Key-Auth = "true";
+        } else {
+            set req.http.X-VC-Purge-Key-Auth = "false";
+        }
+
+        if (req.http.X-VC-Purge-Key-Auth != "true") {
+            return (synth(405, "Not allowed from " + client.ip));
         }
         return (purge);
     }
