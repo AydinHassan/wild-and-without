@@ -35,7 +35,6 @@
     "wpackagist-plugin/disable-xml-rpc": "^1.0",
     "wpackagist-plugin/custom-taxonomy-order-ne":"^3.0",
     "wpackagist-plugin/google-site-kit":"^1.0",
-    "wpackagist-plugin/varnish-http-purge":"^4.8",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^3.6"
   },
