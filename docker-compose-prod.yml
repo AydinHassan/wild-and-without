@@ -34,6 +34,8 @@ services:
       context: .docker/files/wild-and-without-varnish-prod
       dockerfile: Dockerfile
     restart: always
+    environment:
+      VARNISH_PURGE_KEY: "${VARNISH_PURGE_KEY}"
     logging:
       options:
         max-size: 10m
