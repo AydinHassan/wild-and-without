@@ -41,6 +41,14 @@ sub vcl_recv {
         return (pass);
     }
 
+    if (req.url ~ "wp-json") {
+         return(pass);
+    }
+
+    if (req.url ~ "preview=true") {
+        return (pass);
+    }
+
     set req.http.Cookie = regsuball(req.http.Cookie, "has_js=[^;]+(; )?", "");
     set req.http.Cookie = regsuball(req.http.Cookie, "__utm.=[^;]+(; )?", "");
     set req.http.Cookie = regsuball(req.http.Cookie, "_ga=[^;]+(; )?", "");
