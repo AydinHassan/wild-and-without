@@ -104,10 +104,9 @@ $rp->setValue($forms, new MC4WP_Form_Listener);
 
 $subscribe = function () {
     $listener = new MC4WP_Form_Listener();
-    $listener->listen($request = mc4wp('request'));
+    $listener->listen();
 
-    $formId = $request->post->get( '_mc4wp_form_id' );
-    $form = mc4wp_get_form($formId);
+    $form = $listener->submitted_form;
 
     if (!$form->has_errors()) {
         wp_send_json_success(['message' => $form->messages]);
