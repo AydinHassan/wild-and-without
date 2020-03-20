@@ -342,5 +342,27 @@ document.addEventListener("DOMContentLoaded", e => {
             submitNewsletter(document.querySelector('#mc4wp-form-2'));
         })
     }
+
+    const exitIntent = event => {
+        // If the mouse is near the top of the window, show the popup
+        // Also, do NOT trigger when hovering or clicking on selects
+
+        const shouldShow = window.localStorage.getItem('subscribe-popup-shown') === null;
+
+        if (
+            shouldShow &&
+            event.clientY < 50 &&
+            event.relatedTarget == null &&
+            event.target.nodeName.toLowerCase() !== 'select') {
+            // Remove this event listener
+            document.removeEventListener("mouseout", exitIntent);
+
+            // Show the popup
+            document.querySelectorAll('.subscribe_popup_btn')[0].click();
+            window.localStorage.setItem('subscribe-popup-shown', 'shown');
+        }
+    }
+
+    document.addEventListener("mouseout", exitIntent);
 });
 
