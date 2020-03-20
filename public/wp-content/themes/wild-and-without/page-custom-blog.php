@@ -50,7 +50,6 @@ get_template_part( 'templates/slider/top_slider' );
             <?php get_sidebar() ?>
         </div>
     </div>
-    <?php $wp_query = null; wp_reset_postdata() ?>
 </div>
 
 <?php comments_template(); ?>
