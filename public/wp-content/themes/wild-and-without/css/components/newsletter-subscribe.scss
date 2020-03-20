@@ -109,14 +109,12 @@ body.subscribe_popup_show .subscribe_popup_wrap{
   padding:10px 20px;
 }
 .subscribe_popup_content .mc4wp-form p{
-  float:right;
   display:inline-block;
   vertical-align:top;
   margin:0;
   width:36.5%;
 }
 .subscribe_popup_content .mc4wp-form p:first-child{
-  float:left;
   width:61%;
 }
 
@@ -190,7 +188,7 @@ body.subscribe_popup_show .subscribe_popup_wrap{
   }
 
   .mc4wp-response {
-    padding: 80px;
+    padding-top: 30px;
   }
 }
 
