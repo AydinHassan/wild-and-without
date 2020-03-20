@@ -3,13 +3,11 @@
     <div class="subscribe_popup_bg"></div>
     <a class="subscribe_popup_close" href="javascript:void(0);"></a>
     <div class="subscribe_popup_content">
-        <h4>SUBSCRIBE TO GET POSTS DIRECT TO YOUR EMAIL</h4>
-        <p class="mb30">Once you have hit the sign up button you will receive a confirmation e-mail. Head over to your e-mail, confirm that and then you are all ready to receive our blog posts via e-mail!</p>
-        <p class="no-spam mb30">(no spam ever, unsubscribe at any time)</p>
+        <h4>Subscribe to get posts direct to your inbox</h4>
+        <p><b>What do you get for subscribing? </b>Epic adventures & stories, travel inspiration for off the beaten track explorers, city guides, road trip plans and stunning landscape photography</p>
+        <p class="small mb40">Once you have hit the sign up button you will receive a confirmation e-mail. Head over to your e-mail, confirm that and then you are all ready to receive our blog posts via e-mail!</p>
         <div class="clearfix">
-                <?php if (function_exists( 'mc4wp_show_form')): ?>
-                    <?php mc4wp_show_form($id = esc_html(cstheme_option('subscribe_popup_mailChimpid'))); ?>
-                <?php endif ?>
+            <?php mc4wp_show_form(169); ?>
         </div>
     </div>
 </div>
