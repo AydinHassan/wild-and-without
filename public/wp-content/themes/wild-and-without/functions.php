@@ -120,6 +120,10 @@ $subscribe = function () {
     wp_send_json_error(['errors' => $errors]);
 };
 
+add_filter('mc4wp_form_response_position', function () {
+    return 'none';
+});
+
 add_action('wp_ajax_nopriv_wild_without_subscribe', $subscribe);
 add_action('wp_ajax_wild_without_subscribe', $subscribe);
 
