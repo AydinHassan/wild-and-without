@@ -743,15 +743,15 @@
         },
         {
             "name": "wpackagist-plugin/media-file-renamer",
-            "version": "4.6.5",
+            "version": "4.6.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/media-file-renamer/",
-                "reference": "tags/4.6.5"
+                "reference": "tags/4.6.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.4.6.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.4.6.7.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
