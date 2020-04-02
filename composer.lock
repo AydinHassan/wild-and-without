@@ -869,15 +869,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "13.3",
+            "version": "13.4.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/13.3"
+                "reference": "tags/13.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.13.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.13.4.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
