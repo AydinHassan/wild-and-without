@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "771b092a73ea1201c0862aa9bb3f2caf",
+    "content-hash": "5b237f0c4712b90859ca79356e11a580",
     "packages": [
         {
             "name": "composer/installers",
@@ -582,24 +582,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/broken-link-checker/"
-        },
-        {
-            "name": "wpackagist-plugin/cloudinary-image-management-and-manipulation-in-the-cloud-cdn",
-            "version": "1.1.12",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/cloudinary-image-management-and-manipulation-in-the-cloud-cdn/",
-                "reference": "tags/1.1.12"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/cloudinary-image-management-and-manipulation-in-the-cloud-cdn.1.1.12.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/cloudinary-image-management-and-manipulation-in-the-cloud-cdn/"
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
