@@ -11,3 +11,26 @@ $ composer install
 $ docker-compose up -d
 $ npm start
 ```
+
+## Production
+
+### Starting containers
+
+```shell
+cd /var/www/html/current
+sudo docker-compose -f docker-compose-prod.yml up -d
+```
+
+### Stopping
+
+```shell
+cd /var/www/html/current
+sudo docker stop $(sudo docker ps -aq)
+```
+
+After restarting docker, need to allow firewall access to nginx from docker
+
+```shell
+sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' wild-and-without-host
+sudo ufw allow from [ip] proto tcp to any port 8080
+``` 
