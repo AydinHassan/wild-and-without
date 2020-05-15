@@ -37,8 +37,8 @@ body:not(.wp-admin) .dip-block-container {
 // Editor
 // Without this, rows that do not have the 4 columns filled will have the content centered
 body.wp-admin .dip-block-container .block-editor-block-list__layout .block-editor-block-list__block {
-  padding-right: 43px;
-  padding-left: 43px;
+  padding-right: 23px;
+  padding-left: 23px;
 }
 body.wp-admin .dip-block-container .block-editor-block-list__layout {
   [data-article-style] {
