@@ -26,6 +26,7 @@ sudo docker-compose -f docker-compose-prod.yml up -d
 ```shell
 cd /var/www/html/current
 sudo docker stop $(sudo docker ps -aq)
+sudo docker rm $(sudo docker ps -aq)
 ```
 
 After restarting docker, need to allow firewall access to nginx from docker
