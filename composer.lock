@@ -942,15 +942,15 @@
         },
         {
             "name": "wpackagist-theme/twentynineteen",
-            "version": "1.6",
+            "version": "1.7",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/twentynineteen/",
-                "reference": "1.6"
+                "reference": "1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/twentynineteen.1.6.zip"
+                "url": "https://downloads.wordpress.org/theme/twentynineteen.1.7.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
