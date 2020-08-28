@@ -816,15 +816,15 @@
         },
         {
             "name": "wpackagist-plugin/rocket-lazy-load",
-            "version": "2.3.3",
+            "version": "2.3.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/rocket-lazy-load/",
-                "reference": "tags/2.3.3"
+                "reference": "tags/2.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.3.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.3.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
