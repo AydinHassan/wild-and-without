@@ -546,15 +546,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.8.14",
+            "version": "5.9.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.8.14"
+                "reference": "tags/5.9.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.8.14.zip"
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.9.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
