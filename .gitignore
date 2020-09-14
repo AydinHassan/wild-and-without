@@ -15,7 +15,7 @@ public/wp-content/mu-plugins/*
 public/wp-content/plugins/*
 !public/wp-content/plugins/simple-instagram
 !public/wp-content/plugins/tag-list-widget
-!public/wp-content/plugins/wp-post-block-fork
+!public/wp-content/plugins/wp-post-block
 !public/wp-content/plugins/varnish-http-purge
 !public/wp-content/themes
 public/wp-content/themes/*

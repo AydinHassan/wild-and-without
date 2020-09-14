@@ -75,7 +75,7 @@ class Main
      */
     public function __construct($plugin_file)
     {
-        $this->plugin_name = 'wp-post-block-fork';
+        $this->plugin_name = 'wp-post-block';
         $this->version = '1.0.1';
         $this->loader = new utils\Loader();
 
