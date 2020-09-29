@@ -14,7 +14,7 @@
     "wpackagist-theme/twentynineteen": "^1.4",
     "wpackagist-plugin/akismet": "^4",
     "wpackagist-plugin/better-wp-security": "^7.2",
-    "wpackagist-plugin/wordpress-seo": "^14.0",
+    "wpackagist-plugin/wordpress-seo": "^15.0",
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "^6.0",
     "wpackagist-plugin/contact-form-7": "^5.0",
     "wpackagist-plugin/updraftplus": "^1.13",
