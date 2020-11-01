@@ -35,7 +35,7 @@
     "wpackagist-plugin/custom-taxonomy-order-ne":"^3.0",
     "wpackagist-plugin/google-site-kit":"^1.0",
     "roots/wp-password-bcrypt": "^1.0",
-    "vlucas/phpdotenv": "^3.6"
+    "vlucas/phpdotenv": "^5.2"
   },
   "extra" : {
     "wordpress-install-dir": "public/wp",
