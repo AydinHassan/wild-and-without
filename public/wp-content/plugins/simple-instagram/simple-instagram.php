@@ -21,7 +21,7 @@ add_shortcode('simple-instagram', function ($atts = [], $content = null, $tag = 
 $requestHandler = function () {
     $type = $_GET['type'] ?? 'grid';
     if (false === ($posts = get_transient('instagram_posts'))) {
-        $result = wp_remote_get("https://api.instagram.com/v1/users/self/media/recent/?access_token=" . getenv('INSTAGRAM_ACCESS_TOKEN'));
+        $result = wp_remote_get("https://api.instagram.com/v1/users/self/media/recent/?access_token=" . $_ENV['INSTAGRAM_ACCESS_TOKEN']);
 
         if (is_wp_error($result)) {
             wp_send_json_error(['message' => "Something went wrong: {$result->get_error_message()}"]);
