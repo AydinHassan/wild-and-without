@@ -930,7 +930,7 @@
         },
         {
             "name": "wpackagist-plugin/featured-images-for-rss-feeds",
-            "version": "1.5.6",
+            "version": "1.5.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/featured-images-for-rss-feeds/",
@@ -938,7 +938,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1598421337"
+                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1605667072"
             },
             "require": {
                 "composer/installers": "~1.0"
