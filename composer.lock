@@ -1110,15 +1110,15 @@
         },
         {
             "name": "wpackagist-plugin/widget-css-classes",
-            "version": "1.5.4",
+            "version": "1.5.4.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/widget-css-classes/",
-                "reference": "tags/1.5.4"
+                "reference": "tags/1.5.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/widget-css-classes.1.5.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/widget-css-classes.1.5.4.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
