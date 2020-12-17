@@ -8,6 +8,7 @@
 
 use GuzzleHttp\Client;
 use InstagramScraper\Instagram;
+use InstagramScraper\Model\Account;
 use InstagramScraper\Model\Media;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\Cache\Psr16Cache;
@@ -26,7 +27,7 @@ add_shortcode('simple-instagram', function ($atts = [], $content = null, $tag = 
 
 $requestHandler = function () {
     $type = $_GET['type'] ?? 'grid';
-    if (false === ($posts = get_transient('instagram_posts'))) {
+    if (false === ($instaData = get_transient('instagram_data'))) {
         $instagram = Instagram::withCredentials(
             new Client(),
             $_ENV['INSTAGRAM_USER'],
@@ -35,16 +36,17 @@ $requestHandler = function () {
         );
         $instagram->login();
         try {
+            $account = $instagram->getAccount('wildandwithout');
             $posts = $instagram->getMedias('wildandwithout');
         } catch (\Exception $e) {
             wp_send_json_error(['message' => "Something went wrong: {$e->getMessage()}"]);
             return;
         }
 
-        set_transient('instagram_posts', $posts, DAY_IN_SECONDS);
+        set_transient('instagram_data', ['account' => $account, 'posts' => $posts], DAY_IN_SECONDS);
     }
 
-    $widget = new InstagramWidget($posts);
+    $widget = new InstagramWidget($instaData['account'], $instaData['posts']);
 
     if ($type === 'grid') {
         $html = $widget->doGrid();
@@ -74,15 +76,15 @@ class InstagramWidget {
     private $userTitle;
 
     /**
+     * @param Account $account
      * @param Media[] $posts
      */
-    public function __construct(array $posts = [])
+    public function __construct(Account $account, array $posts = [])
     {
-
         $this->posts = $posts;
-        $this->user = $this->posts[0]->getOwner()->getUsername();
-        $this->userImageUrl = $this->posts[0]->getOwner()->getProfilePicUrlHd();
-        $this->userTitle = $this->posts[0]->getOwner()->getFullName();
+        $this->user = $account->getUsername();
+        $this->userImageUrl = $account->getProfilePicUrlHd();
+        $this->userTitle = $account->getFullName();
     }
 
     public function doGrid() : string
