@@ -6,7 +6,11 @@
  * Author: Aydin Hassan
  **/
 
+use GuzzleHttp\Client;
+use InstagramScraper\Instagram;
 use InstagramScraper\Model\Media;
+use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+use Symfony\Component\Cache\Psr16Cache;
 
 add_shortcode('simple-instagram', function ($atts = [], $content = null, $tag = '') {
 
@@ -23,8 +27,13 @@ add_shortcode('simple-instagram', function ($atts = [], $content = null, $tag = 
 $requestHandler = function () {
     $type = $_GET['type'] ?? 'grid';
     if (false === ($posts = get_transient('instagram_posts'))) {
-        $instagram = new \InstagramScraper\Instagram(new \GuzzleHttp\Client());
-
+        $instagram = Instagram::withCredentials(
+            new Client(),
+            $_ENV['INSTAGRAM_USER'],
+            $_ENV['INSTAGRAM_PASSWORD'],
+            new Psr16Cache(new FilesystemAdapter('insta', 0, __DIR__ .  '/../../../../cache'))
+        );
+        $instagram->login();
         try {
             $posts = $instagram->getMedias('wildandwithout');
         } catch (\Exception $e) {
