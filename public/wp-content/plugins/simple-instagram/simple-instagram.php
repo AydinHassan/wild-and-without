@@ -6,6 +6,8 @@
  * Author: Aydin Hassan
  **/
 
+use InstagramScraper\Model\Media;
+
 add_shortcode('simple-instagram', function ($atts = [], $content = null, $tag = '') {
 
     $atts = array_change_key_case((array) $atts, CASE_LOWER);
@@ -21,14 +23,14 @@ add_shortcode('simple-instagram', function ($atts = [], $content = null, $tag = 
 $requestHandler = function () {
     $type = $_GET['type'] ?? 'grid';
     if (false === ($posts = get_transient('instagram_posts'))) {
-        $result = wp_remote_get("https://api.instagram.com/v1/users/self/media/recent/?access_token=" . $_ENV['INSTAGRAM_ACCESS_TOKEN']);
+        $instagram = new \InstagramScraper\Instagram(new \GuzzleHttp\Client());
 
-        if (is_wp_error($result)) {
-            wp_send_json_error(['message' => "Something went wrong: {$result->get_error_message()}"]);
+        try {
+            $posts = $instagram->getMedias('wildandwithout');
+        } catch (\Exception $e) {
+            wp_send_json_error(['message' => "Something went wrong: {$e->getMessage()}"]);
             return;
         }
-
-        $posts = json_decode($result['body'], true);
 
         set_transient('instagram_posts', $posts, DAY_IN_SECONDS);
     }
@@ -62,23 +64,27 @@ class InstagramWidget {
     /** @var string */
     private $userTitle;
 
+    /**
+     * @param Media[] $posts
+     */
     public function __construct(array $posts = [])
     {
+
         $this->posts = $posts;
-        $this->user = $this->posts['data'][0]['user']['username'];
-        $this->userImageUrl = $this->posts['data'][0]['user']['profile_picture'];
-        $this->userTitle = $this->posts['data'][0]['user']['full_name'];
+        $this->user = $this->posts[0]->getOwner()->getUsername();
+        $this->userImageUrl = $this->posts[0]->getOwner()->getProfilePicUrlHd();
+        $this->userTitle = $this->posts[0]->getOwner()->getFullName();
     }
 
     public function doGrid() : string
     {
-        $images = array_map(function ($image) {
+        $images = array_map(function (Media $post) {
             return [
-                'user'      => $image['user']['username'],
-                'thumbnail' => $image['images']['thumbnail']['url'],
-                'link'      => $image['link'],
+                'user' => $post->getOwner()->getUsername(),
+                'thumbnail' => $post->getImageThumbnailUrl(),
+                'link' => $post->getLink(),
             ];
-        }, $this->posts['data']);
+        }, $this->posts);
         $images = array_slice($images, 0, 12);
 
         $html  = <<<EOT
@@ -106,13 +112,13 @@ class InstagramWidget {
 
     public function doCarousel() : string
     {
-        $images = array_map(function ($image) {
+        $images = array_map(function (Media $post) {
             return [
-                'user'  => $image['user']['username'],
-                'img'   => $image['images']['standard_resolution']['url'],
-                'link'  => $image['link'],
+                'user' => $post->getOwner()->getUsername(),
+                'img' => $post->getImageHighResolutionUrl(),
+                'link' => $post->getLink(),
             ];
-        }, $this->posts['data']);
+        }, $this->posts);
 
         $images = array_slice($images, 0, 8);
 
