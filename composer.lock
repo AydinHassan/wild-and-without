@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45f23ecb2516b82e945733ffeedaddbe",
+    "content-hash": "b5b7b9868a1a43d887a9f19828716ebe",
     "packages": [
         {
             "name": "composer/installers",
@@ -979,16 +979,16 @@
         },
         {
             "name": "raiym/instagram-php-scraper",
-            "version": "v0.10.1",
+            "version": "v0.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/postaddictme/instagram-php-scraper.git",
-                "reference": "1e7545ec2df2c0532d6bd7255cb60d269a5ed113"
+                "reference": "cdcb044888329782804054edff48b4a02577b29f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/postaddictme/instagram-php-scraper/zipball/1e7545ec2df2c0532d6bd7255cb60d269a5ed113",
-                "reference": "1e7545ec2df2c0532d6bd7255cb60d269a5ed113",
+                "url": "https://api.github.com/repos/postaddictme/instagram-php-scraper/zipball/cdcb044888329782804054edff48b4a02577b29f",
+                "reference": "cdcb044888329782804054edff48b4a02577b29f",
                 "shasum": ""
             },
             "require": {
@@ -1029,9 +1029,9 @@
             "support": {
                 "email": "r.kapishev@gmail.com",
                 "issues": "https://github.com/postaddictme/instagram-php-scraper/issues",
-                "source": "https://github.com/postaddictme/instagram-php-scraper/tree/v0.10.1"
+                "source": "https://github.com/postaddictme/instagram-php-scraper/tree/v0.11.0"
             },
-            "time": "2020-12-28T19:30:42+00:00"
+            "time": "2021-01-18T13:53:46+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
