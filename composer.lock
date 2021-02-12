@@ -1789,15 +1789,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "5.9.4",
+            "version": "5.9.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/5.9.4"
+                "reference": "tags/5.9.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.9.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.9.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1959,7 +1959,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1605667072"
+                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1613104797"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1969,15 +1969,15 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-dashboard-for-wp",
-            "version": "6.5.1",
+            "version": "6.6.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-analytics-dashboard-for-wp/",
-                "reference": "tags/6.5.1"
+                "reference": "tags/6.6.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.6.5.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.6.6.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2023,15 +2023,15 @@
         },
         {
             "name": "wpackagist-plugin/media-file-renamer",
-            "version": "5.1.4",
+            "version": "5.1.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/media-file-renamer/",
-                "reference": "tags/5.1.4"
+                "reference": "tags/5.1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.5.1.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.5.1.6.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2149,15 +2149,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "15.7",
+            "version": "15.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/15.7"
+                "reference": "tags/15.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.7.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.8.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
