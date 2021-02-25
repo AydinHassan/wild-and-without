@@ -1879,15 +1879,15 @@
         },
         {
             "name": "wpackagist-plugin/custom-taxonomy-order-ne",
-            "version": "3.2.2",
+            "version": "3.3.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/custom-taxonomy-order-ne/",
-                "reference": "tags/3.2.2"
+                "reference": "tags/3.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-taxonomy-order-ne.3.2.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/custom-taxonomy-order-ne.3.3.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
