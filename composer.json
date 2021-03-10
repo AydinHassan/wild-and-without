@@ -11,7 +11,7 @@
   ],
   "require": {
     "johnpbloch/wordpress": "^5.0",
-    "wpackagist-theme/twentynineteen": "^1.4",
+    "wpackagist-theme/twentynineteen": "^2.0",
     "wpackagist-plugin/akismet": "^4",
     "wpackagist-plugin/better-wp-security": "^7.2",
     "wpackagist-plugin/wordpress-seo": "^15.0",
