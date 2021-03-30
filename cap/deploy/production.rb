@@ -1,4 +1,4 @@
-role :web, %w{wildandwithout@198.211.120.174}
+role :web, %w{wildandwithout@wildandwithout}
 
 set :branch, 'master'
 set :deploy_to, '/var/www/html'
