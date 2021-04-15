@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5ababb0860521ef992b83eeb8b66990",
+    "content-hash": "e23acf510139280f564c2805a64ca0e5",
     "packages": [
         {
             "name": "composer/installers",
@@ -2104,24 +2104,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/pre-publish-post-checklist/"
-        },
-        {
-            "name": "wpackagist-plugin/rocket-lazy-load",
-            "version": "2.3.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/rocket-lazy-load/",
-                "reference": "tags/2.3.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/rocket-lazy-load.2.3.4.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/rocket-lazy-load/"
         },
         {
             "name": "wpackagist-plugin/transients-manager",
