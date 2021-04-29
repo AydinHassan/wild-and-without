@@ -10,9 +10,11 @@ RUN apt-get -qq update && apt-get install -qqy apt-utils libzip-dev git zlib1g-d
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Xdebug
-#RUN pecl install xdebug
 #ADD .docker/etc/php-xdebug.ini /usr/local/etc/php/conf.d/php-xdebug.ini
-#RUN docker-php-ext-enable xdebug
+#RUN pecl install xdebug && docker-php-ext-enable xdebug
+
+RUN curl -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+RUN chmod +x /usr/local/bin/wp
 
 WORKDIR /var/www/html
 
