@@ -12,6 +12,18 @@ $ docker-compose up -d
 $ npm start
 ```
 
+### WP CLI
+
+```sh
+docker-compose exec php wp --allow-root --path="public/wp
+```
+
+### Varnish clear cache
+
+```sh
+docker-compose exec varnish varnishadm "ban req.url ~ ."
+```
+
 ## Production
 
 ### Starting containers
