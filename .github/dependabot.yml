@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: composer
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: wpackagist-plugin/wordpress-seo
+    versions:
+    - "15.8"
+    - 16.0.1
+  - dependency-name: wpackagist-plugin/advanced-custom-fields
+    versions:
+    - 5.9.5
+  - dependency-name: wpackagist-plugin/google-analytics-dashboard-for-wp
+    versions:
+    - 6.6.0
