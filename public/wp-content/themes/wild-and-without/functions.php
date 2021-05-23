@@ -47,6 +47,11 @@ add_action('wp_footer', function () {
     wp_deregister_script('mc4wp-forms-api');
 }, PHP_INT_MAX);
 
+
+add_filter('fs_show_admin_notice_featured-images-for-rss-feeds', function ($arg1, $message) {
+    return strpos($message['message'], 'Hey! How do you like ') !== 0;
+}, 10, 3);
+
 add_action('wp_default_scripts', function ($scripts) {
     if (is_admin()) {
         return;
