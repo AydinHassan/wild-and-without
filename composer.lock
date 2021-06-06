@@ -2073,15 +2073,15 @@
         },
         {
             "name": "wpackagist-plugin/mailchimp-for-wp",
-            "version": "4.8.4",
+            "version": "4.8.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/mailchimp-for-wp/",
-                "reference": "tags/4.8.4"
+                "reference": "tags/4.8.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.8.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.8.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
