@@ -2159,15 +2159,15 @@
         },
         {
             "name": "wpackagist-plugin/media-file-renamer",
-            "version": "5.2.1",
+            "version": "5.2.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/media-file-renamer/",
-                "reference": "tags/5.2.1"
+                "reference": "tags/5.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.5.2.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.5.2.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
