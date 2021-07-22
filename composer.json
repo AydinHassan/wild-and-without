@@ -9,6 +9,11 @@
       "url": "https://wpackagist.org"
     }
   ],
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
+  },
   "require": {
     "johnpbloch/wordpress": "^5.0",
     "wpackagist-theme/twentynineteen": "^2.0",
