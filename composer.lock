@@ -2123,15 +2123,15 @@
         },
         {
             "name": "wpackagist-plugin/instagram-feed",
-            "version": "2.9.3",
+            "version": "2.9.3.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/instagram-feed/",
-                "reference": "tags/2.9.3"
+                "reference": "tags/2.9.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/instagram-feed.2.9.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/instagram-feed.2.9.3.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
