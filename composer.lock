@@ -2180,15 +2180,15 @@
         },
         {
             "name": "wpackagist-plugin/google-site-kit",
-            "version": "1.39.0",
+            "version": "1.40.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-site-kit/",
-                "reference": "tags/1.39.0"
+                "reference": "tags/1.40.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-site-kit.1.39.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/google-site-kit.1.40.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
