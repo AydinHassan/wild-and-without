@@ -20,7 +20,7 @@
     "wpackagist-plugin/akismet": "^4",
     "wpackagist-plugin/better-wp-security": "^8.0",
     "wpackagist-plugin/wordpress-seo": "^17.0",
-    "wpackagist-plugin/google-analytics-dashboard-for-wp": "^6.0",
+    "wpackagist-plugin/google-analytics-dashboard-for-wp": "^7.0",
     "wpackagist-plugin/contact-form-7": "^5.0",
     "wpackagist-plugin/updraftplus": "^1.13",
     "wpackagist-plugin/featured-images-for-rss-feeds": "^1.4",
