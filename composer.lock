@@ -2234,18 +2234,18 @@
         },
         {
             "name": "wpackagist-plugin/media-file-renamer",
-            "version": "5.2.5",
+            "version": "5.2.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/media-file-renamer/",
-                "reference": "tags/5.2.5"
+                "reference": "tags/5.2.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.5.2.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.5.2.7.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/media-file-renamer/"
