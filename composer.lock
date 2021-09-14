@@ -1994,7 +1994,7 @@
                 "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.10.2.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
@@ -2030,7 +2030,7 @@
                 "url": "https://downloads.wordpress.org/plugin/better-wp-security.8.0.2.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/better-wp-security/"
@@ -2048,7 +2048,7 @@
                 "url": "https://downloads.wordpress.org/plugin/broken-link-checker.1.11.15.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/broken-link-checker/"
@@ -2066,7 +2066,7 @@
                 "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.4.2.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/contact-form-7/"
@@ -2084,7 +2084,7 @@
                 "url": "https://downloads.wordpress.org/plugin/custom-taxonomy-order-ne.3.3.0.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/custom-taxonomy-order-ne/"
@@ -2102,7 +2102,7 @@
                 "url": "https://downloads.wordpress.org/plugin/disable-embeds.1.5.0.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/disable-embeds/"
@@ -2120,7 +2120,7 @@
                 "url": "https://downloads.wordpress.org/plugin/disable-xml-rpc.1.0.1.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/disable-xml-rpc/"
@@ -2138,7 +2138,7 @@
                 "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.5.0.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/enable-media-replace/"
@@ -2156,7 +2156,7 @@
                 "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1616804616"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/featured-images-for-rss-feeds/"
@@ -2210,7 +2210,7 @@
                 "url": "https://downloads.wordpress.org/plugin/instagram-feed.2.9.3.1.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/instagram-feed/"
@@ -2228,7 +2228,7 @@
                 "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.8.6.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/mailchimp-for-wp/"
@@ -2264,7 +2264,7 @@
                 "url": "https://downloads.wordpress.org/plugin/pre-publish-post-checklist.3.1.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/pre-publish-post-checklist/"
@@ -2282,7 +2282,7 @@
                 "url": "https://downloads.wordpress.org/plugin/transients-manager.zip?timestamp=1596126028"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/transients-manager/"
@@ -2300,7 +2300,7 @@
                 "url": "https://downloads.wordpress.org/plugin/updraftplus.1.16.61.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/updraftplus/"
@@ -2318,7 +2318,7 @@
                 "url": "https://downloads.wordpress.org/plugin/widget-context.1.3.2.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/widget-context/"
@@ -2336,7 +2336,7 @@
                 "url": "https://downloads.wordpress.org/plugin/widget-css-classes.1.5.4.1.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/widget-css-classes/"
@@ -2372,7 +2372,7 @@
                 "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.3.0.3.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-mail-smtp/"
@@ -2390,7 +2390,7 @@
                 "url": "https://downloads.wordpress.org/theme/twentynineteen.2.1.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-theme",
             "homepage": "https://wordpress.org/themes/twentynineteen/"
