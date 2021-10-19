@@ -44,7 +44,8 @@
     "vlucas/phpdotenv": "^5.2",
     "raiym/instagram-php-scraper": "^0.11.0",
     "guzzlehttp/guzzle": "^7.2",
-    "symfony/cache": "^5.2"
+    "symfony/cache": "^5.2",
+    "humanmade/s3-uploads": "^3.0"
   },
   "extra" : {
     "wordpress-install-dir": "public/wp",
