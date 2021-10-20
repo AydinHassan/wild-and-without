@@ -42,7 +42,7 @@
     "johnbillion/wp-crontrol":"^1.10",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^5.2",
-    "raiym/instagram-php-scraper": "^0.11.0",
+    "raiym/instagram-php-scraper": "^0.12.0",
     "guzzlehttp/guzzle": "^7.2",
     "symfony/cache": "^5.2",
     "humanmade/s3-uploads": "^3.0"
