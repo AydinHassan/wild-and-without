@@ -138,6 +138,10 @@ class Controller
                     'type' => 'boolean',
                     'default' => true
                 ],
+                'allowedOptions' => [
+                    'type' => 'array',
+                    'default' => ['all'],
+                ],
                 'id' => [
                     'type' => 'number'
                 ],

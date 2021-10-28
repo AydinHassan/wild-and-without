@@ -119,7 +119,7 @@ class Main
 
         $this->loader->addAction('admin_enqueue_scripts', $plugin_admin, 'enqueueStyles');
         $this->loader->addAction('admin_enqueue_scripts', $plugin_admin, 'enqueueScripts');
-        $this->loader->addAction('block_categories', $plugin_admin, 'setGutenbergCategory');
+        $this->loader->addAction('block_categories_all', $plugin_admin, 'setGutenbergCategory');
         $this->loader->addAction('init', $plugin_admin, 'loadGutenbergBlocks');
     }
 
