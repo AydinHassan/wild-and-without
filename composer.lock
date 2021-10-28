@@ -730,31 +730,33 @@
         },
         {
             "name": "johnbillion/wp-crontrol",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnbillion/wp-crontrol.git",
-                "reference": "7ba483db6afe938d3c37fc9dbf30570abb070854"
+                "reference": "ee901506801d003ea8b0b319fa548aa483e47813"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnbillion/wp-crontrol/zipball/7ba483db6afe938d3c37fc9dbf30570abb070854",
-                "reference": "7ba483db6afe938d3c37fc9dbf30570abb070854",
+                "url": "https://api.github.com/repos/johnbillion/wp-crontrol/zipball/ee901506801d003ea8b0b319fa548aa483e47813",
+                "reference": "ee901506801d003ea8b0b319fa548aa483e47813",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "~1.0",
+                "composer/installers": "^1.0 || ^2.0",
                 "php": ">=5.3.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "0.7.0",
-                "phpcompatibility/phpcompatibility-wp": "2.1.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+                "phpcompatibility/phpcompatibility-wp": "2.1.2",
+                "phpstan/phpstan": "0.12.99",
+                "szepeviktor/phpstan-wordpress": "^0.7.7",
                 "wp-coding-standards/wpcs": "2.3.0"
             },
             "type": "wordpress-plugin",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -770,7 +772,7 @@
             "homepage": "https://github.com/johnbillion/wp-crontrol/",
             "support": {
                 "issues": "https://github.com/johnbillion/wp-crontrol/issues",
-                "source": "https://github.com/johnbillion/wp-crontrol/tree/1.10.0"
+                "source": "https://github.com/johnbillion/wp-crontrol/tree/1.11.0"
             },
             "funding": [
                 {
@@ -778,7 +780,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-02-21T22:12:39+00:00"
+            "time": "2021-10-26T21:21:50+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
