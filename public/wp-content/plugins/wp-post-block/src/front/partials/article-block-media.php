@@ -12,6 +12,6 @@ if (!empty($postStatus) && !empty($attributes['showStatus'])) {
 ?>
 
 <a href="<?php echo esc_url($postUrl) ?>" class="article-block-media <?php echo $imageShadowClass; ?>">
-    <?php echo get_the_post_thumbnail($post->ID, $attributes['imageSize'], $thumbnail_attrs); ?>
+    <?php echo get_the_post_thumbnail($post->ID, 'thumbnail', $thumbnail_attrs); ?>
     <?php echo $postStatusMarkup; ?>
 </a>
