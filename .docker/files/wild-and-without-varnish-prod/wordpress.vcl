@@ -28,7 +28,7 @@ sub vcl_recv {
         return (pass);
     }
 
-    # Did not cache the RSS feed
+    # Do not cache the RSS feed
     if (req.url ~ "/feed") {
         return (pass);
     }
@@ -52,6 +52,7 @@ sub vcl_recv {
     set req.http.Cookie = regsuball(req.http.Cookie, "has_js=[^;]+(; )?", "");
     set req.http.Cookie = regsuball(req.http.Cookie, "__utm.=[^;]+(; )?", "");
     set req.http.Cookie = regsuball(req.http.Cookie, "_ga=[^;]+(; )?", "");
+    set req.http.Cookie = regsuball(req.http.Cookie, "__gads=[^;]+(; )?", "");
     set req.http.Cookie = regsuball(req.http.Cookie, "_gat=[^;]+(; )?", "");
     set req.http.Cookie = regsuball(req.http.Cookie, "_gid=[^;]+(; )?", "");
     set req.http.Cookie = regsuball(req.http.Cookie, "session_depth=[^;]+(; )?", "");
@@ -59,6 +60,8 @@ sub vcl_recv {
     set req.http.cookie = regsuball(req.http.cookie, "wp-settings-time-\d+=[^;]+(; )?", "");
     set req.http.cookie = regsuball(req.http.cookie, "wordpress_test_cookie=[^;]+(; )?", "");
     set req.http.cookie = regsuball(req.http.cookie, "wordpress_logged_in_[a-z0-9]+=[^;]+(; )?", "");
+    set req.http.Cookie = regsuball(req.http.Cookie, "(^|;\s*)(_[_a-zA-Z0-9]+)=[^;]*(; )?", "");
+
 
     if (req.http.cookie ~ "^ *$") {
         unset req.http.cookie;
@@ -113,21 +116,21 @@ sub vcl_backend_response {
 
     # don't cache response to posted requests or those with basic auth
     if (bereq.method == "POST" || bereq.http.Authorization ) {
-        set beresp.uncacheable = true;
+        set beresp.uncacheable = 1;
         set beresp.ttl = 120s;
         return (deliver);
     }
 
     # don't cache search results
     if (bereq.url ~ "\?s=" ){
-        set beresp.uncacheable = true;
+        set beresp.uncacheable = 2;
         set beresp.ttl = 120s;
         return (deliver);
     }
 
     # only cache status ok
     if (beresp.status != 200 ) {
-        set beresp.uncacheable = true;
+        set beresp.uncacheable = 3;
         set beresp.ttl = 120s;
         return (deliver);
     }
