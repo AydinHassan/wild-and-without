@@ -23,7 +23,7 @@
                 <div class="related-post">
                     <div class="related-post-img">
                         <a href="<?= get_permalink() ?>">
-                            <img src="<?= aq_resize(wp_get_attachment_url(get_post_thumbnail_id()), 300, 180, true, true, true) ?>" alt="<?= get_the_title() ?>" />
+                            <img src="<?= aq_resize(wp_get_attachment_url(get_post_thumbnail_id()), 450, 270) ?>" alt="<?= get_the_title() ?>" />
                         </a>
                     </div>
                     <div class="related-post-meta">
