@@ -240,4 +240,4 @@ add_shortcode('tagcloud', function () {
     return $output;
 });
 
-
+add_theme_support('align-wide');
