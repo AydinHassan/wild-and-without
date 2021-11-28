@@ -191,3 +191,47 @@ ol, ul {
     line-height: 48px;
   }
 }
+
+.wp-block-gallery.alignfull {
+  max-width: none;
+  width: auto;
+}
+
+.wp-block-gallery.alignwide {
+  width: auto;
+}
+
+.wp-block-image.alignfull {
+  max-width: none;
+  width: auto;
+}
+
+.wp-block-image.alignwide {
+  width: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .wp-block-gallery.alignfull {
+    margin: 0 calc(50% - 49vw);
+    max-width: 98vw;
+    width: 98vw;
+  }
+
+  .wp-block-gallery.alignwide {
+    width: calc(100% + 30vw);
+    position: relative;
+    left: -15vw;
+  }
+
+  .wp-block-image.alignfull {
+    margin: 0 calc(50% - 49vw);
+    max-width: 98vw;
+    width: 98vw;
+  }
+
+  .wp-block-image.alignwide {
+    width: calc(100% + 30vw);
+    position: relative;
+    left: -15vw;
+  }
+}
