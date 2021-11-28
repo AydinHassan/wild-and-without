@@ -1,4 +1,4 @@
-import Swiper from "swiper";
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
 const stickyHeader = e => {
     const headerHeight = parseInt(window.getComputedStyle(document.querySelector('header')).height, 10);
@@ -54,7 +54,9 @@ window.addEventListener("resize", stickyHeader);
 window.addEventListener('scroll', stickyHeader);
 
 document.addEventListener("DOMContentLoaded", e => {
-    var homepageSlider = new Swiper('.swiper-container', {
+    const homepageSlider = new Swiper('.home-slider', {
+        modules: [Navigation, Pagination, Autoplay],
+        autoplay: true,
         loop: true,
 
         // If we need pagination
@@ -67,7 +69,9 @@ document.addEventListener("DOMContentLoaded", e => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-    })
+    });
+
+    console.log(homepageSlider);
 
     function fixTags (tags) {
         for(let tag of tags) {

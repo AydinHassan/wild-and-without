@@ -1,7 +1,7 @@
 <?php
 
 $args = [
-    'posts_per_page' 		=> 4,
+    'posts_per_page' 		=> 6,
     'post_type' 			=> 'post',
     'cat' 					=> 0,
     'orderby' 				=> 'date',
@@ -13,7 +13,7 @@ $wp_query_2->query($args);
 
 ?>
 
-<div class="swiper-container home-slider">
+<div class="swiper home-slider">
     <div class="swiper-wrapper">
         <?php while ($wp_query_2->have_posts()) : ?>
             <?php $wp_query_2->the_post(); ?>
