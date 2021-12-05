@@ -17,7 +17,7 @@ get_header(); ?>
                         <?php while (have_posts ()) : the_post(); ?>
 
                             <?php $featured_image_url = wp_get_attachment_url(get_post_thumbnail_id()); ?>
-                            <?php $featured_image = '<img src="' . aq_resize( $featured_image_url, 300, 220, true, true, true ) . '" alt="' . get_the_title() . '" />'; ?>
+                            <?php $featured_image = '<img src="' . $featured_image_url . '" alt="' . get_the_title() . '" />'; ?>
 
                             <article id="post-<?php the_ID(); ?>" <?php post_class( 'col-md-12' ); ?>>
                                 <div class="post-content-wrapper clearfix <?= empty($featured_image_url) ? 'no-image' : '' ?>">
