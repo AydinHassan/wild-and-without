@@ -1,3 +1,11 @@
+#blog_list.search-result-list .post-title {
+  padding: 12px 0 11px;
+  text-transform: uppercase;
+  line-height: 48px;
+  font-size: 38px;
+  background-color: #fff;
+}
+
 .search-result-list .post-content-wrapper a.featured_image {
   position: absolute;
   left:0 ;
@@ -83,10 +91,6 @@
 
   #blog_list.search-result-list .no-image .post-meta-date {
     padding: 0px!important;
-  }
-
-  #blog_list.search-result-list .post-title {
-    text-align: center;
   }
 
   #blog_list.search-result-list .post_content_readmore {
