@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6582e3d42c6bf403a572c8babd1df8c7",
+    "content-hash": "c58347b012863f75e9c21618c1f2dc5b",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -2641,7 +2641,7 @@
         },
         {
             "name": "wpackagist-plugin/transients-manager",
-            "version": "1.8.1",
+            "version": "2.0.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/transients-manager/",
@@ -2649,7 +2649,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/transients-manager.zip?timestamp=1596126028"
+                "url": "https://downloads.wordpress.org/plugin/transients-manager.zip?timestamp=1639681621"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"

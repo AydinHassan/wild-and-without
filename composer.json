@@ -32,7 +32,7 @@
     "wpackagist-plugin/wp-mail-smtp": "^3.0",
     "wpackagist-plugin/enable-media-replace": "^3.2",
     "wpackagist-plugin/widget-context": "^1.1",
-    "wpackagist-plugin/transients-manager": "^1.7",
+    "wpackagist-plugin/transients-manager": "^2.0",
     "wpackagist-plugin/pre-publish-post-checklist": "^3.1",
     "wpackagist-plugin/broken-link-checker": "^1.11",
     "wpackagist-plugin/disable-xml-rpc": "^1.0",
