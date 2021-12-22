@@ -2641,15 +2641,15 @@
         },
         {
             "name": "wpackagist-plugin/transients-manager",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/transients-manager/",
-                "reference": "trunk"
+                "reference": "tags/2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/transients-manager.zip?timestamp=1639681621"
+                "url": "https://downloads.wordpress.org/plugin/transients-manager.2.0.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
