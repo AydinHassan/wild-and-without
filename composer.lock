@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.0",
+            "version": "3.209.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "34afa064da0bf2816640b91b7e376ee781cded42"
+                "reference": "fc4ac03c6ec4acea81c01e8b785c8606943d1fd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/34afa064da0bf2816640b91b7e376ee781cded42",
-                "reference": "34afa064da0bf2816640b91b7e376ee781cded42",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fc4ac03c6ec4acea81c01e8b785c8606943d1fd6",
+                "reference": "fc4ac03c6ec4acea81c01e8b785c8606943d1fd6",
                 "shasum": ""
             },
             "require": {
@@ -143,9 +143,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.6"
             },
-            "time": "2022-01-06T19:13:57+00:00"
+            "time": "2022-01-14T19:29:33+00:00"
         },
         {
             "name": "composer/installers",
@@ -2665,15 +2665,15 @@
         },
         {
             "name": "wpackagist-plugin/updraftplus",
-            "version": "1.16.69",
+            "version": "1.22.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/updraftplus/",
-                "reference": "tags/1.16.69"
+                "reference": "tags/1.22.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.16.69.zip"
+                "url": "https://downloads.wordpress.org/plugin/updraftplus.1.22.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -2783,5 +2783,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
