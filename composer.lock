@@ -1374,16 +1374,16 @@
         },
         {
             "name": "raiym/instagram-php-scraper",
-            "version": "v0.12.3",
+            "version": "v0.12.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/postaddictme/instagram-php-scraper.git",
-                "reference": "c9685773d2c85b709894f2e999a22b680b94dd49"
+                "reference": "3c13ebe81b295d82f15d69d7df3331e810d1cf18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/postaddictme/instagram-php-scraper/zipball/c9685773d2c85b709894f2e999a22b680b94dd49",
-                "reference": "c9685773d2c85b709894f2e999a22b680b94dd49",
+                "url": "https://api.github.com/repos/postaddictme/instagram-php-scraper/zipball/3c13ebe81b295d82f15d69d7df3331e810d1cf18",
+                "reference": "3c13ebe81b295d82f15d69d7df3331e810d1cf18",
                 "shasum": ""
             },
             "require": {
@@ -1424,9 +1424,9 @@
             "support": {
                 "email": "r.kapishev@gmail.com",
                 "issues": "https://github.com/postaddictme/instagram-php-scraper/issues",
-                "source": "https://github.com/postaddictme/instagram-php-scraper/tree/v0.12.3"
+                "source": "https://github.com/postaddictme/instagram-php-scraper/tree/v0.12.4"
             },
-            "time": "2022-01-25T08:51:46+00:00"
+            "time": "2022-01-26T15:48:35+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
