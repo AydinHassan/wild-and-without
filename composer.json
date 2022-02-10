@@ -42,7 +42,7 @@
     "wpackagist-plugin/disable-xml-rpc": "^1.0",
     "wpackagist-plugin/custom-taxonomy-order-ne":"^3.0",
     "wpackagist-plugin/google-site-kit":"^1.0",
-    "wpackagist-plugin/instagram-feed":"^2.9",
+    "wpackagist-plugin/instagram-feed":"^6.0",
     "johnbillion/wp-crontrol":"^1.10",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^5.2",
