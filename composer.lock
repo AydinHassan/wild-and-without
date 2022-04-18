@@ -724,16 +724,16 @@
         },
         {
             "name": "johnbillion/wp-crontrol",
-            "version": "1.12.0",
+            "version": "1.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnbillion/wp-crontrol.git",
-                "reference": "0247b26c1214006a55f348ed12fe01c617226a97"
+                "reference": "86f16f64c0b5e2249aa1076789284a8e0c2967c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnbillion/wp-crontrol/zipball/0247b26c1214006a55f348ed12fe01c617226a97",
-                "reference": "0247b26c1214006a55f348ed12fe01c617226a97",
+                "url": "https://api.github.com/repos/johnbillion/wp-crontrol/zipball/86f16f64c0b5e2249aa1076789284a8e0c2967c6",
+                "reference": "86f16f64c0b5e2249aa1076789284a8e0c2967c6",
                 "shasum": ""
             },
             "require": {
@@ -743,13 +743,13 @@
             "require-dev": {
                 "codeception/module-asserts": "^1.0",
                 "codeception/module-filesystem": "^1.0",
-                "codeception/module-phpbrowser": "^1.0",
                 "codeception/module-webdriver": "^1.0",
                 "codeception/util-universalframework": "^1.0",
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
                 "lucatume/wp-browser": "^3.0",
                 "phpcompatibility/phpcompatibility-wp": "2.1.2",
                 "phpstan/phpstan": "^1.0",
+                "phpunit/phpunit": "^9.0",
                 "szepeviktor/phpstan-wordpress": "^1.0",
                 "wp-coding-standards/wpcs": "2.3.0"
             },
@@ -772,7 +772,7 @@
             "homepage": "https://github.com/johnbillion/wp-crontrol/",
             "support": {
                 "issues": "https://github.com/johnbillion/wp-crontrol/issues",
-                "source": "https://github.com/johnbillion/wp-crontrol/tree/1.12.0"
+                "source": "https://github.com/johnbillion/wp-crontrol/tree/1.12.1"
             },
             "funding": [
                 {
@@ -780,7 +780,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-11-22T19:48:16+00:00"
+            "time": "2022-04-15T19:49:49+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
