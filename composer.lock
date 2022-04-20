@@ -2568,15 +2568,15 @@
         },
         {
             "name": "wpackagist-plugin/instagram-feed",
-            "version": "6.0.4",
+            "version": "6.0.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/instagram-feed/",
-                "reference": "tags/6.0.4"
+                "reference": "tags/6.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/instagram-feed.6.0.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/instagram-feed.6.0.5.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -2776,5 +2776,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
