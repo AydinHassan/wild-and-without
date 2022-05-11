@@ -10,6 +10,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 copyright_wrap">
+                            <a class="footer-link heading_font" href="/contact"><?= esc_html__('Contact Us',) ?></a>
                             <div class="copyright">Copyright Wild & Without <?= date('Y') ?>&nbsp;<a href="/privacy-policy" class="link">Privacy Policy</a></div>
                         </div>
                         <div class="col-md-6 social_links_wrap">
