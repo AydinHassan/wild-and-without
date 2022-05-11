@@ -4,43 +4,29 @@ div.wpcf7 {
 }
 
 div.wpcf7 .screen-reader-response {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  width: 1px;
-  margin: 0;
-  padding: 0;
-  border: 0;
+  display: none;
 }
 
-div.wpcf7-response-output {
-  margin: 2em 0.5em 1em;
-  padding: 0.2em 1em;
-  border: 2px solid #ff0000;
-}
-
-div.wpcf7-mail-sent-ok {
+.wpcf7 form.sent .wpcf7-response-output {
   border: 2px solid #398f14;
 }
 
-div.wpcf7-mail-sent-ng,
-div.wpcf7-aborted {
+.wpcf7 form.spam .wpcf7-response-output {
+  border-color: #ffa500; /* Orange */
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
   border: 2px solid #ff0000;
 }
 
-div.wpcf7-spam-blocked {
-  border: 2px solid #ffa500;
+.wpcf7-not-valid-tip {
+  color: #dc3232;
+  font-size: 1em;
+  font-weight: normal;
+  display: block;
 }
 
-div.wpcf7-validation-errors,
-div.wpcf7-acceptance-missing {
-  border: 2px solid #f7e700;
-}
-
-div.wpcf7-display-none {
-  display: none;
-}
 
 form.wpcf7-form {
   padding: 57px 70px 70px;
@@ -55,6 +41,7 @@ form.wpcf7-form label {
   font-size:18px;
   letter-spacing:2px;
 }
+
 
 form.wpcf7-form input,
 form.wpcf7-form textarea {
