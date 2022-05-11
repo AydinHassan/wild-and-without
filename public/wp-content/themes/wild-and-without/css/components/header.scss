@@ -67,6 +67,10 @@ body.header-fixed .social_links_wrap_fixed {
   display: block;
 }
 
+.footer_social_links_wrap.social_links_wrap {
+  display: block !important;
+}
+
 body.header-fixed .header_wrap .header_container {
   text-align: left;
 }

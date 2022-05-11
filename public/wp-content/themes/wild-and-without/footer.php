@@ -13,7 +13,7 @@
                             <a class="footer-link heading_font" href="/contact"><?= esc_html__('Contact Us',) ?></a>
                             <div class="copyright">Copyright Wild & Without <?= date('Y') ?>&nbsp;<a href="/privacy-policy" class="link">Privacy Policy</a></div>
                         </div>
-                        <div class="col-md-6 social_links_wrap">
+                        <div class="col-md-6 social_links_wrap footer_social_links_wrap">
                             <?= cstheme_social_links() ?>
                             <div class="do-ref small mt-4"><p>Proudly hosted on <a class="link" href="https://m.do.co/c/cc90ea102df3">Digital Ocean</a>. If you need hosting, <a class="link" href="https://m.do.co/c/cc90ea102df3">get some free credit.</a></p></div>
                         </div>
