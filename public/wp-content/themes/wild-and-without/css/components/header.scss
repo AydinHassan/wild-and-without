@@ -392,8 +392,7 @@ body.header-fixed .menu-primary-menu-container-wrap .sub-menu:before {
 
 .menu-primary-menu-container-wrap .sub-menu li a {
   display: block;
-  padding: 11px 20px 9px;
-  text-transform: none;
+  padding: 11px 10px 9px;
   text-decoration: none !important;
   text-transform: uppercase;
   font-weight: 700;
@@ -545,7 +544,7 @@ body.header-fixed .menu-primary-menu-container-wrap .sub-menu .sub-menu:before {
   width: 25%;
   min-width: 100px;
   margin: 0;
-  padding-right: 50px;
+  padding-right: 30px;
   border: 0;
   background: none;
 }
@@ -680,7 +679,7 @@ body.header-fixed .menu-primary-menu-container-wrap .sub-menu .sub-menu:before {
 
 .menu-primary-menu-container-wrap .sub-menu li.current_page_item a, .menu-primary-menu-container-wrap .sub-menu li.nav-active a {
   background-color: #2b2b2b;
-  padding-left: 30px;
+  padding-left: 20px;
   color: $dark-green;
 }
 
