@@ -24,7 +24,7 @@
                             <?php get_search_form(true) ?>
                         </div>
                     </div>
-                    <div class="col-md-offset-1 col-md-2">
+                    <div class="col-md-3">
                         <div class="social_links_wrap social_links_wrap_fixed">
                             <?= cstheme_social_links(); ?>
                         </div>
