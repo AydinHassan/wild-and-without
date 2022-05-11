@@ -203,7 +203,7 @@ $cstheme_social_links = array(
 	'vimeo' => array(
         'name' => 'vimeo_username',
         'link' => '*'
-    )
+    ),
 );
 
 function cstheme_social_links() {
@@ -213,6 +213,7 @@ function cstheme_social_links() {
             echo '<a href="'. (str_replace('*', cstheme_option($social['name']), $social['link'])) .'" target="_blank" class="social_link '. $key .'"><i class="fa fa-'. $key .'"></i></a>';
         }
     }
+    echo '<a href="/contact" class="social_link contact_us"><i class="fa fa-envelope-o"></i></a>';
 }
 
 
