@@ -246,4 +246,5 @@ add_filter('preprocess_comment', function (array $comment) {
     if (strlen($comment['comment_content']) > 1000) {
         wp_die('Comment is too long. Please keep your comment under 1000 characters.');
     }
+    return $comment;
 });
