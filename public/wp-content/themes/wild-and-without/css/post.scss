@@ -216,7 +216,7 @@ ol, ul {
 //
 @media only screen and (min-width: 768px) {
   .wp-block-gallery.alignfull {
-    margin: 0 calc(50% - 49vw);
+    margin: 0 calc(50% - 49vw) 16px;
     max-width: 98vw;
     width: 98vw;
   }
