@@ -19,7 +19,7 @@
     }
   },
   "require": {
-    "johnpbloch/wordpress": "^5.0",
+    "johnpbloch/wordpress": "^6.0",
     "wpackagist-theme/twentynineteen": "^2.0",
     "wpackagist-plugin/akismet": "^4",
     "wpackagist-plugin/better-wp-security": "^8.0",
