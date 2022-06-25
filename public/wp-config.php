@@ -21,6 +21,7 @@ require_once( __DIR__ . '/../vendor/autoload.php' );
 
 \Dotenv\Dotenv::createImmutable(__DIR__.'/../')->load();
 
+define('DISABLE_WP_CRON', true);
 // ** Cache Settings ** //
 define('WP_CACHE', true);
 
