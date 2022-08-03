@@ -1,14 +1,14 @@
 <?php
 
-$_SERVER['HTTPS'] = 'on';
-
 // BEGIN iThemes Security - Do not modify or remove this line
 // iThemes Security Config Details: 2
 define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settings > WordPress Tweaks > File Editor
 // END iThemes Security - Do not modify or remove this line
 
-define('WP_HOME', 'https://' . $_SERVER['HTTP_HOST']);
-define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST'] . '/wp');
+$_SERVER['HTTPS'] = 'on';
+
+define('WP_HOME', 'http://' . ($_SERVER['HTTP_HOST'] ?? 'www.wildandwithout.com'));
+define('WP_SITEURL', 'http://' . ($_SERVER['HTTP_HOST'] ?? 'www.wildandwithout.com') . '/wp');
 
 /*
 * Define wp-content directory outside of WordPress core directory
@@ -22,6 +22,7 @@ require_once( __DIR__ . '/../vendor/autoload.php' );
 \Dotenv\Dotenv::createImmutable(__DIR__.'/../')->load();
 
 define('DISABLE_WP_CRON', true);
+
 // ** Cache Settings ** //
 define('WP_CACHE', true);
 
@@ -82,6 +83,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
+
 define('WP_DEBUG', filter_var($_ENV['DEBUG_MODE'], FILTER_VALIDATE_BOOLEAN));
 define('WP_DEBUG_DISPLAY', filter_var($_ENV['DEBUG_MODE'], FILTER_VALIDATE_BOOLEAN));
 
