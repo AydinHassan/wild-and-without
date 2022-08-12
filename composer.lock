@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3bae9dd489be4ab6319e204859eda5f3",
+    "content-hash": "e81ea9fedac367605785cf9e8d6c11f5",
     "packages": [
         {
             "name": "composer/installers",
@@ -2388,24 +2388,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/pre-publish-checklist/"
-        },
-        {
-            "name": "wpackagist-plugin/pre-publish-post-checklist",
-            "version": "3.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/pre-publish-post-checklist/",
-                "reference": "tags/3.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/pre-publish-post-checklist.3.1.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/pre-publish-post-checklist/"
         },
         {
             "name": "wpackagist-plugin/transients-manager",
