@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84c008501ec0e59c2040e43593901f5e",
+    "content-hash": "139d2139548f868f8824c95e1fdeae8d",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -2621,6 +2621,24 @@
             "homepage": "https://wordpress.org/plugins/media-file-renamer/"
         },
         {
+            "name": "wpackagist-plugin/pre-publish-checklist",
+            "version": "1.1.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/pre-publish-checklist/",
+                "reference": "tags/1.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/pre-publish-checklist.1.1.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/pre-publish-checklist/"
+        },
+        {
             "name": "wpackagist-plugin/pre-publish-post-checklist",
             "version": "3.1",
             "source": {
@@ -2776,5 +2794,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
