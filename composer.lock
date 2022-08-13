@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e81ea9fedac367605785cf9e8d6c11f5",
+    "content-hash": "081c48f5110d6a49f06ebd0ef8aceef4",
     "packages": [
         {
             "name": "composer/installers",
@@ -2282,24 +2282,6 @@
             "homepage": "https://wordpress.org/plugins/featured-images-for-rss-feeds/"
         },
         {
-            "name": "wpackagist-plugin/google-analytics-dashboard-for-wp",
-            "version": "7.7.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/google-analytics-dashboard-for-wp/",
-                "reference": "tags/7.7.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.7.7.0.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/google-analytics-dashboard-for-wp/"
-        },
-        {
             "name": "wpackagist-plugin/google-site-kit",
             "version": "1.80.0",
             "source": {
@@ -2355,15 +2337,15 @@
         },
         {
             "name": "wpackagist-plugin/media-file-renamer",
-            "version": "5.4.2",
+            "version": "5.4.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/media-file-renamer/",
-                "reference": "trunk"
+                "reference": "tags/5.4.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.zip?timestamp=1660230400"
+                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.5.4.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
