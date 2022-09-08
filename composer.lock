@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "081c48f5110d6a49f06ebd0ef8aceef4",
+    "content-hash": "0d2325ac8a750b37a67798f05f286b69",
     "packages": [
         {
             "name": "composer/installers",
@@ -2252,15 +2252,15 @@
         },
         {
             "name": "wpackagist-plugin/enable-media-replace",
-            "version": "3.6.3",
+            "version": "4.0.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/enable-media-replace/",
-                "reference": "tags/3.6.3"
+                "reference": "tags/4.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.6.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.4.0.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
