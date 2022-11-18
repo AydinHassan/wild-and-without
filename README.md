@@ -21,7 +21,7 @@ docker-compose exec php wp --allow-root --path="public/wp
 ### Varnish clear cache
 
 ```sh
-docker-compose exec varnish varnishadm "ban req.url ~ ."
+sudo docker-compose -f docker-compose-prod.yml exec varnish varnishadm "ban req.url ~ ."
 ```
 
 ### Varnish page debugging
@@ -60,3 +60,14 @@ sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}
 sudo ufw allow from [ip] proto tcp to any port 8080
 ``` 
 
+### Production db dump
+
+```shell
+sudo mysqldump --skip-extended-insert -u root -p wild_and_without > ~/wildandwithout.sql
+```
+
+### Local db import
+
+```shell
+docker exec -i wild-and-without-db mariadb -uwild_and_without -pwild_and_without wild_and_without < wildandwithout.sql
+```
