@@ -1,12 +1,5 @@
 {
-  "fonts/Dolce-Caffe-Regular.otf": "fonts/Dolce-Caffe-Regular.otf",
-  "fonts/Marat-Sans-Bold.woff": "fonts/Marat-Sans-Bold.woff",
-  "fonts/Marat-Sans-DemiBold.woff": "fonts/Marat-Sans-DemiBold.woff",
-  "fonts/Marat-Sans-Italic.woff": "fonts/Marat-Sans-Italic.woff",
-  "fonts/Marat-Sans-Light.woff": "fonts/Marat-Sans-Light.woff",
-  "fonts/Marat-Sans-Regular.woff": "fonts/Marat-Sans-Regular.woff",
-  "fonts/icons.woff?34vurh": "fonts/icons.woff",
-  "main.css": "main.b57a1ad6096b6c433f24.css",
-  "main.js": "bundle.fcded4ebc4734ca39023.js",
-  "photography.js": "bundle.35354f5c4cca7c25aa05.js"
+  "main.css": "main.4b7a9eacdef212b54fa6.css",
+  "main.js": "bundle.570937cd301ff708dcab.js",
+  "photography.js": "bundle.620aa88f8ff440b3eeb3.js"
 }
