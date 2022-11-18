@@ -33,3 +33,5 @@ public/wp-content/themes/*
 !public/wp-content/object-cache.php
 !public/wp-content/w3tc-config
 !public/wp-content/cache
+
+/*.sql
