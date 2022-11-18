@@ -5,8 +5,6 @@
 define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settings > WordPress Tweaks > File Editor
 // END iThemes Security - Do not modify or remove this line
 
-$_SERVER['HTTPS'] = 'on';
-
 define('WP_HOME', 'http://' . ($_SERVER['HTTP_HOST'] ?? 'www.wildandwithout.com'));
 define('WP_SITEURL', 'http://' . ($_SERVER['HTTP_HOST'] ?? 'www.wildandwithout.com') . '/wp');
 
@@ -20,6 +18,8 @@ define( 'WP_CONTENT_URL', WP_HOME . '/wp-content' );
 require_once( __DIR__ . '/../vendor/autoload.php' );
 
 \Dotenv\Dotenv::createImmutable(__DIR__.'/../')->load();
+
+$_SERVER['HTTPS'] = filter_var($_ENV['DEBUG_MODE'], FILTER_VALIDATE_BOOLEAN) ? 'off' : 'on';
 
 define('DISABLE_WP_CRON', true);
 
