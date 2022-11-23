@@ -60,7 +60,7 @@ sub vcl_recv {
     set req.http.cookie = regsuball(req.http.cookie, "wp-settings-time-\d+=[^;]+(; )?", "");
     set req.http.cookie = regsuball(req.http.cookie, "wordpress_test_cookie=[^;]+(; )?", "");
     set req.http.cookie = regsuball(req.http.cookie, "wordpress_logged_in_[a-z0-9]+=[^;]+(; )?", "");
-    set req.http.Cookie = regsuball(req.http.Cookie, "(^|;\s*)(_[_a-zA-Z0-9]+)=[^;]*(; )?", "");
+    set req.http.Cookie = regsuball(req.http.Cookie, "(^\s*|;\s*)(_[_a-zA-Z0-9]+)=[^;]*(; )?", "");
 
 
     if (req.http.cookie ~ "^ *$") {
