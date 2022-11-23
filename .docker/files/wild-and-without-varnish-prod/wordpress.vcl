@@ -8,6 +8,23 @@ backend default {
     .port = "8080";
 }
 
+sub vcl_purge {
+	set req.method = "GET";
+	set req.http.X-Purger = "Purged";
+	set req.http.X-Purge = "Yes";
+	return (restart);
+}
+
+sub vcl_backend_response {
+	set beresp.http.x-url = bereq.url;
+	set beresp.http.x-host = bereq.http.host;
+}
+
+sub vcl_deliver {
+	unset resp.http.x-url;
+	unset resp.http.x-host;
+}
+
 sub vcl_recv {
     set req.http.X-VC-My-Purge-Key = std.getenv("VARNISH_PURGE_KEY");
     if (req.method == "PURGE") {
@@ -20,6 +37,17 @@ sub vcl_recv {
         if (req.http.X-VC-Purge-Key-Auth != "true") {
             return (synth(405, "Not allowed from " + client.ip));
         }
+
+        # If we're trying to regex, then we need to use the ban calls:
+        if (req.http.X-Purge-Method == "regex") {
+            ban("obj.http.x-url ~ " + req.url + " && obj.http.x-host ~ " + req.http.host);
+            return (synth(200, "Purged"));
+        }
+
+        # Otherwise, we strip the query params and flush as is:
+        set req.url = regsub(req.url, "\?.*$", "");
+        return (purge);
+
         return (purge);
     }
 
