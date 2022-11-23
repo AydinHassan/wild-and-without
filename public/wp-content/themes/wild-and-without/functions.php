@@ -248,3 +248,14 @@ add_filter('preprocess_comment', function (array $comment) {
     }
     return $comment;
 });
+
+add_action('varnish_http_purge_headers', function (array $headers) {
+    $varnishAuthKey = $_ENV['VARNISH_PURGE_KEY'] ?? '';
+
+    if ($varnishAuthKey) {
+        $headers['X-VC-Purge-Key'] = $varnishAuthKey;
+    }
+
+    return $headers;
+});
+
