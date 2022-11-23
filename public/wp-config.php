@@ -35,6 +35,8 @@ define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
 define('FS_METHOD','direct');
+
+define('WP_REDIS_HOST', $_ENV['REDIS_HOST'] ?? '127.0.0.1');
 /**#@+
  * Authentication Unique Keys and Salts.
  *

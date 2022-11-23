@@ -51,6 +51,12 @@ services:
       traefik.http.routers.varnish-websecure.entrypoints: websecure
       traefik.http.routers.varnish-websecure.tls.certresolver: myresolver
 
+  redis:
+    container_name: wild-and-without-redis
+    image: redis:latest
+    ports:
+      - "6379"
+
   dockerhost:
     container_name: wild-and-without-host
     image: qoomon/docker-host
