@@ -30,6 +30,12 @@ sudo docker-compose -f docker-compose-prod.yml exec varnish varnishadm "ban req.
 sudo docker-compose -f docker-compose-prod.yml exec varnish varnishlog -q 'ReqURL ~ "^/2021/08/25/georgia-canyons-ultimate-guide/"'
 ```
 
+#### Monitor purge requests
+
+```
+sudo docker-compose -f docker-compose-prod.yml exec varnish varnishlog -g request -q 'ReqMethod eq "PURGE"'
+```
+
 ## Production
 
 ### Starting containers
