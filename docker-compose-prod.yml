@@ -53,9 +53,9 @@ services:
 
   redis:
     container_name: wild-and-without-redis
-    image: redis:latest
+    image: redis:alpine
     ports:
-      - "6379"
+      - "6379:6379"
 
   dockerhost:
     container_name: wild-and-without-host
