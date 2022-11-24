@@ -8,17 +8,12 @@
 	"icon": "sticky",
 	"description": "Hike Stats Block.",
 	"supports": {
-		"html": false,
-	  	"align": true
+		"html": false
 	},
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"attributes": {
-	  "align": {
-		"type": "string",
-		"default": "wide"
-	  },
 	  "ascent": {
 		"type": "string",
 		"source": "html",
