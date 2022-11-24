@@ -1,0 +1,53 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "tp/hike-stats",
+	"version": "0.1.0",
+	"title": "Hike Stats",
+	"category": "design",
+	"icon": "sticky",
+	"description": "Hike Stats Block.",
+	"supports": {
+		"html": false,
+	  	"align": true
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+	  "align": {
+		"type": "string",
+		"default": "wide"
+	  },
+	  "ascent": {
+		"type": "string",
+		"source": "html",
+		"selector": "h4.ascent",
+		"default": "1000 M"
+	  },
+	  "descent": {
+		"type": "string",
+		"source": "html",
+		"selector": "h4.descent",
+		"default": "300 M"
+	  },
+	  "distance": {
+		"type": "string",
+		"source": "html",
+		"selector": "h4.distance",
+		"default": "21 KM"
+	  },
+	  "highestElevation": {
+		"type": "string",
+		"source": "html",
+		"selector": "h4.highest-elevation",
+		"default": "3734 M"
+	  },
+	  "duration": {
+		"type": "string",
+		"source": "html",
+		"selector": "h4.duration",
+		"default": "2 Days"
+	  }
+	}
+}

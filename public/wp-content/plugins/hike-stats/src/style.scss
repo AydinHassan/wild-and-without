@@ -1,0 +1,103 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-tp-hike-stats {
+  justify-content: center;
+  //width: 80%;
+  width: 100%;
+  position: relative;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.wp-block-tp-hike-stats > div {
+  padding: 1rem;
+}
+
+@media (min-width: 650px) {
+  .wp-block-tp-hike-stats {
+	width: 80%;
+  }
+}
+
+@media (min-width: 990px) {
+  .wp-block-tp-hike-stats {
+	left: -15vw;
+	width: calc(100% + 30vw);
+  }
+}
+
+.wp-block-tp-hike-stats > div > div {
+  width: 136px;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(45 212 191 / var(--tw-border-opacity));
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .wp-block-tp-hike-stats > div > div {
+	width: 150px;
+  }
+}
+
+.wp-block-tp-hike-stats > div > div > p {
+  line-height: 1.625;
+  margin-bottom: 0;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .wp-block-tp-hike-stats > div > div > p {
+	font-size: 16px;
+  }
+}
+
+.wp-block-tp-hike-stats > div > div > h4 {
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+  margin-bottom: 4px;
+}
+
+@media (min-width: 768px) {
+  .wp-block-tp-hike-stats > div > div > h4 {
+	font-size: 24px;
+	line-height: 32px;
+  }
+}
+
+.wp-block-tp-hike-stats svg {
+  margin-bottom: 12px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  --tw-text-opacity: 1;
+  color: rgb(45 212 191 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .wp-block-tp-hike-stats svg {
+	height: 40px;
+	width: 40px;
+  }
+}
+
