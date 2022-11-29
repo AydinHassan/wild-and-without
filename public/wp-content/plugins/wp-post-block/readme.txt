@@ -1,13 +1,7 @@
 === WP Post Block ===
-Author URI: https://dipcode.com
-Contributors: dipcode
 Tags: block, post, post block, gutenberg, gutenberg blocks, page builder
 Requires at least: 5.0
-Tested up to: 5.2.2
-Requires PHP: 7.0
-Stable tag: trunk
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Requires PHP: 8.0
 
 
 WP Post Block is an easy way to insert your posts into your content without a single line of code!

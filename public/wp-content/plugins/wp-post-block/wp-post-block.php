@@ -13,14 +13,10 @@
 * @wordpress-plugin
 * Plugin Name: WP Post Block - Display your Posts using the new Block Editor
 * Description: WP Post Block is an easy way to insert your posts into your content without a single line of code.
-* Version: 1.0.1
-* Author: Dipcode
-* Author URI: https://www.dipcode.com
-* License: GPL-2.0+
-* License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+* Version: 1.2.0
+* Author: TrashPanda
 * Text Domain: wp-post-block
 * Domain Path: /languages
-* Network: true
 */
 
 namespace WpPostBlock;
