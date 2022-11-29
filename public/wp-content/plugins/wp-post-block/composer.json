@@ -1,0 +1,9 @@
+{
+    "name": "trash-panda/wp-post-block",
+    "autoload": {
+        "psr-4": {
+            "WpPostBlock\\": "src/"
+        }
+    },
+    "require": {}
+}
