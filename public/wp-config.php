@@ -5,7 +5,13 @@
 define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settings > WordPress Tweaks > File Editor
 // END iThemes Security - Do not modify or remove this line
 
-$scheme = $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
+if ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '' === 'https') {
+    $_SERVER['HTTPS'] = 'on';
+    $scheme = 'https://';
+} else {
+    $scheme = 'http://';
+}
+
 define('WP_HOME', $scheme . ($_SERVER['HTTP_HOST'] ?? 'www.wildandwithout.com'));
 define('WP_SITEURL', $scheme . ($_SERVER['HTTP_HOST'] ?? 'www.wildandwithout.com') . '/wp');
 
