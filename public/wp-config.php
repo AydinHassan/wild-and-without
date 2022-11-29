@@ -5,8 +5,9 @@
 define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settings > WordPress Tweaks > File Editor
 // END iThemes Security - Do not modify or remove this line
 
-define('WP_HOME', 'http://' . ($_SERVER['HTTP_HOST'] ?? 'www.wildandwithout.com'));
-define('WP_SITEURL', 'http://' . ($_SERVER['HTTP_HOST'] ?? 'www.wildandwithout.com') . '/wp');
+$scheme = $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
+define('WP_HOME', $scheme . ($_SERVER['HTTP_HOST'] ?? 'www.wildandwithout.com'));
+define('WP_SITEURL', $scheme . ($_SERVER['HTTP_HOST'] ?? 'www.wildandwithout.com') . '/wp');
 
 /*
 * Define wp-content directory outside of WordPress core directory
