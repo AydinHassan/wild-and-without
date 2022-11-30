@@ -241,6 +241,7 @@ add_shortcode('tagcloud', function () {
 });
 
 add_theme_support('align-wide');
+add_theme_support('custom-logo');
 
 add_filter('preprocess_comment', function (array $comment) {
     if (strlen($comment['comment_content']) > 1000) {
@@ -259,3 +260,30 @@ add_action('varnish_http_purge_headers', function (array $headers) {
     return $headers;
 });
 
+add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
+    $wp_customize->add_section('newsletter', [
+        'title' => __('Newsletter'),
+        'description' => __('Newsletter settings'),
+        'priority' => 160,
+        'capability' => 'edit_theme_options',
+    ]);
+
+    $wp_customize->add_setting('newsletter_id', [
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'default' => null,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_newsletter_id',
+    ]);
+
+    $wp_customize->add_control('newsletter_id', [
+        'type' => 'number',
+        'section' => 'newsletter',
+        'label' => __('Newsletter ID'),
+        'description' => __('Your Mailchimp newsletter ID.'),
+    ]);
+});
+
+function sanitize_newsletter_id($id) {
+    return (int) $id;
+}
