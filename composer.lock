@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e27cca7158bf53659bdb7bc453c0a0f",
+    "content-hash": "68fc084f2f1489a92ed8a1e0e1bb391a",
     "packages": [
         {
             "name": "composer/installers",
@@ -2194,6 +2194,24 @@
             "homepage": "https://wordpress.org/plugins/broken-link-checker/"
         },
         {
+            "name": "wpackagist-plugin/classic-widgets",
+            "version": "0.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/classic-widgets/",
+                "reference": "tags/0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/classic-widgets.0.3.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/classic-widgets/"
+        },
+        {
             "name": "wpackagist-plugin/contact-form-7",
             "version": "5.6.4",
             "source": {
@@ -2501,15 +2519,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "19.10",
+            "version": "19.11",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/19.10"
+                "reference": "tags/19.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.19.10.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.19.11.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
