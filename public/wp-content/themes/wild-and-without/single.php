@@ -99,9 +99,7 @@
                 </div>
                 <div class="post-newsletter-signup-container flex justify-center">
                     <p class="signup-text">If you enjoyed this article, subscribe to our mailing list and receive new posts direct to your e-mail!</p>
-                    <?php if (function_exists('mc4wp_show_form')): ?>
-                        <?php mc4wp_show_form($id = esc_html(cstheme_option('subscribe_popup_mailChimpid'))); ?>
-                    <?php endif ?>
+                    <?php mc4wp_show_form(get_theme_mod('newsletter_id')); ?>
                     <p class="no-spam">(no spam ever, unsubscribe at any time)</p>
                 </div>
                 <div class="post-newsletter-signup-overlay"></div>
