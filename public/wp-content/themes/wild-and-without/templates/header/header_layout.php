@@ -3,7 +3,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 logo_wrap_col">
-                        <?php cstheme_logo(); ?>
+                        <div class="cstheme-logo">
+                            <?php $custom_logo_id = get_theme_mod('custom_logo'); ?>
+                            <?php $logo = wp_get_attachment_image_src($custom_logo_id, 'full'); ?>
+                            <a class="logo" href="<?= esc_url(home_url('/')) ?>">
+                                <img data-pin-nopin="true" class="logo-img" src="<?= esc_url($logo[0]) ?>" alt="Wild &amp; Without">
+                            </a>
+                        </div>
                     </div>
                     <div class="col-md-7 text-center header_container">
                         <div class="menu-primary-menu-container-wrap heading_font clearfix">
@@ -15,11 +21,6 @@
                         </div>
                     </div>
                     <div class="col-md-offset-1 col-md-1">
-                        <?php if( cstheme_option( 'fixed_sidebar_enable') ) { ?>
-                            <div class="sidebar_btn pull-right">
-                                <i class="fa fa-info"></i>
-                            </div>
-                        <?php } ?>
                         <div class="header_search pull-right">
                             <?php get_search_form(true) ?>
                         </div>
