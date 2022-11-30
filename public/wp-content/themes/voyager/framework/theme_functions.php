@@ -3,44 +3,16 @@
  * Custom functions and definitions
  */
 
-
-//	if WooCommerce Plugin Active
-function cstheme_woo_enabled() {
-    if ( class_exists( 'woocommerce' ) )
-        return true;
-    return false;
-}
-
-//	if Evatheme CPT Plugin Active
-function evatheme_cpt_enabled() {
-    if ( class_exists( 'evatheme_cpt' ) )
-        return true;
-    return false;
-}
-
-
 //	Add specific CSS class by filter
 add_filter( 'body_class', 'cstheme_body_class' );
 function cstheme_body_class( $classes ) {
 	
 	global $post;
-	
-	//	If Site Boxed
-	$theme_layout = cstheme_option('theme_layout');
-	if ($theme_layout == 'boxed') {
-		$classes[] = 'boxed';
-	}
-	
-	//	If Top Slider Enabled
-	$top_slider = get_metabox('top_slider');
-	if ( is_page_template( 'page-custom-blog.php' ) && $top_slider != 'disabled' ) {
-		$classes[] = 'top_slider_enabled';
-	} else {
-		$classes[] = 'top_slider_disable';
-	}
-	
+	//top Slider Enabled
+    $classes[] = 'top_slider_enabled';
+
 	//	Header Layout
-	$header_layout = cstheme_option('header_layout');
+	$header_layout = "type7";
 	$classes[] = 'header_' . $header_layout;
 	
 	//	if Page have Featured Image
@@ -50,28 +22,22 @@ function cstheme_body_class( $classes ) {
 			$classes[] = 'page_has_featured_img';
 		}
 	}
-	if ( is_single() ) {
-		$single_post_featured_img = cstheme_option( 'single_post_featured_img' );
-		if ( $single_post_featured_img != '' ) {
-			$classes[] = 'single_featured_img_fullwidth';
-		}
-	}
 	
 	return $classes;
 }
- 
-//	Theme Options
-function cstheme_option($index1, $index2 = false) {
-    global $smof_data;
-    if ($index2) {
-        $output = isset($smof_data[$index1][$index2]) ? $smof_data[$index1][$index2] : false;
-        return $output;
+
+function cstheme_likes()
+{
+    $all_likes = get_post_meta(get_the_ID(), 'cstheme_likes', true);
+    if (!isset($all_likes) || absint($all_likes) < 1) {
+        $all_likes = 0;
     }
-    $output = isset($smof_data[$index1]) ? $smof_data[$index1] : false;
-    
-	$output = !empty( $output ) ? $output : '';
-	
-	return $output;
+    echo '
+    <span class="cstheme_likes ' . (isset($_COOKIE['like' . get_the_ID()]) ? "already_liked" : "cstheme_add_like") . '" data-postid="' . get_the_ID() . '">
+        <i class="fa ' . (isset($_COOKIE['like' . get_the_ID()]) ? "fa-heart" : "fa-heart-o") . '"></i>
+        <span class="likes_count">' . $all_likes . '</span>
+    </span>
+    ';
 }
 
 
@@ -97,122 +63,11 @@ function set_metabox($name, $val) {
     return false;
 }
 
-
-/**
- * Theme Logo
- */
-function cstheme_logo() {
-    echo '<div class="cstheme-logo">';
-    if (cstheme_option("theme_logo") == "") {
-        echo '<h1 class="site-name">';
-			echo '<a class="logo" href="'. esc_url( home_url( '/' ) ) .'">';
-				bloginfo('name');
-			echo '</a>';
-        echo '</h1>';
-    } else {
-        echo '<a class="logo" href="' . esc_url( home_url( '/' ) ) . '">';
-        if (cstheme_option("logo_retina")) {
-            echo '<img data-pin-nopin="true" class="logo-img" src="'. cstheme_option( 'theme_logo_retina' ) .'" style="width:'. cstheme_option('logo_width') .'px" alt="'. get_bloginfo( 'name' ) .'"/>';
-        } else {
-            echo '<img data-pin-nopin="true" class="logo-img" src="'. cstheme_option( 'theme_logo' ) .'" alt="'. get_bloginfo( 'name' ) .'"/>';
-        }
-        echo '</a>';        
-    }
-    echo '</div>';
-}
-
-
-/**
- *	Theme Favicon
- */
-function cstheme_favicon() {
-	
-	if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) {
-		if (cstheme_option('theme_favicon') == "") {
-			echo '<link rel="shortcut icon" href="'. get_template_directory_uri() . '/favicon.ico" />';
-		} else {
-			echo '<link rel="shortcut icon" href="' . esc_url( cstheme_option('theme_favicon') ) . '"/>';
-		}
-		
-		echo cstheme_option('favicon_iphone') != "" ? ('<link rel="apple-touch-icon" href="' . esc_url( cstheme_option('favicon_iphone') ) . '"/>') : '';
-        echo cstheme_option('favicon_iphone_retina') != "" ? ('<link rel="apple-touch-icon" sizes="114x114" href="' . esc_url( cstheme_option('favicon_iphone_retina') ) . '"/>') : '';
-        echo cstheme_option('favicon_ipad') != "" ? ('<link rel="apple-touch-icon" sizes="72x72" href="' . esc_url( cstheme_option('favicon_ipad') ) . '"/>') : '';
-	}
-	
-}
-
-
-
-/**
- * Social Links
- */
-global $cstheme_social_links;
-$cstheme_social_links = array(
-    'facebook' => array(
-        'name' => 'facebook_username',
-        'link' => '*',
-    ),
-    'flickr' => array(
-        'name' => 'flickr_username',
-        'link' => '*'
-    ),
-    'google-plus' => array(
-        'name' => 'googleplus_username',
-        'link' => '*'
-    ),
-    'twitter' => array(
-        'name' => 'tweets_username',
-        'link' => '*',
-    ),
-    'instagram' => array(
-        'name' => 'instagram_username',
-        'link' => '*',
-    ),
-    'pinterest' => array(
-        'name' => 'pinterest_username',
-        'link' => '*',
-    ),
-    'skype' => array(
-        'name' => 'skype_username',
-        'link' => '*'
-    ),
-    'youtube' => array(
-        'name' => 'youtube_username',
-        'link' => '*',
-    ),
-    'dribbble' => array(
-        'name' => 'dribbble_username',
-        'link' => '*',
-    ),
-    'linkedin' => array(
-        'name' => 'linkedin_username',
-        'link' => '*'
-    ),
-    'rss' => array(
-        'name' => 'rss_username',
-        'link' => '*'
-    ),
-	'vk' => array(
-        'name' => 'vk_username',
-        'link' => '*'
-    ),
-	'tumblr' => array(
-        'name' => 'tumblr_username',
-        'link' => '*'
-    ),
-	'vimeo' => array(
-        'name' => 'vimeo_username',
-        'link' => '*'
-    ),
-);
-
-function cstheme_social_links() {
-    global $cstheme_social_links;
-    foreach ($cstheme_social_links as $key => $social) {
-        if (cstheme_option($social['name']) != "") {
-            echo '<a href="'. (str_replace('*', cstheme_option($social['name']), $social['link'])) .'" target="_blank" class="social_link '. $key .'"><i class="fa fa-'. $key .'"></i></a>';
-        }
-    }
+function cstheme_social_links(): void {
+    echo '<a href="https://www.facebook.com/wildandwithout/" target="_blank" class="social_link facebook"><i class="fa fa-facebook"></i></a>';
+    echo '<a href="https://www.flickr.com/photos/aydinh/" target="_blank" class="social_link flickr"><i class="fa fa-flickr"></i></a>';
+    echo '<a href="https://www.instagram.com/wildandwithout/" target="_blank" class="social_link instagram"><i class="fa fa-instagram"></i></a>';
+    echo '<a href="https://www.pinterest.co.uk/wildandwithout/" target="_blank" class="social_link pinterest"><i class="fa fa-pinterest"></i></a>';
     echo '<a href="/contact" class="social_link contact_us"><i class="fa fa-envelope-o"></i></a>';
 }
 
@@ -298,11 +153,7 @@ if (!function_exists('cstheme_pagination')) {
 		
 		$text_prev = esc_html__('Older Posts','voyager');
 		$text_next = esc_html__('Newer Posts','voyager');
-		if (cstheme_woo_enabled() && is_shop()) {
-			$text_prev = esc_html__('Next','voyager');
-			$text_next = esc_html__('Prev','voyager');
-		}
-		
+
 		if ($type == "query2") {
 			
 			$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
@@ -362,67 +213,6 @@ if (!function_exists('cstheme_pagination')) {
 		}
     }
 }
-
-
-/**
- *	Load More button
- */
-
-if (!function_exists('cstheme_infinite_scroll')) {
-	function cstheme_infinite_scroll($type = "") {
-		if ($type == "query2") {
-            global $paged, $wp_query;
-        } else {
-            global $paged, $wp_query;
-        }
-        $range = 3;
-
-        if (empty($paged)) {
-            $paged = (get_query_var('page')) ? get_query_var('page') : 1;
-        }
-		$pages = intval($wp_query->max_num_pages);
-		if (empty($pages)) {
-			$pages = 1;
-		}
-		if (1 != $pages) {
-			echo '<div class="eva-infinite-scroll" data-has-next="' . ( $paged === $pages ? 'false' : 'true' ) . '">';
-				echo '<a class="btn btn-infinite-scroll no-more hide" href="#">' . esc_html__('No more posts', 'voyager') . '</a>';
-				echo '<a class="btn btn-infinite-scroll loading" href="#">' . esc_html__('Loading', 'voyager') . '</a>';
-				echo '<a class="btn btn-infinite-scroll next" href="' . esc_url( get_pagenum_link($paged + 1) ) . '">' . esc_html__('Load More Posts', 'voyager') . '</a>';
-			echo '</div>';
-		}
-	}
-}
-
-/**
- *	Post Likes
- */
-function cstheme_likes()
-{
-    $all_likes = get_post_meta(get_the_ID(), 'cstheme_likes', true);
-    if (!isset($all_likes) || absint($all_likes) < 1) {
-        $all_likes = 0;
-    }
-    echo '
-    <span class="cstheme_likes ' . (isset($_COOKIE['like' . get_the_ID()]) ? "already_liked" : "cstheme_add_like") . '" data-postid="' . get_the_ID() . '">
-        <i class="fa ' . (isset($_COOKIE['like' . get_the_ID()]) ? "fa-heart" : "fa-heart-o") . '"></i>
-        <span class="likes_count">' . $all_likes . '</span>
-    </span>
-    ';
-}
-
-add_action('wp_ajax_add_like_post', 'cstheme_add_like_post');
-add_action('wp_ajax_nopriv_add_like_post', 'cstheme_add_like_post');
-function cstheme_add_like_post()
-{
-    $post_id = absint($_POST['post_id']);
-    $all_likes = get_post_meta($post_id, 'cstheme_likes', true);
-    $all_likes = (isset($all_likes) ? $all_likes : 0) + 1;
-    update_post_meta($post_id, 'cstheme_likes', $all_likes);
-    echo $all_likes;
-    die();
-}
-
 
 /**
  *	Author Social Icons
