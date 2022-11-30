@@ -40,29 +40,6 @@ function cstheme_likes()
     ';
 }
 
-
-/**
- * Page, Post custom metaboxes
- */
-function get_metabox($name) {
-    global $post;
-    if ($post) {
-        $metabox = get_post_meta($post->ID, 'cstheme_' . strtolower(THEMENAME) . '_options', true);
-        return isset($metabox[$name]) ? $metabox[$name] : "";
-    }
-    return false;
-}
-
-function set_metabox($name, $val) {
-    global $post;
-    if ($post) {
-        $metabox = get_post_meta($post->ID, 'cstheme_' . strtolower(THEMENAME) . '_options', true);
-        $metabox[$name] = $val;
-        return update_post_meta($post->ID, 'cstheme_' . strtolower(THEMENAME) . '_options', $metabox);
-    }
-    return false;
-}
-
 function cstheme_social_links(): void {
     echo '<a href="https://www.facebook.com/wildandwithout/" target="_blank" class="social_link facebook"><i class="fa fa-facebook"></i></a>';
     echo '<a href="https://www.flickr.com/photos/aydinh/" target="_blank" class="social_link flickr"><i class="fa fa-flickr"></i></a>';
