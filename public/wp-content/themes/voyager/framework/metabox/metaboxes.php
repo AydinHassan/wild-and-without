@@ -333,50 +333,6 @@ function metabox_render($post, $metabox) {
 <?php 
 }
 
-add_action('save_post', 'savePostMeta');
-function savePostMeta($post_id) {
-    global $cs_post_settings, $cs_portfolio_single, $cs_portfolio_single_gallery, $cs_portfolio_single_video, $cs_portfolio_single_audio;
-
-    $meta = 'cstheme_'.strtolower(THEMENAME).'_options';
-    
-    // verify nonce
-    if (!isset($_POST['cstheme_meta_box_nonce']) || !wp_verify_nonce($_POST['cstheme_meta_box_nonce'], basename(__FILE__))) {
-            return $post_id;
-    }
-    
-    // check autosave
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-        return $post_id;
-    }
-    // check permissions
-    if ('page' == $_POST['post_type']) {
-            if (!current_user_can('edit_page', $post_id)) {
-                    return $post_id;
-            }
-    } elseif (!current_user_can('edit_post', $post_id)) {
-            return $post_id;
-    }
-    
-    if($_POST['post_type']=='post') {
-        $metaboxes = $cs_post_settings;
-	} elseif($_POST['post_type']=='page') {
-        $metaboxes = [['id' => 'sidebar_layout']];
-	} elseif($_POST['post_type']=='portfolio') {
-        $metaboxes = array_merge($cs_portfolio_single, $cs_portfolio_single_gallery, $cs_portfolio_single_video, $cs_portfolio_single_audio);
-    }
-    
-    if(!empty($metaboxes)) {
-        $myMeta = array();
-
-        foreach ($metaboxes as $metabox) {
-            $myMeta[$metabox['id']] = isset($_POST[$metabox['id']]) ? $_POST[$metabox['id']] : "";
-        }
-
-        update_post_meta($post_id, $meta, $myMeta);        
-
-    }
-}
-
 /* ================================================================================== */
 /*      Save gallery images
 /* ================================================================================== */
