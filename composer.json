@@ -44,6 +44,7 @@
     "wpackagist-plugin/instagram-feed":"^6.0",
     "wpackagist-plugin/redis-cache":"^2.2.2",
     "wpackagist-plugin/classic-widgets":"^0.3",
+    "wpackagist-plugin/cloudflare":"^4.11.0",
     "johnbillion/wp-crontrol":"^1.10",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^5.2",
