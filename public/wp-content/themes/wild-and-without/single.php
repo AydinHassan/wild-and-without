@@ -7,7 +7,7 @@
         <div id="blog-single-wrap" class="clearfix">
 
             <div class="single_post_header">
-                <h2 class="single-post-title"><?php the_title(); ?></h2>
+                <h1 class="single-post-title"><?php the_title(); ?></h1>
                 <div class="single_post_meta_category"><?php the_category(' '); ?></div>
 
                 <div class="top_slider_blog_post_author">
