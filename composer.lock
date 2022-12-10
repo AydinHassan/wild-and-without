@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "68fc084f2f1489a92ed8a1e0e1bb391a",
+    "content-hash": "204ff19399b84b72b7a7859add32d853",
     "packages": [
         {
             "name": "composer/installers",
@@ -2213,15 +2213,15 @@
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
-            "version": "5.6.4",
+            "version": "5.7",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/contact-form-7/",
-                "reference": "tags/5.6.4"
+                "reference": "tags/5.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.6.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.7.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -2357,15 +2357,15 @@
         },
         {
             "name": "wpackagist-plugin/mailchimp-for-wp",
-            "version": "4.8.11",
+            "version": "4.8.12",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/mailchimp-for-wp/",
-                "reference": "tags/4.8.11"
+                "reference": "tags/4.8.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.8.11.zip"
+                "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.8.12.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -2462,24 +2462,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/updraftplus/"
-        },
-        {
-            "name": "wpackagist-plugin/varnish-http-purge",
-            "version": "5.1.3",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/varnish-http-purge/",
-                "reference": "tags/5.1.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/varnish-http-purge.5.1.3.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/varnish-http-purge/"
         },
         {
             "name": "wpackagist-plugin/widget-context",

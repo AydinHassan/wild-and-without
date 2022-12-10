@@ -250,16 +250,6 @@ add_filter('preprocess_comment', function (array $comment) {
     return $comment;
 });
 
-add_action('varnish_http_purge_headers', function (array $headers) {
-    $varnishAuthKey = $_ENV['VARNISH_PURGE_KEY'] ?? '';
-
-    if ($varnishAuthKey) {
-        $headers['X-VC-Purge-Key'] = $varnishAuthKey;
-    }
-
-    return $headers;
-});
-
 add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
     $wp_customize->add_section('newsletter', [
         'title' => __('Newsletter'),
