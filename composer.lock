@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c77243a14a759c14f7b7c2f2082563b9",
+    "content-hash": "5101c2cfc5b3d7ac4fde908fc69580d6",
     "packages": [
         {
             "name": "composer/installers",
@@ -2177,15 +2177,15 @@
         },
         {
             "name": "wpackagist-plugin/broken-link-checker",
-            "version": "1.11.21",
+            "version": "2.0.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/broken-link-checker/",
-                "reference": "tags/1.11.21"
+                "reference": "tags/2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/broken-link-checker.1.11.21.zip"
+                "url": "https://downloads.wordpress.org/plugin/broken-link-checker.2.0.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
