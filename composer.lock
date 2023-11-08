@@ -2547,15 +2547,15 @@
         },
         {
             "name": "wpackagist-theme/twentynineteen",
-            "version": "2.6",
+            "version": "2.7",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/twentynineteen/",
-                "reference": "2.6"
+                "reference": "2.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/twentynineteen.2.6.zip"
+                "url": "https://downloads.wordpress.org/theme/twentynineteen.2.7.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
