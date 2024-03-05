@@ -2205,15 +2205,15 @@
         },
         {
             "name": "wpackagist-plugin/cloudflare",
-            "version": "4.12.4",
+            "version": "4.12.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/cloudflare/",
-                "reference": "tags/4.12.4"
+                "reference": "tags/4.12.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/cloudflare.4.12.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/cloudflare.4.12.6.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
