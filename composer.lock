@@ -2499,15 +2499,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "22.2",
+            "version": "22.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/22.2"
+                "reference": "tags/22.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.22.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.22.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
