@@ -529,16 +529,16 @@
         },
         {
             "name": "johnbillion/wp-crontrol",
-            "version": "1.16.2",
+            "version": "1.16.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnbillion/wp-crontrol.git",
-                "reference": "99d7afe03397390f7d4d18c3a86c86a669b0c704"
+                "reference": "0248b88cdc3fc55cb50d92cd36f87be2d1aa2e9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnbillion/wp-crontrol/zipball/99d7afe03397390f7d4d18c3a86c86a669b0c704",
-                "reference": "99d7afe03397390f7d4d18c3a86c86a669b0c704",
+                "url": "https://api.github.com/repos/johnbillion/wp-crontrol/zipball/0248b88cdc3fc55cb50d92cd36f87be2d1aa2e9d",
+                "reference": "0248b88cdc3fc55cb50d92cd36f87be2d1aa2e9d",
                 "shasum": ""
             },
             "require": {
@@ -583,7 +583,7 @@
                     "homepage": "http://scompt.com/"
                 }
             ],
-            "description": "WP Crontrol lets you view and control what's happening in the WP-Cron system.",
+            "description": "Take control of the cron events on your WordPress website",
             "homepage": "https://wp-crontrol.com",
             "support": {
                 "forum": "https://wordpress.org/support/plugin/wp-crontrol",
@@ -596,7 +596,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-24T18:17:34+00:00"
+            "time": "2024-04-19T11:18:19+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
