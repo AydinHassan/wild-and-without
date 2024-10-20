@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ae09627ce22ff1fcabf3fd8b96df7d6",
+    "content-hash": "38aa11ce594bab5de5d107bb28252ccc",
     "packages": [
         {
             "name": "composer/installers",
@@ -2370,15 +2370,15 @@
         },
         {
             "name": "wpackagist-plugin/media-file-renamer",
-            "version": "5.9.8",
+            "version": "6.0.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/media-file-renamer/",
-                "reference": "tags/5.9.8"
+                "reference": "tags/6.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.5.9.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/media-file-renamer.6.0.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
