@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38aa11ce594bab5de5d107bb28252ccc",
+    "content-hash": "1b3193719d180b5896f07b8f0790931f",
     "packages": [
         {
             "name": "composer/installers",
@@ -2208,15 +2208,15 @@
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
-            "version": "5.9.8",
+            "version": "6.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/contact-form-7/",
-                "reference": "tags/5.9.8"
+                "reference": "tags/6.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.9.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.6.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
