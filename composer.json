@@ -20,7 +20,7 @@
   },
   "require": {
     "johnpbloch/wordpress": "^6.0",
-    "wpackagist-theme/twentynineteen": "^2.0",
+    "wpackagist-theme/twentynineteen": "^3.0",
     "wpackagist-plugin/akismet": "^5",
     "wpackagist-plugin/better-wp-security": "^9.0",
     "wpackagist-plugin/wordpress-seo": "^23.0",
