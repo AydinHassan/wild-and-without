@@ -2136,15 +2136,15 @@
         },
         {
             "name": "wpackagist-plugin/better-wp-security",
-            "version": "9.3.3",
+            "version": "9.3.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/better-wp-security/",
-                "reference": "tags/9.3.3"
+                "reference": "tags/9.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/better-wp-security.9.3.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/better-wp-security.9.3.4.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
