@@ -2298,15 +2298,15 @@
         },
         {
             "name": "wpackagist-plugin/featured-images-for-rss-feeds",
-            "version": "1.6.2",
+            "version": "1.6.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/featured-images-for-rss-feeds/",
-                "reference": "trunk"
+                "reference": "tags/1.6.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.zip?timestamp=1706649885"
+                "url": "https://downloads.wordpress.org/plugin/featured-images-for-rss-feeds.1.6.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
