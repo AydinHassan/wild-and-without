@@ -19,9 +19,6 @@ if (!function_exists('cstheme_setup')) {
     function cstheme_setup()
     {
 
-        //	Make theme available for translation.
-        load_theme_textdomain('voyager', get_template_directory() . '/languages');
-
         // Add default posts and comments RSS feed links to head.
         add_theme_support('automatic-feed-links');
 
