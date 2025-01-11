@@ -1,4 +1,4 @@
-FROM php:8.0-fpm
+FROM php:8.3-fpm
 
 RUN apt-get -qq update && apt-get install -qqy apt-utils libzip-dev git zlib1g-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev \
 	&& rm -rf /var/lib/apt/lists/* \
