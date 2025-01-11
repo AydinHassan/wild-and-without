@@ -54,7 +54,7 @@ class Controller
 
         $this->plugin_name = $plugin_name;
         $this->version = $version;
-        $this->gutenberg_entrypoint = "${plugin_name}-gutenberg_blocks";
+        $this->gutenberg_entrypoint = "plugin_name-gutenberg_blocks";
     }
 
     /**

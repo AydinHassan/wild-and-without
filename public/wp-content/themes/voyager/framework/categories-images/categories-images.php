@@ -12,9 +12,14 @@ function z_init() {
 	$z_taxonomies = get_taxonomies();
 	if (is_array($z_taxonomies)) {
 		$zci_options = get_option('zci_options');
-		if (empty($zci_options['excluded_taxonomies']))
-			$zci_options['excluded_taxonomies'] = array();
-		
+
+        if ($zci_options === false) {
+            $zci_options = ['excluded_taxonomies' => []];
+        }
+        if (is_array($zci_options) && !isset($zci_options['excluded_taxonomies'])) {
+            $zci_options['excluded_taxonomies'] = [];
+        }
+
 	    foreach ($z_taxonomies as $z_taxonomy) {
 			if (in_array($z_taxonomy, $zci_options['excluded_taxonomies']))
 				continue;
