@@ -73,7 +73,8 @@ body.boxed #blog_list.blog_list_style_grid-bg.columns3 .post {
   line-height: 30px;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.5);
-  font-family: 'Dolce Caffe Regular', sans-serif;
+  font-family: 'Gill Sans', sans-serif;
+  text-transform: uppercase;
   letter-spacing: 0.15em;
 }
 
@@ -83,7 +84,8 @@ body.boxed #blog_list.blog_list_style_grid-bg.columns3 .post {
   line-height: 30px;
   color: rgba(255, 255, 255, 0.5);
   font-size: 18px;
-  font-family: 'Dolce Caffe Regular', sans-serif;
+  font-family: 'Gill Sans', sans-serif;
+  text-transform: uppercase;
   letter-spacing: 0.15em;
 }
 
@@ -214,14 +216,13 @@ body.boxed #blog_list.blog_list_style_grid-bg.columns3 .post {
   margin-bottom: 10px;
 }
 #blog_list.blog_list_style_left-image .post_meta_category {
-  font-family: 'Dolce Caffe Regular', sans-serif;
   letter-spacing: 0.15em;
 }
 
 #blog_list.blog_list_style_left-image .post_meta_category a {
   display: inline-block;
   vertical-align: top;
-  font-family: 'Dolce Caffe Regular', sans-serif;
+  font-family: 'Gill Sans', sans-serif;
   padding: 6px 15px;
   font-size: 12px;
   font-weight: bold;
