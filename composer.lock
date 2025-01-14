@@ -530,16 +530,16 @@
         },
         {
             "name": "johnbillion/wp-crontrol",
-            "version": "1.17.1",
+            "version": "1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnbillion/wp-crontrol.git",
-                "reference": "935132b5bcee5d70eb65c56104ff09ce36eb45cb"
+                "reference": "eb1a688c457d19a9bef9449eae93ff8495f227a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnbillion/wp-crontrol/zipball/935132b5bcee5d70eb65c56104ff09ce36eb45cb",
-                "reference": "935132b5bcee5d70eb65c56104ff09ce36eb45cb",
+                "url": "https://api.github.com/repos/johnbillion/wp-crontrol/zipball/eb1a688c457d19a9bef9449eae93ff8495f227a9",
+                "reference": "eb1a688c457d19a9bef9449eae93ff8495f227a9",
                 "shasum": ""
             },
             "require": {
@@ -599,7 +599,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-22T16:44:19+00:00"
+            "time": "2025-01-13T18:33:37+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
