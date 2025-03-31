@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "00b2637a3ad972d41b05d90b15331351",
+    "content-hash": "0398a7fe20cb988b3cf7ae63f2324f03",
     "packages": [
         {
             "name": "composer/installers",
@@ -2389,6 +2389,24 @@
             "homepage": "https://wordpress.org/plugins/media-file-renamer/"
         },
         {
+            "name": "wpackagist-plugin/meow-gallery",
+            "version": "5.2.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/meow-gallery/",
+                "reference": "tags/5.2.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/meow-gallery.5.2.7.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/meow-gallery/"
+        },
+        {
             "name": "wpackagist-plugin/pre-publish-checklist",
             "version": "1.1.4",
             "source": {
@@ -2423,24 +2441,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/redis-cache/"
-        },
-        {
-            "name": "wpackagist-plugin/simply-gallery-block",
-            "version": "3.2.5",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/simply-gallery-block/",
-                "reference": "tags/3.2.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/simply-gallery-block.3.2.5.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/simply-gallery-block/"
         },
         {
             "name": "wpackagist-plugin/transients-manager",

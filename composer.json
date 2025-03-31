@@ -45,7 +45,7 @@
     "wpackagist-plugin/redis-cache":"^2.2.2",
     "wpackagist-plugin/classic-widgets":"^0.3",
     "wpackagist-plugin/cloudflare":"^4.11.0",
-    "wpackagist-plugin/simply-gallery-block":"^3.2.5",
+    "wpackagist-plugin/meow-gallery":"^5.2.7",
     "johnbillion/wp-crontrol":"^1.10",
     "roots/wp-password-bcrypt": "^1.0",
     "vlucas/phpdotenv": "^5.2",
