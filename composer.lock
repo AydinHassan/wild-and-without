@@ -2102,15 +2102,15 @@
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "6.3.12",
+            "version": "6.4.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/6.3.12"
+                "reference": "tags/6.4.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.6.3.12.zip"
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.6.4.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
